@@ -9,10 +9,20 @@ figure/*
 !figure/10854_ssast.pdf
 !figure/10854_ssast.png
 !figure/ablation.jpg
-pretrained_model/*
-!pretrained_model/README.md
-src/models/check_load_model.py
-src/models/copy_process_pretrain.py
-src/models/ast_model_uni.py
+#pretrained_model/*
+pretrained_model/README.md
+#src/models/check_load_model.py
+#src/models/copy_process_pretrain.py
+#src/models/ast_model_uni.py
 src/finetune/superb/s3prl-master/*
 .idea/*
+
+
+
+src/prep_data/esc50/data/*
+src/finetune/esc50/data/ESC-50-master
+#[Hyosun] added
+src/finetune/esc50/exp/*
+src/pretrain/exp/*
+#[/Hyosun] added
+venvssast/*

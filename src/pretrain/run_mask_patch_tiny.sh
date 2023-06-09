@@ -12,9 +12,15 @@
 
 set -x
 # comment this line if not running on sls cluster
-. /data/sls/scratch/share-201907/slstoolchainrc
-source /data/sls/scratch/yuangong/sslast2/sslast2/bin/activate
-export TORCH_HOME=../../pretrained_models
+#. /data/sls/scratch/share-201907/slstoolchainrc #[Hyosun] commented out
+
+#source /data/sls/scratch/yuangong/sslast2/sslast2/bin/activate #[Hyosun] commented out
+
+# [Hyosun] editied the folder_name
+#export TORCH_HOME=../../pretrained_models
+export TORCH_HOME=../../pretrained_models_by_Hyosun
+# [/Hyosun] editied the folder_name
+
 mkdir exp
 mkdir slurm_log
 
@@ -23,12 +29,21 @@ mask_patch=400
 
 # audioset and librispeech
 dataset=asli
-tr_data=/data/sls/scratch/yuangong/sslast2/src/prep_data/audioset_librispeech.json
-te_data=/data/sls/scratch/yuangong/audioset/datafiles/eval_data.json
+
+# [Hyosun] editied the data_file_path
+#tr_data=/data/sls/scratch/yuangong/sslast2/src/prep_data/audioset_librispeech.json
+#tr_data=/content/drive/MyDrive/ColabNotebooks/Github/ssast/src/prep_data/esc50/esc_class_labels_indices.csv
+tr_data=/content/drive/MyDrive/ColabNotebooks/Github/ssast/src/prep_data/esc50/data/datafiles/esc_train_data_1.json
+#te_data=/data/sls/scratch/yuangong/audioset/datafiles/eval_data.json
+te_data=/content/drive/MyDrive/ColabNotebooks/Github/ssast/src/prep_data/esc50/data/datafiles/esc_eval_data_1.json
+# [/Hyosun] editied the data_file_path
+
+# [Hyosun] edit needed later
 dataset_mean=-4.2677393
 dataset_std=4.5689974
 target_length=1024
 num_mel_bins=128
+# [/Hyosun] edit needed later
 
 model_size=tiny
 # no patch split overlap
@@ -49,11 +64,15 @@ timem=0
 # no mixup training
 mixup=0
 
+# [Hyosun] edited the path
+#exp_dir=./exp/mask01-${model_size}-f${fshape}-t${tshape}-b$batch_size-lr${lr}-m${mask_patch}-${task}-${dataset}
 exp_dir=./exp/mask01-${model_size}-f${fshape}-t${tshape}-b$batch_size-lr${lr}-m${mask_patch}-${task}-${dataset}
+# [/Hyosun] edited the path
 
+# [Hyosun] editied the file_path into: ./data/esc_class_labels_indices.csv \
 CUDA_CACHE_DISABLE=1 python -W ignore ../run.py --dataset ${dataset} \
 --data-train ${tr_data} --data-val ${te_data} --exp-dir $exp_dir \
---label-csv ./data/class_labels_indices.csv \
+--label-csv ./data/esc_class_labels_indices.csv \
 --lr $lr --n-epochs ${epoch} --batch-size $batch_size --save_model False \
 --freqm $freqm --timem $timem --mixup ${mixup} --bal ${bal} \
 --tstride $tstride --fstride $fstride --fshape ${fshape} --tshape ${tshape} \

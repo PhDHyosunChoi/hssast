@@ -11,10 +11,15 @@
 #SBATCH --output=./slurm_log/log_%j.txt
 
 set -x
-# comment this line if not running on sls cluster
-. /data/sls/scratch/share-201907/slstoolchainrc
-source ../../../venvssast/bin/activate
-export TORCH_HOME=../../pretrained_models
+##comment this line if not running on sls cluster
+#. /data/sls/scratch/share-201907/slstoolchainrc #[Hyosun] commented out
+
+#source ../../../venvssast/bin/activate #[Hyosun] commented out: virtual env activate하는 line
+
+# [Hyosun] editied
+#export TORCH_HOME=../../pretrained_models
+export TORCH_HOME=../../../pretrained_models
+#[/Hyosun]
 mkdir exp
 
 # prep esc50 dataset and download the pretrained model
@@ -24,7 +29,7 @@ then
 else
     python prep_esc50.py
 fi
-if [ -e SSAST-Base-Patch-400.pth ]
+if [ -e SSAST-Base-Patch-400.pth ] # [Hyosun] -e: whether exist  
 then
     echo "pretrained model already downloaded."
 else
@@ -33,7 +38,10 @@ fi
 
 pretrain_exp=
 pretrain_model=SSAST-Base-Patch-400
-pretrain_path=./${pretrain_exp}/${pretrain_model}.pth
+#[Hyosun] edited
+#pretrain_path=./${pretrain_exp}/${pretrain_model}.pth 
+pretrain_path=./${pretrain_model}.pth 
+#[/Hyosun] 
 
 dataset=esc50
 dataset_mean=-6.6268077
@@ -57,7 +65,11 @@ task=ft_avgtok
 model_size=base
 head_lr=1
 
-base_exp_dir=./exp/test01-${dataset}-f${fstride}-${fshape}-t${tstride}-${tshape}-b${batch_size}-lr${lr}-${task}-${model_size}-${pretrain_exp}-${pretrain_model}-${head_lr}x-noise${noise}
+#[Hyosun]
+#base_exp_dir=./exp/test01-${dataset}-f${fstride}-${fshape}-t${tstride}-${tshape}-b${batch_size}-lr${lr}-${task}-${model_size}-${pretrain_exp}-${pretrain_model}-${head_lr}x-noise${noise}
+base_exp_dir=/content/drive/MyDrive/ColabNotebooks/Github/ssast/src/finetune/esc50/exp/test 
+#01-${dataset}-f${fstride}-${fshape}-t${tstride}-${tshape}-b${batch_size}-lr${lr}-${task}-${model_size}-${pretrain_exp}-${pretrain_model}-${head_lr}x-noise${noise} #[Hyosun]curtailed
+#[/Hyosun]
 
 for((fold=1;fold<=5;fold++));
 do
@@ -81,4 +93,7 @@ do
   --lrscheduler_start 6 --lrscheduler_step 1 --lrscheduler_decay 0.85 --wa False --loss CE --metrics acc
 done
 
-python ./get_esc_result.py --exp_path ${base_exp_dir}
+#[Hyosun] edited
+#python ./get_esc_result.py --exp_path ${base_exp_dir}
+python get_esc_result.py --exp_path ${base_exp_dir}
+#[/Hyosun]

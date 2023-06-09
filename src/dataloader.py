@@ -60,7 +60,10 @@ class AudioDataset(Dataset):
         """
         self.datapath = dataset_json_file
         with open(dataset_json_file, 'r') as fp:
-            data_json = json.load(fp)
+            # [Hyosun] editied
+            #data_json = json.load(fp) 
+            data_json = json.loads(fp.read())
+            # [/Hyosun] editied
 
         self.data = data_json['data']
         self.audio_conf = audio_conf
@@ -175,6 +178,7 @@ class AudioDataset(Dataset):
             datum = self.data[index]
             label_indices = np.zeros(self.label_num)
             fbank, mix_lambda = self._wav2fbank(datum['wav'])
+            print(self.index_dict)# [Hyosun] for-loop 아래 에러나서 확인중
             for label_str in datum['labels'].split(','):
                 label_indices[int(self.index_dict[label_str])] = 1.0
 

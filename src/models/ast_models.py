@@ -64,7 +64,7 @@ class ASTModel(nn.Module):
         timm.models.vision_transformer.PatchEmbed = PatchEmbed
 
         # pretrain the AST models
-        if pretrain_stage == True:
+        if pretrain_stage == True: #[Hyosun] pretrain 
             if load_pretrained_mdl_path != None:
                 raise ValueError('Setting load_pretrained_mdl_path at pretraining stage is useless, pretraining is always from scratch, please change it to None.')
             if fstride != fshape or tstride != tshape:
@@ -79,7 +79,7 @@ class ASTModel(nn.Module):
                 self.v = timm.create_model('vit_deit_small_distilled_patch16_224', pretrained=False)
                 self.heads, self.depth = 6, 12
                 self.cls_token_num = 2
-            elif model_size == 'base':
+            elif model_size == 'base': #[Hyosun] pretrain 직접하는 부분
                 self.v = timm.create_model('vit_deit_base_distilled_patch16_384', pretrained=False)
                 self.heads, self.depth = 12, 12
                 self.cls_token_num = 2
@@ -135,8 +135,10 @@ class ASTModel(nn.Module):
             self.v.pos_embed = new_pos_embed
             trunc_normal_(self.v.pos_embed, std=.02)
 
+            #[Hyosun] Here: Right Before Going Through Transformer Encoder 
+
         # use a pretrained models for finetuning
-        elif pretrain_stage == False:
+        elif pretrain_stage == False: #[Hyosun] Finetuning
             device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
             if load_pretrained_mdl_path == None:
                 raise ValueError('Please set load_pretrained_mdl_path to load a pretrained models.')
@@ -154,9 +156,9 @@ class ASTModel(nn.Module):
             # we need to know input_fdim and input_tdim to do positional embedding cut/interpolation.
             # generally it should be better to use same input_fdim during pretraining and finetuning, but input_tdim can be safely different
             audio_model = ASTModel(fstride=p_fshape, tstride=p_tshape, fshape=p_fshape, tshape=p_tshape,
-                                   input_fdim=p_input_fdim, input_tdim=p_input_tdim, pretrain_stage=True, model_size=model_size)
-            audio_model = torch.nn.DataParallel(audio_model)
-            audio_model.load_state_dict(sd, strict=False)
+                                   input_fdim=p_input_fdim, input_tdim=p_input_tdim, pretrain_stage=True, model_size=model_size) #[Hyosun] representation shell만 만들어
+            audio_model = torch.nn.DataParallel(audio_model) #[Hyosun] representation shell만 만들어
+            audio_model.load_state_dict(sd, strict=False)    #[Hyosun] contents를 이제 넣어
 
             self.v = audio_model.module.v
             self.original_embedding_dim = self.v.pos_embed.shape[2]
@@ -476,7 +478,7 @@ if __name__ == '__main__':
     # input in shape [batch_size, input_tdim, input_fdim]
     test_input = torch.zeros([10, input_tdim, 128])
     # mask 100 patches for both discriminative and generative loss
-    acc, nce_loss = ast_mdl(test_input, task='pretrain_mpc', mask_patch=100)
+    acc, nce_loss = ast_mdl(test_input, task='pretrain_mpc', mask_patch=100) #[Hyosun]ast_mdl(): traintest_mask.py의 audio_model()와 같다
     mse_loss = ast_mdl(test_input, task='pretrain_mpg', mask_patch=100)
     loss = nce_loss + 10 * mse_loss
     # do back propagate and update the model, etc

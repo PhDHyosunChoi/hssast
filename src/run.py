@@ -131,7 +131,7 @@ if 'pretrain' in args.task:
     # no label dimension needed as it is self-supervised, fshape=fstride and tshape=tstride
     audio_model = ASTModel(fshape=args.fshape, tshape=args.tshape, fstride=args.fshape, tstride=args.tshape,
                        input_fdim=args.num_mel_bins, input_tdim=args.target_length, model_size=args.model_size, pretrain_stage=True)
-# in the fine-tuning stage
+# in the fine-tuning stage [Hyosun] focus and use!!!
 else:
     audio_model = ASTModel(label_dim=args.n_class, fshape=args.fshape, tshape=args.tshape, fstride=args.fstride, tstride=args.tstride,
                        input_fdim=args.num_mel_bins, input_tdim=args.target_length, model_size=args.model_size, pretrain_stage=False,
@@ -146,10 +146,10 @@ if os.path.exists("%s/models" % args.exp_dir) == False:
 with open("%s/args.pkl" % args.exp_dir, "wb") as f:
     pickle.dump(args, f)
 
-if 'pretrain' not in args.task:
+if 'pretrain' not in args.task: #[Hyosun] focus and use!!!: fine-tuning
     print('Now starting fine-tuning for {:d} epochs'.format(args.n_epochs))
     train(audio_model, train_loader, val_loader, args)
-else:
+else: #[Hyosun] pretrain => [Hyosun] traintest_mask.py의 trainmask()로 연결
     print('Now starting self-supervised pretraining for {:d} epochs'.format(args.n_epochs))
     trainmask(audio_model, train_loader, val_loader, args)
 
@@ -162,7 +162,7 @@ if args.data_eval != None:
         audio_model = torch.nn.DataParallel(audio_model)
     audio_model.load_state_dict(sd, strict=False)
 
-    # best models on the validation set
+    # best models on the validation set => [Hyosun]traintest_mask.py의 validate()함수로 연결
     args.loss_fn = torch.nn.BCEWithLogitsLoss()
     stats, _ = validate(audio_model, val_loader, args, 'valid_set')
     # note it is NOT mean of class-wise accuracy

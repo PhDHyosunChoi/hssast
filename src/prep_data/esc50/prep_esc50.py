@@ -10,6 +10,7 @@ import json
 import os
 import zipfile
 import wget
+import sox #[Hyosun] added
 
 # label = np.loadtxt('/data/sls/scratch/yuangong/aed-pc/src/utilities/esc50_label.csv', delimiter=',', dtype='str')
 # f = open("/data/sls/scratch/yuangong/aed-pc/src/utilities/esc_class_labels_indices.csv", "w")
@@ -38,8 +39,9 @@ def get_immediate_files(a_dir):
 # downlooad esc50
 # dataset provided in https://github.com/karolpiczak/ESC-50
 if os.path.exists('./data/ESC-50-master') == False:
+    os.mkdir('./data/') # [Hyosun] added
     esc50_url = 'https://github.com/karoldvl/ESC-50/archive/master.zip'
-    wget.download(esc50_url, out='./data/')
+    wget.download(esc50_url, out='/content/drive/MyDrive/ColabNotebooks/Github/ssast/src/prep_data/esc50/data/') #'./data/')#[Hyosun] edited
     with zipfile.ZipFile('./data/ESC-50-master.zip', 'r') as zip_ref:
         zip_ref.extractall('./data/')
     os.remove('./data/ESC-50-master.zip')
@@ -49,8 +51,12 @@ if os.path.exists('./data/ESC-50-master') == False:
     os.mkdir('./data/ESC-50-master/audio_16k/')
     audio_list = get_immediate_files('./data/ESC-50-master/audio')
     for audio in audio_list:
-        print('sox ' + base_dir + '/audio/' + audio + ' -r 16000 ' + base_dir + '/audio_16k/' + audio)
-        os.system('sox ' + base_dir + '/audio/' + audio + ' -r 16000 ' + base_dir + '/audio_16k/' + audio)
+        #[Hyosun]modified the path
+        print('sox ' + base_dir + 'audio/' + audio + ' -r 16000 ' + base_dir + 'audio_16k/' + audio) 
+        os.system('sox ' + base_dir + 'audio/' + audio + ' -r 16000 ' + base_dir + 'audio_16k/' + audio)
+        # print('sox ' + base_dir + '/audio/' + audio + ' -r 16000 ' + base_dir + '/audio_16k/' + audio) 
+        # os.system('sox ' + base_dir + '/audio/' + audio + ' -r 16000 ' + base_dir + '/audio_16k/' + audio)
+        #[/Hyosun]modified        
 
 label_set = np.loadtxt('./esc_class_labels_indices.csv', delimiter=',', dtype='str')
 label_map = {}

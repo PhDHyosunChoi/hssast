@@ -32,7 +32,7 @@ def trainmask(audio_model, train_loader, test_loader, args):
         with open("%s/progress.pkl" % exp_dir, "wb") as f:
             pickle.dump(progress, f)
 
-    if not isinstance(audio_model, nn.DataParallel):
+    if not isinstance(audio_model, nn.DataParallel): #[Hyosun]audio_model이 nn.DataParallel라는 instance가 아니면,
         audio_model = nn.DataParallel(audio_model)
 
     audio_model = audio_model.to(device)
@@ -51,7 +51,7 @@ def trainmask(audio_model, train_loader, test_loader, args):
     print("start training...")
 
     result = []
-    audio_model.train()
+    audio_model.train() # change the models to train mode
 
     # training until break
     while epoch < args.n_epochs + 1:
@@ -93,7 +93,7 @@ def trainmask(audio_model, train_loader, test_loader, args):
                 loss = loss.mean()
                 # dirty code to make the code report mse loss for generative objective
                 acc = loss
-            # if pretrain with joint discriminative and generative objective
+            # if pretrain with joint discriminative and generative objective #[Hyosun]the core of the paper
             elif args.task == 'pretrain_joint':
                 acc, loss1 = audio_model(audio_input, 'pretrain_mpc', mask_patch=args.mask_patch, cluster=cluster)
                 acc, loss1 = acc.mean(), loss1.mean()
@@ -134,7 +134,7 @@ def trainmask(audio_model, train_loader, test_loader, args):
 
             # pretraining data is usually very large, save model every epoch is too sparse.
             # save the model every args.epoch_iter steps.
-            epoch_iteration = args.epoch_iter
+            epoch_iteration = args.epoch_iter #[Hyosun] as input @ run_mask_patch.sh
             if global_step % epoch_iteration == 0:
                 print('---------------- step '+ str(global_step) +' evaluation ----------------')
                 equ_epoch = int(global_step/epoch_iteration) + 1
@@ -145,6 +145,9 @@ def trainmask(audio_model, train_loader, test_loader, args):
                 print("masked acc eval: {:.6f}".format(acc_eval))
                 print("nce loss eval: {:.6f}".format(nce_eval))
                 result.append([train_acc_meter.avg, train_nce_meter.avg, acc_eval, nce_eval, optimizer.param_groups[0]['lr']])
+                #[Hyosun] if args.epoch_iter is small enough, then the results saved
+                print("[Hyosun] result: ", result)
+                #[/Hyosun] if args.epoch_iter is small enough, then the results saved
                 np.savetxt(exp_dir + '/result.csv', result, delimiter=',')
 
                 if acc > best_acc:
@@ -184,7 +187,7 @@ def trainmask(audio_model, train_loader, test_loader, args):
                 print('---------------- evaluation finished ----------------')
         epoch += 1
 
-def validatemask(audio_model, val_loader, args, epoch):
+def validatemask(audio_model, val_loader, args, epoch): #[Hyosun] 바로위에서 train하면서 도중에 eval시 사용
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
     if not isinstance(audio_model, nn.DataParallel):
         audio_model = nn.DataParallel(audio_model)

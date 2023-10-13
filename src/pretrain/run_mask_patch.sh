@@ -18,7 +18,8 @@ set -x
 
 # [Hyosun] editied the folder_name
 #export TORCH_HOME=../../pretrained_models
-export TORCH_HOME=../../pretrained_models_by_Hyosun
+#export TORCH_HOME=../../pretrained_models_by_Hyosun
+export TORCH_HOME=../../pretrained_models #[Hyosun] restored the original line here 
 # [/Hyosun] editied the folder_name
 
 mkdir exp
@@ -41,12 +42,25 @@ dataset=esc50  #[Hyosun] added
 # # [/Hyosun] editied the data_file_path
 # [/Hyosun:folds logic] commented out
 
-# [Hyosun] edit needed later
-dataset_mean=-4.2677393
-dataset_std=4.5689974
-target_length=1024
-num_mel_bins=128
-# [/Hyosun] edit needed later
+# [Hyosun] commented out 
+# # [Hyosun] edit needed later  #[Hyosun] The below 4 lines might have affected the accuracy performances
+# dataset_mean=-4.2677393
+# dataset_std=4.5689974
+# target_length=1024
+# num_mel_bins=128
+# # [/Hyosun] edit needed later #[/Hyosun] The below 4 lines might have affected the accuracy performances
+# [/Hyosun] commented out 
+
+# [Hyosun] commented out ==> modified and inserted again 20230704
+#[Hyosun] added for dataset esc50
+#dataset=esc50
+dataset_mean=-6.6268077
+dataset_std=5.358466
+target_length=1024 #512 #[Hyosun] The original value 512 is modified 20230704
+noise=True #[Hyosun] might need to be inserted? 20230704 try experiment
+num_mel_bins=128 #[Hyosun] confirmed by the file src/finetune/esc50/run_esc_patch.sh
+#[/Hyosun] added for dataset esc50
+# [/Hyosun] commented out ==> modified and inserted again 20230704
 
 model_size=base
 # no patch split overlap
@@ -94,11 +108,20 @@ mixup=0
 
 #[Hyosun] added the results & folds logic from [ast] run_esc.sh ====================================
 #[Hyosun] edited
+#[original code line] exp_dir=./exp/mask01-${model_size}-f${fshape}-t${tshape}-b$batch_size-lr${lr}-m${mask_patch}-${task}-${dataset}
+
 #base_exp_dir=./exp/test-${dataset}-f$fstride-t$tstride-imp$imagenetpretrain-asp$audiosetpretrain-b$batch_size-lr${lr}
-base_exp_dir=./exp/mask01-${model_size}-f${fshape}-t${tshape}-b$batch_size-lr${lr}-m${mask_patch}-${task}-${dataset}
+#base_exp_dir=./exp/mask01-${model_size}-f${fshape}-t${tshape}-b$batch_size-lr${lr}-m${mask_patch}-${task}-${dataset}
+#now = $(date)
+#base_exp_dir=./exp/date"$(date +'%Y-%m-%d/%H:%M:%S')"-mask01-${model_size}-f${fshape}-t${tshape}-b$batch_size-lr${lr}-m${mask_patch}-${task}-${dataset}
+#base_exp_dir=./exp/.            mask01-${model_size}-f${fshape}-t${tshape}-b$batch_size-lr${lr}-m${mask_patch}-${task}-${dataset}
+
+#base_exp_dir=./exp/mask01-${model_size}-f${fshape}-t${tshape}-b$batch_size-lr${lr}-m${mask_patch}-${task}-${dataset}
+base_exp_dir=./exp/date"$(date +'%Y-%m-%d/%H:%M:%S%p')"-mask01-${model_size}-f${fshape}-t${tshape}-b$batch_size-lr${lr}-m${mask_patch}-${task}-${dataset}
+
 #[/Hyosun] edited
 
-for((fold=1;fold<=5;fold++));
+for((fold=1;fold<=2;fold++));#5;fold++)); #[Hyosun: for testing(temp)] 5fold->2
 do
   echo 'now process fold'${fold}
 
@@ -109,9 +132,13 @@ do
 
 # [Hyosun] editied the data_file_path: 여기 파일 1,2..로 나뉜거 말고 합친거로 돌려야할듯
 #tr_data=/data/sls/scratch/yuangong/sslast2/src/prep_data/audioset_librispeech.json
-  tr_data=/content/drive/MyDrive/ColabNotebooks/Github/ssast/src/prep_data/esc50/data/datafiles/esc_train_data_${fold}.json
+#  tr_data=/content/drive/MyDrive/ColabNotebooks/Github/ssast/src/prep_data/esc50/data/datafiles/esc_train_data_${fold}.json
+  tr_data=../prep_data/esc50/data/datafiles/esc_train_data_${fold}.json
+
 #te_data=/data/sls/scratch/yuangong/audioset/datafiles/eval_data.json
-  te_data=/content/drive/MyDrive/ColabNotebooks/Github/ssast/src/prep_data/esc50/data/datafiles/esc_eval_data_${fold}.json
+#  te_data=/content/drive/MyDrive/ColabNotebooks/Github/ssast/src/prep_data/esc50/data/datafiles/esc_eval_data_${fold}.json
+  te_data=../prep_data/esc50/data/datafiles/esc_eval_data_${fold}.json
+
 # [/Hyosun] editied the data_file_path
 
   # [Hyosun] insert the original code from [ssast] run_mask_patch.sh
@@ -124,10 +151,12 @@ do
   --tstride $tstride --fstride $fstride --fshape ${fshape} --tshape ${tshape} \
   --dataset_mean ${dataset_mean} --dataset_std ${dataset_std} --target_length ${target_length} --num_mel_bins ${num_mel_bins} \
   --model_size ${model_size} --mask_patch ${mask_patch} --n-print-steps 100 \
-  --task ${task} --lr_patience ${lr_patience} --epoch_iter 5
-  # [Hyosun] commented out and changed --epoch_iter 4000 into 5
+  --task ${task} --lr_patience ${lr_patience} --epoch_iter 500
+  # [Hyosun] commented out and changed --epoch_iter 4000 into 5 #[Hyosun] into 500 again for easy testing
   #--task ${task} --lr_patience ${lr_patience} --epoch_iter 4000
-  # [/Hyosun] commented out and changed --epoch_iter 4000 into 5
+  #--task ${task} --lr_patience ${lr_patience} --epoch_iter 5
+  #--task ${task} --lr_patience ${lr_patience} --epoch_iter 1
+  # [/Hyosun] commented out and changed --epoch_iter 4000 into 5 #[/Hyosun] into 500 again for easy testing
   # [/Hyosun] insert the original code from [ssast] run_mask_patch.sh
 
   # #[Hyosun] original code for [ast] run_esc.sh commented out by Hyosun

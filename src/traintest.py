@@ -17,6 +17,7 @@ import numpy as np
 import pickle
 from torch.cuda.amp import autocast,GradScaler
 
+#[Hyosun] train function for fine-tuning [/Hyosun]
 def train(audio_model, train_loader, test_loader, args):
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
     print('running on ' + str(device))
@@ -46,12 +47,12 @@ def train(audio_model, train_loader, test_loader, args):
         audio_model = nn.DataParallel(audio_model)
 
     audio_model = audio_model.to(device)
-    # Set up the optimizer
+    # Set up the optimizer #[Hyosun] use here for hyper-parameter optimization!!!
     trainables = [p for p in audio_model.parameters() if p.requires_grad]
     print('Total parameter number is : {:.3f} million'.format(sum(p.numel() for p in audio_model.parameters()) / 1e6))
     print('Total trainable parameter number is : {:.3f} million'.format(sum(p.numel() for p in trainables) / 1e6))
 
-    # diff lr optimizer
+    # diff lr optimizer #[Hyosun] use here for hyper-parameter optimization!!!
     mlp_list = ['mlp_head.0.weight', 'mlp_head.0.bias', 'mlp_head.1.weight', 'mlp_head.1.bias']
     mlp_params = list(filter(lambda kv: kv[0] in mlp_list, audio_model.module.named_parameters()))
     base_params = list(filter(lambda kv: kv[0] not in mlp_list, audio_model.module.named_parameters()))
@@ -66,6 +67,7 @@ def train(audio_model, train_loader, test_loader, args):
     print('Total mlp parameter number is : {:.3f} million'.format(sum(p.numel() for p in mlp_params) / 1e6))
     print('Total base parameter number is : {:.3f} million'.format(sum(p.numel() for p in base_params) / 1e6))
 
+    # #[Hyosun] uncommented, make it alive 2023-09-19
     # # dataset specific settings
     # if args.dataset == 'audioset':
     #     if len(train_loader.dataset) > 2e5:
@@ -77,7 +79,7 @@ def train(audio_model, train_loader, test_loader, args):
     #     main_metrics = 'mAP'
     #     loss_fn = nn.BCEWithLogitsLoss()
     #     warmup = True
-    # elif args.dataset == 'esc50':
+    # elif args.dataset == 'esc50': ##[Hyosun] focus!! here for esc50 [/Hyosun]
     #     print('scheduler for esc-50 is used')
     #     scheduler = torch.optim.lr_scheduler.MultiStepLR(optimizer, list(range(5,26)), gamma=0.85)
     #     main_metrics = 'acc'
@@ -92,6 +94,7 @@ def train(audio_model, train_loader, test_loader, args):
     # else:
     #     raise ValueError('unknown dataset, dataset should be in [audioset, speechcommands, esc50]')
     # print('now training with {:s}, main metrics: {:s}, loss function: {:s}, learning rate scheduler: {:s}'.format(str(args.dataset), str(main_metrics), str(loss_fn), str(scheduler)))
+    # #[/Hyosun] uncommented, make it alive 2023-09-19
 
     if args.adaptschedule == True:
         scheduler = torch.optim.lr_scheduler.ReduceLROnPlateau(optimizer, mode='max', factor=0.5, patience=args.lr_patience, verbose=True)
@@ -114,7 +117,7 @@ def train(audio_model, train_loader, test_loader, args):
     print("start training...")
     result = np.zeros([args.n_epochs, 10])
     audio_model.train()
-    while epoch < args.n_epochs + 1:
+    while epoch < args.n_epochs + 1: #[Hyosun] fine-tuning: train with epoch
         begin_time = time.time()
         end_time = time.time()
         audio_model.train()
@@ -132,14 +135,16 @@ def train(audio_model, train_loader, test_loader, args):
             per_sample_data_time.update((time.time() - end_time) / audio_input.shape[0])
             dnn_start_time = time.time()
 
-            # first several steps for warm-up
+            # first several steps for warm-up #[Hyosun] what is warm_lr?? 2023-09-20 #[/Hyosun]
             if global_step <= 1000 and global_step % 50 == 0 and args.warmup == True:
                 for group_id, param_group in enumerate(optimizer.param_groups):
                     warm_lr = (global_step / 1000) * lr_list[group_id]
                     param_group['lr'] = warm_lr
                     print('warm-up learning rate is {:f}'.format(param_group['lr']))
-
-            audio_output = audio_model(audio_input, args.task)
+            #[Hyosun] added
+            print("[Hyosun:traintest.py-train()]epoch: ", epoch)
+            #[/Hyosun] added
+            audio_output = audio_model(audio_input, args.task) #[Hyosun] call forward(): fusion here? Yes inside forward()
             if isinstance(loss_fn, torch.nn.CrossEntropyLoss):
                 loss = loss_fn(audio_output, torch.argmax(labels.long(), axis=1))
             else:
@@ -183,6 +188,7 @@ def train(audio_model, train_loader, test_loader, args):
 
         print('start validation')
         stats, valid_loss = validate(audio_model, test_loader, args, epoch)
+        #[Hyosun] acc is saved in stats as stats[0] [/Hyosun]
 
         # ensemble results
         cum_stats = validate_ensemble(args, epoch)
@@ -192,7 +198,7 @@ def train(audio_model, train_loader, test_loader, args):
 
         mAP = np.mean([stat['AP'] for stat in stats])
         mAUC = np.mean([stat['auc'] for stat in stats])
-        acc = stats[0]['acc']
+        acc = stats[0]['acc'] #[Hyosun] acc is saved in stats as stats[0] [/Hyosun]
 
         middle_ps = [stat['precisions'][int(len(stat['precisions'])/2)] for stat in stats]
         middle_rs = [stat['recalls'][int(len(stat['recalls'])/2)] for stat in stats]
@@ -329,7 +335,8 @@ def validate(audio_model, val_loader, args, epoch):
         audio_output = torch.cat(A_predictions)
         target = torch.cat(A_targets)
         loss = np.mean(A_loss)
-        stats = calculate_stats(audio_output, target)
+        stats = calculate_stats(audio_output, target) 
+        #[Hyosun] acc is saved in stats as stats[0] [/Hyosun]
 
         # save the prediction here
         exp_dir = args.exp_dir
@@ -338,7 +345,7 @@ def validate(audio_model, val_loader, args, epoch):
             np.savetxt(exp_dir+'/predictions/target.csv', target, delimiter=',')
         np.savetxt(exp_dir+'/predictions/predictions_' + str(epoch) + '.csv', audio_output, delimiter=',')
 
-    return stats, loss
+    return stats, loss 
 
 def validate_ensemble(args, epoch):
     exp_dir = args.exp_dir

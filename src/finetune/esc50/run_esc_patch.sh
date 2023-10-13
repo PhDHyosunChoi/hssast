@@ -36,7 +36,10 @@ else
     wget https://www.dropbox.com/s/ewrzpco95n9jdz6/SSAST-Base-Patch-400.pth?dl=1 -O SSAST-Base-Patch-400.pth
 fi
 
+#[Hyosun] save my own model.pth here, then use it for fine-tuning
 pretrain_exp=
+#/[Hyosun] save my own model.pth here, then use it for fine-tuning
+
 pretrain_model=SSAST-Base-Patch-400
 #[Hyosun] edited
 #pretrain_path=./${pretrain_exp}/${pretrain_model}.pth 
@@ -50,11 +53,12 @@ target_length=512
 noise=True
 
 bal=none
+#[Hyosun] Experiments of lr #[/Hyosun]
 lr=1e-4
 freqm=24
 timem=96
 mixup=0
-epoch=50
+epoch=50 #10 #50 #50 #5  #50 [Hyosun] The original epoch 50: reduced into 5 for experiments
 batch_size=48
 fshape=16
 tshape=16
@@ -63,12 +67,25 @@ tstride=10
 
 task=ft_avgtok
 model_size=base
+#[Hyosun] Experiments of lr #[/Hyosun]
 head_lr=1
+
+#[Hyosun] comp_fusion logic added
+comp_fusion=True
+comp_fusion_method='use_all_patch'
+comp_fusion_multi_layer='[4,11]'
+pooling_ty='mean_max' #[Hyosun] #choices=["mean", "min", "max", "mean_min", "mean_max"] #[/Hyosun]
+#[/Hyosun] comp_fusion logic added
 
 #[Hyosun]
 #base_exp_dir=./exp/test01-${dataset}-f${fstride}-${fshape}-t${tstride}-${tshape}-b${batch_size}-lr${lr}-${task}-${model_size}-${pretrain_exp}-${pretrain_model}-${head_lr}x-noise${noise}
-base_exp_dir=/content/drive/MyDrive/ColabNotebooks/Github/ssast/src/finetune/esc50/exp/test 
+#base_exp_dir=/content/drive/MyDrive/ColabNotebooks/Github/ssast/src/finetune/esc50/exp/test 
 #01-${dataset}-f${fstride}-${fshape}-t${tstride}-${tshape}-b${batch_size}-lr${lr}-${task}-${model_size}-${pretrain_exp}-${pretrain_model}-${head_lr}x-noise${noise} #[Hyosun]curtailed
+#base_exp_dir=/content/drive/MyDrive/ColabNotebooks/Github/hssast/src/finetune/esc50/exp/test #[Hyosun] ssast->hssast
+#base_exp_dir=./exp/test01-${dataset}-f${fstride}-${fshape}-t${tstride}-${tshape}-b${batch_size}-lr${lr}-${task}-${model_size}-${pretrain_exp}-${pretrain_model}-${head_lr}x-noise${noise} #[Hyosun] ssast->hssast
+#base_exp_dir=./exp/"$(date +'%Y-%m-%d/%H:%M:%S%p')"-test01-${dataset}-f${fstride}-${fshape}-t${tstride}-${tshape}-b${batch_size}-lr${lr}-${task}-${model_size}-${pretrain_exp}-${pretrain_model}-${head_lr}x-noise${noise} #[Hyosun] ssast->hssast
+base_exp_dir=./exp/"$(date +'%Y-%m-%d/%H:%M:%S%p')"-test01-${dataset}-comp_fusion-${comp_fusion}-comp_fusion_method-${comp_fusion_method}-comp_fusion_multi_layer-${comp_fusion_multi_layer}-pooling-${pooling_ty}-f${fstride}-${fshape}-t${tstride}-${tshape}-b${batch_size}-lr${lr}-${task}-${model_size}-${pretrain_exp}-${pretrain_model}-${head_lr}x-noise${noise} 
+#                                                            [Hyosun]-comp_fusion-${comp_fusion}-comp_fusion_method-${comp_fusion_method}-pooling-${pooling_ty}-added
 #[/Hyosun]
 
 for((fold=1;fold<=5;fold++));
@@ -90,8 +107,10 @@ do
   --pretrained_mdl_path ${pretrain_path} \
   --dataset_mean ${dataset_mean} --dataset_std ${dataset_std} --target_length ${target_length} \
   --num_mel_bins 128 --head_lr ${head_lr} --noise ${noise} \
-  --lrscheduler_start 6 --lrscheduler_step 1 --lrscheduler_decay 0.85 --wa False --loss CE --metrics acc
+  --lrscheduler_start 6 --lrscheduler_step 1 --lrscheduler_decay 0.85 --wa False --loss CE --metrics acc \
+  --comp_fusion ${comp_fusion} --comp_fusion_method ${comp_fusion_method} --comp_fusion_multi_layer ${comp_fusion_multi_layer} --pooling_ty ${pooling_ty}
 done
+#[Hyosun] "--comp_fusion $comp_fusion --comp_fusion_method $comp_fusion_method  --pooling_ty $pooling_ty" added [/Hyosun]
 
 #[Hyosun] edited
 #python ./get_esc_result.py --exp_path ${base_exp_dir}

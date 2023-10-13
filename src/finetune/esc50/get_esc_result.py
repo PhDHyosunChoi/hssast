@@ -22,10 +22,19 @@ if __name__ == '__main__':
         if fold == 1:
             cum_result = np.zeros([result.shape[0], result.shape[1]])
         cum_result = cum_result + result
+    #[Hyosun_comment] note this is the best epoch based on AVERAGED accuracy across 5 folds, 
+                    # not the best epoch for each fold (which leads to over-optimistic results), 
+                    # this gives more fair result.        
     result = cum_result / 5
     np.savetxt(args.exp_path+'/result.csv', result, delimiter=',')
-    # note this is choose the best epoch based on AVERAGED accuracy across 5 folds, not the best epoch for each fold
-    best_epoch = np.argmax(result[:, 0])
+    
+    #[Hyosun] insert my own logic: the best acc & the best epoch logic #[/Hyosun]
+
+    # note this is choose the best epoch based on AVERAGED accuracy across 5 folds, not the best epoch for each fold 
+    best_epoch = np.argmax(result[:, 0]) #[Hyosun_comment] The best acc's epoch from the averaged acc result file
+    #[Hyosun_comment] note this is the best epoch based on AVERAGED accuracy across 5 folds, 
+                    # not the best epoch for each fold (which leads to over-optimistic results), 
+                    # this gives more fair result.  
     np.savetxt(args.exp_path + '/best_result.csv', result[best_epoch, :], delimiter=',')
 
     acc_fold = []
@@ -33,8 +42,8 @@ if __name__ == '__main__':
     for fold in range(1, 6):
         result = np.loadtxt(args.exp_path+'/fold' + str(fold) + '/result.csv', delimiter=',')
         # note this is the best epoch based on AVERAGED accuracy across 5 folds, not the best epoch for each fold (which leads to over-optimistic results), this gives more fair result.
-        acc_fold.append(result[best_epoch, 0])
+        acc_fold.append(result[best_epoch, 0]) #[Hyosun_comment] The best epoch(based on the averaged acc result file)'s acc : 쳇
         print('Fold {:d} accuracy: {:.4f}'.format(fold, result[best_epoch, 0]))
-    acc_fold.append(np.mean(acc_fold))
+    acc_fold.append(np.mean(acc_fold)) #[Hyosun_comment] and average those acc(not the actual best acc, mean(averaged best epoch's acc))
     print('The averaged accuracy of 5 folds is {:.3f}'.format(acc_fold[-1]))
     np.savetxt(args.exp_path + '/acc_fold.csv', acc_fold, delimiter=',')

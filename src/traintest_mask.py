@@ -99,7 +99,7 @@ def trainmask(audio_model, train_loader, test_loader, args):
                 acc, loss1 = acc.mean(), loss1.mean()
                 loss2 = audio_model(audio_input, 'pretrain_mpg', mask_patch=args.mask_patch, cluster=cluster)
                 loss2 = loss2.mean()
-                loss = loss1 + 10 * loss2
+                loss = loss1 + 10 * loss2 #[Hyosun] lambda : 10
 
             optimizer.zero_grad()
             loss.backward()
@@ -130,12 +130,12 @@ def trainmask(audio_model, train_loader, test_loader, args):
                     return
 
             end_time = time.time()
-            global_step += 1
+            global_step += 1 #[Hyosun] global_step
 
             # pretraining data is usually very large, save model every epoch is too sparse.
             # save the model every args.epoch_iter steps.
             epoch_iteration = args.epoch_iter #[Hyosun] as input @ run_mask_patch.sh
-            if global_step % epoch_iteration == 0:
+            if global_step % epoch_iteration == 0: #[Hyosun] save result every global_step % epoch_iteration == 0
                 print('---------------- step '+ str(global_step) +' evaluation ----------------')
                 equ_epoch = int(global_step/epoch_iteration) + 1
                 acc_eval, nce_eval = validatemask(audio_model, test_loader, args, equ_epoch)

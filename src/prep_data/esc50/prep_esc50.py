@@ -10,7 +10,7 @@ import json
 import os
 import zipfile
 import wget
-import sox #[Hyosun] added
+#import sox #[Hyosun] added
 
 # label = np.loadtxt('/data/sls/scratch/yuangong/aed-pc/src/utilities/esc50_label.csv', delimiter=',', dtype='str')
 # f = open("/data/sls/scratch/yuangong/aed-pc/src/utilities/esc_class_labels_indices.csv", "w")
@@ -41,7 +41,7 @@ def get_immediate_files(a_dir):
 if os.path.exists('./data/ESC-50-master') == False:
     os.mkdir('./data/') # [Hyosun] added
     esc50_url = 'https://github.com/karoldvl/ESC-50/archive/master.zip'
-    wget.download(esc50_url, out='/content/drive/MyDrive/ColabNotebooks/Github/ssast/src/prep_data/esc50/data/') #'./data/')#[Hyosun] edited
+    wget.download(esc50_url, out='./data/') #'./data/')#[Hyosun] edited
     with zipfile.ZipFile('./data/ESC-50-master.zip', 'r') as zip_ref:
         zip_ref.extractall('./data/')
     os.remove('./data/ESC-50-master.zip')
@@ -79,7 +79,8 @@ for fold in [1,2,3,4,5]:
         cur_fold = int(meta[i][1])
         # /m/07rwj is just a dummy prefix
         cur_dict = {"wav": base_path + cur_path, "labels": '/m/07rwj'+cur_label.zfill(2)}
-        if cur_fold == fold:
+        if cur_fold == fold:#[Hyosun] 파일상의 fold넘버 정해진거 보고 그거랑 요기 for-loop의 fold랑 
+        #같을때만 eval에 넣고 나머지는 다 train으로 넣어서 돌리는거 그게 cross-validation의 방법이지^^[/Hyosun]
             eval_wav_list.append(cur_dict)
         else:
             train_wav_list.append(cur_dict)

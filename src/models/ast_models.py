@@ -20,6 +20,11 @@ from random import randrange
 from matplotlib import pyplot as plt
 import random
 
+#[Hyosun]Including core operations from the paper
+from comp_fusion.evar.model_utils import (mean_max_pooling, mean_pooling, max_pooling, 
+    MLP, initialize_layers, set_layers_trainable, show_layers_trainable)
+#[/Hyosun]Including core operations from the paper
+
 # override the timm package to relax the input shape constraint.
 class PatchEmbed(nn.Module):
     """ Image to Patch Embedding
@@ -52,10 +57,28 @@ def get_sinusoid_encoding(n_position, d_hid):
     return torch.FloatTensor(sinusoid_table).unsqueeze(0)
 
 class ASTModel(nn.Module):
-    def __init__(self, label_dim=527,
+    def __init__(self, 
+                 comp_fusion,               #[Hyosun] comp_fusion added
+                 comp_fusion_method,        #[Hyosun] comp_fusion_method added
+                 comp_fusion_multi_layer,   #[Hyosun] comp_fusion_multi_layer added
+                 pooling_ty,                #[Hyosun] pooling_ty added #[Hyosun] representation shell만 만들어 
+                 label_dim=527,
                  fshape=128, tshape=2, fstride=128, tstride=2,
                  input_fdim=128, input_tdim=1024, model_size='base',
-                 pretrain_stage=True, load_pretrained_mdl_path=None):
+                 pretrain_stage=True, load_pretrained_mdl_path=None
+    ):
+                #  comp_fusion,                         #[Hyosun] comp_fusion added
+                #  comp_fusion_method,                  #[Hyosun] comp_fusion_method added
+                #  comp_fusion_multi_layer,             #[Hyosun] comp_fusion_multi_layer added
+                #  pooling_ty):                         #[Hyosun] pooling_ty added
+                #  comp_fusion=True,                       #[Hyosun] comp_fusion added
+                #  comp_fusion_method='use_all_patch',     #[Hyosun] comp_fusion_method added
+                #  comp_fusion_multi_layer='[4,11]',       #[Hyosun] comp_fusion_multi_layer added
+                #  pooling_ty="mean_max"):                 #[Hyosun] pooling_ty added
+                #  comp_fusion=p_comp_fusion,                         #[Hyosun] comp_fusion added
+                #  comp_fusion_method=p_comp_fusion_method,           #[Hyosun] comp_fusion_method added
+                #  comp_fusion_multi_layer=p_comp_fusion_multi_layer, #[Hyosun] comp_fusion_multi_layer added
+                #  pooling_ty=p_pooling_ty):                          #[Hyosun] pooling_ty added
 
         super(ASTModel, self).__init__()
         assert timm.__version__ == '0.4.5', 'Please use timm == 0.4.5, the code might not be compatible with newer versions.'
@@ -64,8 +87,8 @@ class ASTModel(nn.Module):
         timm.models.vision_transformer.PatchEmbed = PatchEmbed
 
         # pretrain the AST models
-        if pretrain_stage == True: #[Hyosun] pretrain 
-            if load_pretrained_mdl_path != None:
+        if pretrain_stage == True: #[Hyosun] pretrain =====================================================================================
+            if load_pretrained_mdl_path != None: #[Hyosun comment] In case we don't use the pretrained model
                 raise ValueError('Setting load_pretrained_mdl_path at pretraining stage is useless, pretraining is always from scratch, please change it to None.')
             if fstride != fshape or tstride != tshape:
                 raise ValueError('fstride != fshape or tstride != tshape, they must be same at the pretraining stage, patch split overlapping is not supported.')
@@ -80,7 +103,12 @@ class ASTModel(nn.Module):
                 self.heads, self.depth = 6, 12
                 self.cls_token_num = 2
             elif model_size == 'base': #[Hyosun] pretrain 직접하는 부분
-                self.v = timm.create_model('vit_deit_base_distilled_patch16_384', pretrained=False)
+                #[Hyosun][2023-10-09] scrapped out the 2023-07-27experiment#1
+                #[Hyosun][2023-07-27experiment#1]pretrained=True로 
+                self.v = timm.create_model('vit_deit_base_distilled_patch16_384', pretrained=False) #[the original line]
+                # self.v = timm.create_model('vit_deit_base_distilled_patch16_384', pretrained=True) #[Hyosun's line]
+                #[/Hyosun][2023-07-27experiment#1]pretrained=True로 
+                #[/Hyosun][2023-10-09] scrapped out the 2023-07-27experiment#1
                 self.heads, self.depth = 12, 12
                 self.cls_token_num = 2
             elif model_size == 'base_nokd':
@@ -93,6 +121,21 @@ class ASTModel(nn.Module):
             self.original_num_patches = self.v.patch_embed.num_patches
             self.oringal_hw = int(self.original_num_patches ** 0.5)
             self.original_embedding_dim = self.v.pos_embed.shape[2]
+
+            # #[Hyosun] Composing Multi-Layer Function inserted
+            # self.comp_fusion = comp_fusion #[Hyosun] added
+            # print("[Hyosun] Fine-Tuning code: self.comp_fusion: ", self.comp_fusion)
+            # self.comp_fusion_method = comp_fusion_method #[Hyosun] added
+            #   #[Hyosun] if comp_fusion==False: added
+            # if comp_fusion==False:
+            #     self.comp_fusion_multi_layer = []
+            # else:#[Hyosun_coment] comp_fusion==True:
+            #     self.comp_fusion_multi_layer = [4,11] #[5,12] #[Hyosun_2023-09-20][5,12] #[4,11] #np.array(comp_fusion_multi_layer) 
+            #   #[/Hyosun] if comp_fusion==False: added
+            # #self.temporal_pooling_type = 'mean' #[Hyosun_2023-10-09] commented out: a variable from comp paper, but not used here 
+            # self.pooling_ty = pooling_ty #[Hyosun] added 2023-09-08
+            # #self.fusion_embedding_dim
+            # #/[Hyosun] Composing Multi-Layer Function inserted
 
             # SSL Pretraining Code
             self.softmax = nn.Softmax(dim=-1)
@@ -108,8 +151,14 @@ class ASTModel(nn.Module):
             # we map the output of transformer (768-dim for base models) to 256-dim patch input space, and then dot product with flattened patch input (also 256-dim) to calculate loss.
             # alternatively, you can map the output of transformer to 768-dim patch embedding space, and dot product with patch embedding. Performance-wise they are similar, but map to 256 space is more efficient.
             self.cpredlayer = nn.Sequential(nn.Linear(self.original_embedding_dim, self.original_embedding_dim), nn.ReLU(), nn.Linear(self.original_embedding_dim, 256))
+            
             # masked patch reconstruction (generative objective) layer
-            self.gpredlayer = nn.Sequential(nn.Linear(self.original_embedding_dim, self.original_embedding_dim), nn.ReLU(), nn.Linear(self.original_embedding_dim, 256))
+            # [Hyosun] Back to the original code: scrapped out the experiment which commented the original line and add the modified line 2023-10-09
+            # [Hyosun] Experiment_SSL_part : commented the original line and add the modified line
+            self.gpredlayer = nn.Sequential(nn.Linear(self.original_embedding_dim, self.original_embedding_dim), nn.ReLU(), nn.Linear(self.original_embedding_dim, 256)) #[The original line]
+            # self.gpredlayer = nn.Sequential(nn.Linear(self.original_embedding_dim, self.original_embedding_dim), nn.Linear(self.original_embedding_dim, self.original_embedding_dim), nn.ReLU(), nn.Linear(self.original_embedding_dim, 256)) #[Hyosun's line]
+            # [/Hyosun] Experiment_SSL_part : commented the original line and add the modified line
+            # [/Hyosun] Back to the original code: scrapped out the experiment which commented the original line and add the modified line 2023-10-09
             self.unfold = torch.nn.Unfold(kernel_size=(fshape, tshape), stride=(fstride, tstride))
 
             # we use learnable mask embedding (follow the BEIT paper), but using a fixed mask embedding (e.g., 0) leads to same performance.
@@ -135,10 +184,10 @@ class ASTModel(nn.Module):
             self.v.pos_embed = new_pos_embed
             trunc_normal_(self.v.pos_embed, std=.02)
 
-            #[Hyosun] Here: Right Before Going Through Transformer Encoder 
+            #[Hyosun] Here: Right Before Going Through Transformer Encoder =>[Hyosun_2023-08-05] this sentence seems wrong.
 
         # use a pretrained models for finetuning
-        elif pretrain_stage == False: #[Hyosun] Finetuning
+        elif pretrain_stage == False: #[Hyosun] Finetuning ================================================================================
             device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
             if load_pretrained_mdl_path == None:
                 raise ValueError('Please set load_pretrained_mdl_path to load a pretrained models.')
@@ -155,19 +204,63 @@ class ASTModel(nn.Module):
             # here, input_fdim and input_tdim should be that used in pretraining, not that in the fine-tuning.
             # we need to know input_fdim and input_tdim to do positional embedding cut/interpolation.
             # generally it should be better to use same input_fdim during pretraining and finetuning, but input_tdim can be safely different
-            audio_model = ASTModel(fstride=p_fshape, tstride=p_tshape, fshape=p_fshape, tshape=p_tshape,
-                                   input_fdim=p_input_fdim, input_tdim=p_input_tdim, pretrain_stage=True, model_size=model_size) #[Hyosun] representation shell만 만들어
+            audio_model = ASTModel(
+                                   comp_fusion,               #[Hyosun] comp_fusion added
+                                   comp_fusion_method,        #[Hyosun] comp_fusion_method added
+                                   comp_fusion_multi_layer,   #[Hyosun] comp_fusion_multi_layer added
+                                   pooling_ty,                #[Hyosun] pooling_ty added #[Hyosun] representation shell만 만들어
+                                   fstride=p_fshape, tstride=p_tshape, fshape=p_fshape, tshape=p_tshape,
+                                   input_fdim=p_input_fdim, input_tdim=p_input_tdim, pretrain_stage=True, model_size=model_size
+                                  )
+                                  #  comp_fusion,               #[Hyosun] comp_fusion added
+                                  #  comp_fusion_method, #[Hyosun] comp_fusion_method added
+                                  #  comp_fusion_multi_layer,  #[Hyosun] comp_fusion_multi_layer added
+                                  #  pooling_ty)                 #[Hyosun] pooling_ty added #[Hyosun] representation shell만 만들어
+                                  #  comp_fusion=p_comp_fusion,               #[Hyosun] comp_fusion added
+                                  #  comp_fusion_method=p_comp_fusion_method, #[Hyosun] comp_fusion_method added
+                                  #  comp_fusion_multi_layer=p_comp_fusion_multi_layer,  #[Hyosun] comp_fusion_multi_layer added
+                                  #  pooling_ty=p_pooling_ty)                 #[Hyosun] pooling_ty added #[Hyosun] representation shell만 만들어
+
             audio_model = torch.nn.DataParallel(audio_model) #[Hyosun] representation shell만 만들어
-            audio_model.load_state_dict(sd, strict=False)    #[Hyosun] contents를 이제 넣어
+            audio_model.load_state_dict(sd, strict=False)    #[Hyosun] [important]assign pretrained weights contents(를 이제 넣어) into our model shell
 
             self.v = audio_model.module.v
             self.original_embedding_dim = self.v.pos_embed.shape[2]
             self.cls_token_num = audio_model.module.cls_token_num
+ 
+            #[Hyosun] Composing Multi-Layer Function inserted
+            self.comp_fusion = comp_fusion #[Hyosun] added
+            print("[Hyosun][elif pretrain_stage == False:] Fine-Tuning code: self.comp_fusion: ", self.comp_fusion)
+            print("[Hyosun][elif pretrain_stage == False:] Fine-Tuning code: comp_fusion: ", comp_fusion)
+            self.comp_fusion_method = comp_fusion_method #[Hyosun] added
+              #[Hyosun] if comp_fusion==False: added
+            if self.comp_fusion=='False':
+                self.comp_fusion_multi_layer = []
+            else:#[Hyosun_coment] comp_fusion==True:
+                self.comp_fusion_multi_layer = [4,11] #[5,12] #[Hyosun_2023-09-20][5,12] #[4,11] #np.array(comp_fusion_multi_layer) 
+              #[/Hyosun] if comp_fusion==False: added
+            #self.temporal_pooling_type = 'mean' #[Hyosun_2023-10-09] commented out: a variable from comp paper, but not used here 
+            self.pooling_ty = pooling_ty #[Hyosun] added 2023-09-08
+            #self.fusion_embedding_dim
+            print("[Hyosun:astmodels_init()]self.comp_fusion: ", self.comp_fusion)
+            print("[Hyosun:astmodels_init()]self.comp_fusion_method: ", self.comp_fusion_method)
+            print("[Hyosun:astmodels_init()]self.comp_fusion_multi_layer: ", self.comp_fusion_multi_layer)
+            print("[Hyosun:astmodels_init()]self.pooling_ty: ", self.pooling_ty)
+            #/[Hyosun] Composing Multi-Layer Function inserted
 
-            # mlp head for fine-tuning
-            self.mlp_head = nn.Sequential(nn.LayerNorm(self.original_embedding_dim),
-                                          nn.Linear(self.original_embedding_dim, label_dim))
-
+            # mlp head for fine-tuning [Hyosun] mlp only exists for fine-tuning, i.e. evaluation #########
+            print("[Hyosun:ASTModel init function] self.original_embedding_dim: ", self.original_embedding_dim) #[Hyosun] added
+            #[Hyosun] if-else case added for both non-comp_fusion and comp_fusion cases 2023-10-09
+            #[Hyosun] modified for Composing Multi-Layer Fusion 2023-08-16
+            if self.comp_fusion=='False': #[Hyosun_comment] the original code: comp_fusion==False case
+                self.mlp_head = nn.Sequential(nn.LayerNorm(self.original_embedding_dim),
+                                              nn.Linear(self.original_embedding_dim, label_dim)) #[Hyosun_comment] the original code
+            else: #[Hyosun_comment] comp_fusion==True case
+                self.mlp_head = nn.Sequential(nn.LayerNorm(self.original_embedding_dim*2), #[Hyosun] modified here: input shape for fusion concat 2023-08-14
+                                              nn.Linear(self.original_embedding_dim*2, label_dim))  
+            #[/Hyosun] modified for Composing Multi-Layer Fusion 2023-08-16                  
+            #[/Hyosun] if-else case added for both non-comp_fusion and comp_fusion cases 2023-10-09                   
+            ########################## [/Hyosun] mlp only exists for fine-tuning, i.e. evaluation ########
             f_dim, t_dim = self.get_shape(fstride, tstride, input_fdim, input_tdim, fshape, tshape)
             # patch array dimension during pretraining
             p_f_dim, p_t_dim = audio_model.module.p_f_dim, audio_model.module.p_t_dim
@@ -204,7 +297,27 @@ class ASTModel(nn.Module):
 
             new_pos_embed = new_pos_embed.reshape(1, self.original_embedding_dim, num_patches).transpose(1, 2)
             self.v.pos_embed = nn.Parameter(torch.cat([self.v.pos_embed[:, :self.cls_token_num, :].detach(), new_pos_embed], dim=1))
+    # #[Hyosun] Composing Multi-Layer #[Hyosun] 현재 요거 사용안하는중 2023-09-08
+    # def composing_multi_layer(self, layer=[5,12]):
+    #     print("[Hyosun] function Composing Multi-Layer start")
+    #     print("[Hyosun] function Composing Multi-Layer end")
+    #     return 0
+    # #[/Hyosun] Composing Multi-Layer
 
+    #[Hyosun] [현재 요거(from comp_paper)사용안하고 본 코드에 그냥 넣는방식 사용중]
+    # This summarizes the time axis as combined statistics of mean and max operation
+    def temporal_pooling(self, frame_embeddings):
+        if self.temporal_pooling_type == 'mean':
+            return mean_pooling(frame_embeddings)
+        elif self.temporal_pooling_type == 'max':
+            return max_pooling(frame_embeddings)
+        # [Hyosun] z~ = mean(z) + max(z) :from the paper, dim=-1 means time axis(the last element == Time here)
+        elif self.temporal_pooling_type == 'mean_max':
+            return mean_max_pooling(frame_embeddings)
+        # [/Hyosun] z~ = mean(z) + max(z) :from the paper, dim=-1 means time axis(the last element == Time here)
+        assert False, f'Unknown frame pooling type: {self.temporal_pooling_type}'
+    #[/Hyosun] This summarizes the time axis as combined statistics of mean and max operation
+    
     # get the shape of intermediate representation.
     def get_shape(self, fstride, tstride, input_fdim, input_tdim, fshape, tshape):
         test_input = torch.randn(1, 1, input_fdim, input_tdim)
@@ -243,7 +356,7 @@ class ASTModel(nn.Module):
         mask_id = random.sample(range(0, sequence_len), mask_size)
         return torch.tensor(mask_id)
 
-    def finetuningavgtok(self, x):
+    def finetuningavgtok(self, x):#[Hyosun:fine-tuning] fusion here seems to be right.(Yes!!)
         B = x.shape[0]
         x = self.v.patch_embed(x)
         if self.cls_token_num == 2:
@@ -256,14 +369,193 @@ class ASTModel(nn.Module):
         x = x + self.v.pos_embed
         x = self.v.pos_drop(x)
 
-        for blk_id, blk in enumerate(self.v.blocks):
-            x = blk(x)
-        x = self.v.norm(x)
+        #[Hyosun] check the dim
+        print("[Hyosun:finetuningavgtok]: self.original_embedding_dim", self.original_embedding_dim) #768
+        print("[Hyosun:finetuningavgtok]: self.original_embedding_dim*2", self.original_embedding_dim*2) #1536
+        #[/Hyosun] check the dim
 
-        # average output of all tokens except cls token(s)
-        x = torch.mean(x[:, self.cls_token_num:, :], dim=1)
-        x = self.mlp_head(x)
-        return x
+        multi_feat_embeds= [] #[Hyosun] added for comp_fusion
+        for blk_id, blk in enumerate(self.v.blocks):#[Hyosun] apply fusion here!!
+            x = blk(x)
+        #[Hyosun] apply fusion here!!#####################
+        #[Hyosun] added
+            # comp_fusion = True 
+            # comp_fusion_method_arr = ['use_all_patch', 'cls_token']
+            if self.comp_fusion == 'True':
+                print("[Hyosun:finetuningavgtok] self.comp_fusion=='True'!!")
+                print("[Hyosun:finetuningavgtok] x.shape: ", x.shape)
+                if blk_id in self.comp_fusion_multi_layer: #self.composing_multi_layer:
+                    xdash = self.v.norm(x)
+                    print("[Hyosun:finetuningavgtok before hstack] xdash.shape: ", xdash.shape)
+                    # comp_fusion_method = 'use_all_patch'
+                    if self.comp_fusion_method == 'use_all_patch': #[Hyosun:comment] only interested in this way for now
+                        #[Hyosun] idea: apply fusion into each patch instead of cls_token like here                            
+                        #[Hyosun's idea1] In this work, we apply mean pooling over all patch representation {O} as the audio clip level representation.
+                        multi_feat_embeds.append(xdash)
+                        #[Hyosun][experiment idea_2023-10-10] pooling apply here & append [/Hyosun]                    
+                        #[/Hyosun's idea1]
+                        #[/Hyosun] idea: apply fusion into each patch instead of cls_token like here
+                    elif  self.comp_fusion_method == 'cls_token':  #[Hyosun:comment] not yet planned to experiments further(later potential experiments)_use the original function below                     
+                        #[Hyosun's idea2] use CLS_TOKEN as AST   #[Hyosun:comment2023-10-09] needs to be implemented furtuer in this case                 
+                        #xdash = (xdash[:,0] + xdash[:,1]) / 2
+                        # cls_token, dist_token엔 무엇이 들어있지? 어디서 초기 assign하지?
+                        xdash = (xdash[:,0] + xdash[:,1]) / 2 #[Hyosun] xdash[:,0]:cls_token, xdash_token[:,1]:dist_token인거 같음
+                        print("[Hyosun:finetuningavgtok, after avg] xdash.shape: ", xdash.shape)
+                        multi_feat_embeds.append(xdash)
+                        #[/Hyosun's idea2] use CLS_TOKEN as AST
+        if self.comp_fusion == 'True': 
+            #[Hyosun] mean + max pooling
+            if self.pooling_ty == 'mean_max':          
+                #print("[Hyosun:mpc] multi_feat_embeds: \n", multi_feat_embeds)
+                #print("[Hyosun:mpc] torch.hstack(multi_feat): \n", torch.hstack(multi_feat))
+                xdash = torch.hstack(multi_feat_embeds)
+                #print("[Hyosun:finetuningavgtok] torch.hstack(multi_feat_embeds).shape: \n", torch.hstack(multi_feat_embeds).shape)
+                print("[Hyosun:finetuningavgtok:mean_max] xdash.shape: \n", xdash.shape)
+                #print("[Hyosun:finetuningavgtok] xdash: \n", xdash)
+
+                xdash = self.v.norm(xdash) #[Hyosun_comment] Idea!!: change the position of norm function=> the result might be different :)
+                                           #[Hyosun_comment 2023-10-10] the position is different from comp_paper: might need to move the position before hstack
+                
+                #[Hyosun] meanpooling added
+                # average output of all tokens except cls token(s) [Hyosun] 여기 hstack후의 옆으로 붙은것도(M,L layers) cls떼야
+                print("[Hyosun:finetuningavgtok:mean_max] xdash.shape[1]/2: ", xdash.shape[1]/2)
+                xdash_mi = int(xdash.shape[1]/2)
+                xdash_mean1 = torch.mean(xdash[:, self.cls_token_num:xdash_mi, :], dim=1) # [Hyosun] 여기 hstack후의 옆으로 붙은것도(M,L layers) cls떼야
+                xdash_mean2 = torch.mean(xdash[:, (xdash_mi+self.cls_token_num):, :], dim=1)
+                xdash_mean  = (xdash_mean1 + xdash_mean2)/2 #[Hyosun] seems to be no need.
+                xdash_mean_fusion = torch.hstack((xdash_mean1, xdash_mean2)) #[Hyosun] 요대로 linear_eval하면 맞을듯
+                #xdash_mean  = torch.hstack((xdash_mean1,xdash_mean2))
+                print("[Hyosun:finetuningavgtok:mean_max] xdash_mean1.shape: ",xdash_mean1.shape)
+                print("[Hyosun:finetuningavgtok:mean_max] xdash_mean2.shape: ",xdash_mean2.shape)
+                print("[Hyosun:finetuningavgtok:mean_max] xdash_mean.shape: ",xdash_mean.shape)
+                print("[Hyosun:finetuningavgtok:mean_max] xdash_mean_fusion.shape: ",xdash_mean_fusion.shape)
+                #xdash = self.mlp_head(xdash)
+
+                #[Hyosun] maxpooling added
+                (xdash_max1, _) = torch.max(xdash[:, self.cls_token_num:xdash_mi, :], dim=1) # [Hyosun] 여기 hstack후의 옆으로 붙은것도(M,L layers) cls떼야
+                (xdash_max2, _) = torch.max(xdash[:, (xdash_mi+self.cls_token_num):, :], dim=1)
+                xdash_max  = (xdash_max1 + xdash_max2)/2 #[Hyosun] seems to be no need.
+                xdash_max_fusion = torch.hstack((xdash_max1, xdash_max2)) #[Hyosun] 요대로 linear_eval하면 맞을듯
+                #[/Hyosun] maxpooling added
+
+                #[Hyosun] mean + max pooling
+                xdash_mean_max_fusion = xdash_mean_fusion + xdash_max_fusion
+                #[/Hyosun]mean + max pooling
+
+                #[Hyosun] go through mlp_head
+                xdash_mean_max_fusion = self.mlp_head(xdash_mean_max_fusion)
+                print("[Hyosun:finetuningavgtok:mean_max] xdash_mean_max_fusion.shape after go through self.mlp_head(): ",xdash_mean_max_fusion.shape)
+                #print("[Hyosun:finetuningavgtok after mlp_head] xdash_mean.shape: ",xdash_mean.shape)
+                return xdash_mean_max_fusion #[Hyosun] to be uncommented later
+            #[Hyosun] mean pooling  [2023-10-11] added  
+            elif self.pooling_ty == 'mean':
+                xdash = torch.hstack(multi_feat_embeds)
+                #print("[Hyosun:finetuningavgtok] torch.hstack(multi_feat_embeds).shape: \n", torch.hstack(multi_feat_embeds).shape)
+                print("[Hyosun:finetuningavgtok:mean] xdash.shape: \n", xdash.shape)
+                #print("[Hyosun:finetuningavgtok] xdash: \n", xdash)
+
+                xdash = self.v.norm(xdash) #[Hyosun_comment] Idea!!: change the position of norm function=> the result might be different :)
+                                           #[Hyosun_comment 2023-10-10] the position is different from comp_paper: might need to move the position before hstack
+                
+                #[Hyosun] meanpooling added
+                # average output of all tokens except cls token(s) [Hyosun] 여기 hstack후의 옆으로 붙은것도(M,L layers) cls떼야
+                print("[Hyosun:finetuningavgtok:mean] xdash.shape[1]/2: ", xdash.shape[1]/2)
+                xdash_mi = int(xdash.shape[1]/2)
+                xdash_mean1 = torch.mean(xdash[:, self.cls_token_num:xdash_mi, :], dim=1) # [Hyosun] 여기 hstack후의 옆으로 붙은것도(M,L layers) cls떼야
+                xdash_mean2 = torch.mean(xdash[:, (xdash_mi+self.cls_token_num):, :], dim=1)
+                xdash_mean  = (xdash_mean1 + xdash_mean2)/2 #[Hyosun] seems to be no need.
+                xdash_mean_fusion = torch.hstack((xdash_mean1, xdash_mean2)) #[Hyosun] 요대로 linear_eval하면 맞을듯
+                #xdash_mean  = torch.hstack((xdash_mean1,xdash_mean2))
+                print("[Hyosun:finetuningavgtok:mean] xdash_mean1.shape: ",xdash_mean1.shape)
+                print("[Hyosun:finetuningavgtok:mean] xdash_mean2.shape: ",xdash_mean2.shape)
+                print("[Hyosun:finetuningavgtok:mean] xdash_mean.shape: ",xdash_mean.shape)
+                print("[Hyosun:finetuningavgtok:mean] xdash_mean_fusion.shape: ",xdash_mean_fusion.shape)
+                #xdash = self.mlp_head(xdash)
+
+                #[Hyosun] go through mlp_head
+                xdash_mean_fusion = self.mlp_head(xdash_mean_fusion)
+                print("[Hyosun:finetuningavgtok:mean] xdash_mean_fusion.shape after go through self.mlp_head(): ",xdash_mean_fusion.shape)
+                #print("[Hyosun:finetuningavgtok after mlp_head] xdash_mean.shape: ",xdash_mean.shape)
+                return xdash_mean_fusion
+            #[Hyosun] max pooling
+            elif self.pooling_ty == 'max':
+                #print("[Hyosun:mpc] multi_feat_embeds: \n", multi_feat_embeds)
+                #print("[Hyosun:mpc] torch.hstack(multi_feat): \n", torch.hstack(multi_feat))
+                xdash = torch.hstack(multi_feat_embeds)
+                #print("[Hyosun:finetuningavgtok] torch.hstack(multi_feat_embeds).shape: \n", torch.hstack(multi_feat_embeds).shape)
+                print("[Hyosun:finetuningavgtok:max] xdash.shape: \n", xdash.shape)
+                #print("[Hyosun:finetuningavgtok] xdash: \n", xdash)
+
+                xdash = self.v.norm(xdash)
+                
+                # average output of all tokens except cls token(s) [Hyosun] 여기 hstack후의 옆으로 붙은것도(M,L layers) cls떼야
+                print("[Hyosun:finetuningavgtok:max] xdash.shape[1]/2: ", xdash.shape[1]/2)
+                xdash_mi = int(xdash.shape[1]/2)
+
+                #[Hyosun] maxpooling added
+                (xdash_max1, _) = torch.max(xdash[:, self.cls_token_num:xdash_mi, :], dim=1) # [Hyosun] 여기 hstack후의 옆으로 붙은것도(M,L layers) cls떼야
+                (xdash_max2, _) = torch.max(xdash[:, (xdash_mi+self.cls_token_num):, :], dim=1)
+                xdash_max  = (xdash_max1 + xdash_max2)/2 #[Hyosun] seems to be no need.
+                xdash_max_fusion = torch.hstack((xdash_max1, xdash_max2)) #[Hyosun] 요대로 linear_eval하면 맞을듯
+                print("[Hyosun:finetuningavgtok:max] xdash_max_fusion.shape: ",xdash_max_fusion.shape)
+                #[/Hyosun] maxpooling added
+
+                #[Hyosun] go through mlp_head
+                xdash_max_fusion = self.mlp_head(xdash_max_fusion)
+                print("[Hyosun:finetuningavgtok:max] xdash_max_fusion.shape after go through self.mlp_head(): ",xdash_max_fusion.shape)
+                #print("[Hyosun:finetuningavgtok after mlp_head] xdash_mean.shape: ",xdash_mean.shape)
+                return xdash_max_fusion #[Hyosun] to be uncommented later
+            #[Hyosun] max + max pooling
+            elif self.pooling_ty == 'max_max':
+                #print("[Hyosun:mpc] multi_feat_embeds: \n", multi_feat_embeds)
+                #print("[Hyosun:mpc] torch.hstack(multi_feat): \n", torch.hstack(multi_feat))
+                xdash = torch.hstack(multi_feat_embeds)
+                #print("[Hyosun:finetuningavgtok] torch.hstack(multi_feat_embeds).shape: \n", torch.hstack(multi_feat_embeds).shape)
+                print("[Hyosun:finetuningavgtok:max_max] xdash.shape: \n", xdash.shape)
+                #print("[Hyosun:finetuningavgtok] xdash: \n", xdash)
+
+                xdash = self.v.norm(xdash) #[Hyosun] the position is different from comp_paper: might need to move the position before hstack
+                
+                # average output of all tokens except cls token(s) [Hyosun] 여기 hstack후의 옆으로 붙은것도(M,L layers) cls떼야
+                print("[Hyosun:finetuningavgtok:max_max] xdash.shape[1]/2: ", xdash.shape[1]/2)
+                xdash_mi = int(xdash.shape[1]/2)
+
+                #[Hyosun] maxpooling added
+                (xdash_max1, _) = torch.max(xdash[:, self.cls_token_num:xdash_mi, :], dim=1) # [Hyosun] 여기 hstack후의 옆으로 붙은것도(M,L layers) cls떼야
+                (xdash_max2, _) = torch.max(xdash[:, (xdash_mi+self.cls_token_num):, :], dim=1)
+                xdash_max  = (xdash_max1 + xdash_max2)/2 #[Hyosun] seems to be no need.
+                xdash_max_fusion = torch.hstack((xdash_max1, xdash_max2)) #[Hyosun] 요대로 linear_eval하면 맞을듯
+                print("[Hyosun:finetuningavgtok:max_max] xdash_max_fusion.shape: ",xdash_max_fusion.shape)
+                #[/Hyosun] maxpooling added
+
+                #[Hyosun] max + max pooling
+                xdash_max_max_fusion = xdash_max_fusion + xdash_max_fusion
+                #[/Hyosun]max + max pooling
+
+                #[Hyosun] go through mlp_head
+                xdash_max_max_fusion = self.mlp_head(xdash_max_max_fusion)
+                print("[Hyosun:finetuningavgtok:max_max] xdash_max_max_fusion.shape after go through self.mlp_head(): ",xdash_max_max_fusion.shape)
+                #print("[Hyosun:finetuningavgtok after mlp_head] xdash_mean.shape: ",xdash_mean.shape)
+                return xdash_max_max_fusion #[Hyosun] to be uncommented later
+
+                # xdash_mean_fusion = self.mlp_head(xdash_mean_fusion)
+                # print("[Hyosun:finetuningavgtok] xdash_mean_fusion.shape after go through self.mlp_head(): ",xdash_mean_fusion.shape)
+                # #print("[Hyosun:finetuningavgtok after mlp_head] xdash_mean.shape: ",xdash_mean.shape)
+                # return xdash_mean_fusion #[Hyosun] to be uncommented later
+                #[/Hyosun] go through mlp_head
+
+                #[/Hyosun] added
+                #[/Hyosun] apply fusion here!!####################
+
+        else: #[Hyosun] when self.comp_fusion == False [/Hyosun]
+            #[original code][Hyosun] commented out then restored back 
+            x = self.v.norm(x)
+
+            # average output of all tokens except cls token(s)
+            x = torch.mean(x[:, self.cls_token_num:, :], dim=1)
+            x = self.mlp_head(x)
+            return x
+            #[/original code][/Hyosun] commented out then restored back
 
     def finetuningcls(self, x):
         B = x.shape[0]
@@ -325,15 +617,55 @@ class ASTModel(nn.Module):
         # mask the patch
         x = x * mask_dense + (1-mask_dense) * mask_tokens
 
-        # pass through the Transformer layers
+        # pass through the Transformer layers [Hyosun] Transformer
         cls_tokens = self.v.cls_token.expand(B, -1, -1)  # stole cls_tokens impl from Phil Wang, thanks
         dist_token = self.v.dist_token.expand(B, -1, -1)
-        x = torch.cat((cls_tokens, dist_token, x), dim=1)
-        x = x + self.v.pos_embed
+        x = torch.cat((cls_tokens, dist_token, x), dim=1) #[Hyosun] vertically 우측옆으로 붙어
+        x = x + self.v.pos_embed #[Hyosun] vertically 위로 얹어 붙여
         x = self.v.pos_drop(x)
-        for blk in self.v.blocks:
+        #[Hyosun] edited
+        #for blk in self.v.blocks:
+        #for vbi, blk in self.v.blocks:
+        multi_feat_embeds = [] #[Hyosun] added for comp_fusion
+        for blk_id, blk in enumerate(self.v.blocks):
+            #print("[hyosun:mpc] v.blk_id: ", blk_id)
+            #print("[hyosun:mpc] v.blk: \n", blk)
+        #[/Hyosun] edited   
             x = blk(x)
-        x = self.v.norm(x)
+        #[Hyosun] added
+            comp_fusion = True
+            comp_fusion_method_arr = ['use_all_patch', 'cls_token']
+            if comp_fusion == True:
+                print("[Hyosun:mpc] x.shape: ", x.shape)
+                if blk_id in self.composing_multi_layer:
+                    xdash = self.v.norm(x)
+                    print("[Hyosun:mpc before hstack] xdash.shape: ", xdash.shape)
+                    comp_fusion_method = 'use_all_patch'
+                    if comp_fusion_method == 'use_all_patch':
+                        #[Hyosun] idea: apply fusion into each patch instead of cls_token like here                            
+                        #[Hyosun's idea1] In this work, we apply mean pooling over all patch representation {O} as the audio clip level representation.
+                        multi_feat_embeds.append(xdash)                    
+                        #[/Hyosun's idea1]
+                        #[/Hyosun] idea: apply fusion into each patch instead of cls_token like here
+                    elif  comp_fusion_method == 'cls_token':                      
+                        #[Hyosun's idea2] use CLS_TOKEN as AST                    
+                        #xdash = (xdash[:,0] + xdash[:,1]) / 2
+                        # cls_token, dist_token엔 무엇이 들어있지? 어디서 초기 assign하지?
+                        xdash = (xdash[:,0] + xdash[:,1]) / 2 #[Hyosun] xdash[:,0]:cls_token, xdash_token[:,1]:dist_token인거 같음
+                        print("[Hyosun:mpc, after avg] xdash.shape: ", xdash.shape)
+                        multi_feat_embeds.append(xdash)
+                        #[/Hyosun's idea2] use CLS_TOKEN as AST
+        if comp_fusion == True:           
+            #print("[Hyosun:mpc] multi_feat_embeds: \n", multi_feat_embeds)
+            #print("[Hyosun:mpc] torch.hstack(multi_feat): \n", torch.hstack(multi_feat))
+            xdash = torch.hstack(multi_feat_embeds)
+            print("[Hyosun:mpc] torch.hstack(multi_feat_embeds).shape: \n", torch.hstack(multi_feat_embeds).shape)
+            print("[Hyosun:mpc] xdash.shape: \n", xdash.shape)
+            print("[Hyosun:mpc] xdash: \n", xdash)
+        #[/Hyosun] added
+        x = self.v.norm(x) #[Hyosun:original code] seems not needed any more..2023-08-08 TUE
+        print("[Hyosun:mpc, before SSL part] x.shape: \n", x.shape)
+        # /pass through the Transformer layers [/Hyosun] Transformer 
 
         # prediction of the masked patch
         pred = torch.empty((B, mask_patch, 256), device=x.device).float()  # e.g. size 12*100*768
@@ -384,7 +716,7 @@ class ASTModel(nn.Module):
             masked = fold(masked.transpose(1, 2))
 
             return pred, masked
-
+    
     # # masked patch pretraining with generative objective
     def mpg(self, input, mask_patch, cluster):
         B = input.shape[0]
@@ -410,15 +742,28 @@ class ASTModel(nn.Module):
         # follow BEIT paper, mask with learnable masking embedding, but no performance diff observed compared with masking with 0s.
         x = x * mask_dense + (1-mask_dense) * mask_tokens
 
-        # go through the Transformer layers
+        # go through the Transformer layers [Hyosun] Transformer
         cls_tokens = self.v.cls_token.expand(B, -1, -1)  # stole cls_tokens impl from Phil Wang, thanks
         dist_token = self.v.dist_token.expand(B, -1, -1)
         x = torch.cat((cls_tokens, dist_token, x), dim=1)
         x = x + self.v.pos_embed
         x = self.v.pos_drop(x)
-        for blk in self.v.blocks:
+        #[Hyosun] edited
+        #for blk in self.v.blocks:  
+        #for vbi, blk in self.v.blocks:
+        multi_feat = []
+        for blk_id, blk in enumerate(self.v.blocks):
+            #print("[hyosun:mpg] v.blk_id: ", blk_id)
+            #print("[hyosun:mpg] v.blk: \n", blk)
+        #[/Hyosun] edited 
             x = blk(x)
+        #[Hyosun] added
+            if blk_id+1 in self.composing_multi_layer:
+              multi_feat.append(x)
+        print("[Hyosun:mpg] multi_feat: \n", multi_feat)
+        #[/Hyosun] added
         x = self.v.norm(x)
+        # /go through the Transformer layers [/Hyosun] Transformer 
 
         pred = torch.empty((B, mask_patch, self.fshape * self.tshape), device=x.device).float()  # e.g. size 12*100*256
         target = torch.empty((B, mask_patch, self.fshape * self.tshape), device=x.device).float() # e.g. size 12*100*256
@@ -440,10 +785,10 @@ class ASTModel(nn.Module):
 
         # finetuning (ft), use the mean of all token (patch) output as clip-level representation.
         # this is default for SSAST fine-tuning as during pretraining, supervision signal is given to each token, not the [cls] token
-        if task == 'ft_avgtok':
+        if task == 'ft_avgtok':#[Hyosun] paper SSAST method: finetuning (ft), use the mean of all token (patch) output as clip-level representation.
             return self.finetuningavgtok(x)
         # alternatively, use the [cls] token output as clip-level representation.
-        elif task == 'ft_cls':
+        elif task == 'ft_cls':#[Hyosun] use cls token
             return self.finetuningcls(x)
         # pretraining, masked patch classification (discriminative objective)
         elif task == 'pretrain_mpc':
@@ -456,9 +801,15 @@ class ASTModel(nn.Module):
         else:
             raise Exception('Task unrecognized.')
 
+#[Hyosun]This __main__ part is only executed when this file is directly called as main. 
+#        But when this file is imported in other file, the below part is not called.[/Hyosun]
 if __name__ == '__main__':
-    # this is an example of how to use the SSAST model
+    # this is an example of how to use the SSAST model [Hyosun]This __main__ part is executed only when this file is directly called
 
+    #[Hyosun]
+    print("[Hyosun_test] Is this executed?")
+    #[/Hyosun]
+    
     # pretraining stage
     # suppose you have an unlabled dataset with avg length of 1024 frames (i.e., 10.24s)
     input_tdim = 1024
@@ -474,7 +825,7 @@ if __name__ == '__main__':
     #              input_fdim=128, input_tdim=input_tdim, model_size='base',
     #              pretrain=True)
 
-    # do pretraining, see src/traintest_mask.py for our full pretraining code
+    # do pretraining, see src/traintest_mask.py for our full pretraining code #[Hyosun] traintest_mask.py는 또 따로하나?
     # input in shape [batch_size, input_tdim, input_fdim]
     test_input = torch.zeros([10, input_tdim, 128])
     # mask 100 patches for both discriminative and generative loss

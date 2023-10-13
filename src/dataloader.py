@@ -58,7 +58,7 @@ class AudioDataset(Dataset):
         :param audio_conf: Dictionary containing the audio loading and preprocessing settings
         :param dataset_json_file
         """
-        self.datapath = dataset_json_file
+        self.datapath = dataset_json_file #[Hyosun] means datapath
         with open(dataset_json_file, 'r') as fp:
             # [Hyosun] editied
             #data_json = json.load(fp) 
@@ -178,7 +178,7 @@ class AudioDataset(Dataset):
             datum = self.data[index]
             label_indices = np.zeros(self.label_num)
             fbank, mix_lambda = self._wav2fbank(datum['wav'])
-            print(self.index_dict)# [Hyosun] for-loop 아래 에러나서 확인중
+            #print(self.index_dict)# [Hyosun] for-loop 아래 에러나서 확인중
             for label_str in datum['labels'].split(','):
                 label_indices[int(self.index_dict[label_str])] = 1.0
 

@@ -6,6 +6,7 @@
 # @File    : run.py
 
 import argparse
+from array import ArrayType
 import os
 import ast
 import pickle
@@ -22,7 +23,7 @@ from traintest import train, validate
 from traintest_mask import trainmask
 
 print("I am process %s, running on %s: starting (%s)" % (os.getpid(), os.uname()[1], time.asctime()))
-
+#print("basepath: ", basepath) #[Hyosun] added for checkout
 parser = argparse.ArgumentParser(formatter_class=argparse.ArgumentDefaultsHelpFormatter)
 parser.add_argument("--data-train", type=str, default=None, help="training data json")
 parser.add_argument("--data-val", type=str, default=None, help="validation data json")
@@ -85,6 +86,12 @@ parser.add_argument("--wa", help='if do weight averaging in finetuning', type=as
 parser.add_argument("--wa_start", type=int, default=16, help="which epoch to start weight averaging in finetuning")
 parser.add_argument("--wa_end", type=int, default=30, help="which epoch to end weight averaging in finetuning")
 parser.add_argument("--loss", type=str, default="BCE", help="the loss function for finetuning, depend on the task", choices=["BCE", "CE"])
+  #[Hyosun] comp_fusion logic added
+parser.add_argument("--comp_fusion", type=str, default='True', help="whether composing fusion or not for finetuning", choices=['True', 'False'])
+parser.add_argument("--comp_fusion_method", type=str, default="use_all_patch", help="whether to use_all_patch or only cls_token for finetuning", choices=['use_all_patch', 'cls_token'])
+parser.add_argument("--comp_fusion_multi_layer", type=str, default='[4,11]', help="which multi-layers you want to apply fusion for finetuning", choices=['[4,11]','[5,12]', '[]'])
+parser.add_argument("--pooling_ty", type=str, default="mean_max", help="which pooling type you want to use", choices=["mean", "min", "max", "mean_min", "mean_max", "max_max"])
+  #[/Hyosun] comp_fusion logic  added
 
 args = parser.parse_args()
 
@@ -132,11 +139,28 @@ if 'pretrain' in args.task:
     audio_model = ASTModel(fshape=args.fshape, tshape=args.tshape, fstride=args.fshape, tstride=args.tshape,
                        input_fdim=args.num_mel_bins, input_tdim=args.target_length, model_size=args.model_size, pretrain_stage=True)
 # in the fine-tuning stage [Hyosun] focus and use!!!
-else:
-    audio_model = ASTModel(label_dim=args.n_class, fshape=args.fshape, tshape=args.tshape, fstride=args.fstride, tstride=args.tstride,
+else: #[Hyosun] set-up model for fine-tuning
+    print("[Hyosun:run.py] args.comp_fusion: ", args.comp_fusion)
+    print("[Hyosun:run.py] args.comp_fusion_method: ", args.comp_fusion_method)
+    print("[Hyosun:run.py] args.comp_fusion_multi_layer: ", args.comp_fusion_multi_layer)
+    print("[Hyosun:run.py] args.pooling_ty: ", args.pooling_ty)
+    audio_model = ASTModel(
+                       #[Hyosun] comp_logic added
+                       comp_fusion=args.comp_fusion,                          #[Hyosun] comp_fusion added
+                       comp_fusion_method=args.comp_fusion_method,            #[Hyosun] comp_fusion_method added
+                       comp_fusion_multi_layer=args.comp_fusion_multi_layer,  #[Hyosun] comp_fusion_multi_layer added
+                       pooling_ty=args.pooling_ty,                            #[Hyosun] pooling_ty added
+                       #[/Hyosun] comp_logic added
+                       label_dim=args.n_class, fshape=args.fshape, tshape=args.tshape, fstride=args.fstride, tstride=args.tstride,
                        input_fdim=args.num_mel_bins, input_tdim=args.target_length, model_size=args.model_size, pretrain_stage=False,
-                       load_pretrained_mdl_path=args.pretrained_mdl_path)
-
+                       load_pretrained_mdl_path=args.pretrained_mdl_path #[Hyosun] call the model that are already saved, using args.pretrained_mdl_path 
+    )
+                      #  #[Hyosun] comp_logic added
+                      #  comp_fusion=args.comp_fusion,                      #[Hyosun] comp_fusion added
+                      #  comp_fusion_method=args.comp_fusion_method,        #[Hyosun] comp_fusion_method added
+                      #  comp_fusion_multi_layer=args.comp_fusion_multi_layer,  #[Hyosun] comp_fusion_multi_layer added
+                      #  pooling_ty=args.pooling_ty)                        #[Hyosun] pooling_ty added
+                      #  #[/Hyosun] comp_logic added
 if not isinstance(audio_model, torch.nn.DataParallel):
     audio_model = torch.nn.DataParallel(audio_model)
 
@@ -146,12 +170,13 @@ if os.path.exists("%s/models" % args.exp_dir) == False:
 with open("%s/args.pkl" % args.exp_dir, "wb") as f:
     pickle.dump(args, f)
 
-if 'pretrain' not in args.task: #[Hyosun] focus and use!!!: fine-tuning
+#[Hyosun commented] Pretrain or Fine-tuning here
+if 'pretrain' not in args.task: #[Hyosun] fine-tuning: traintest.py의 train()으로 연결
     print('Now starting fine-tuning for {:d} epochs'.format(args.n_epochs))
-    train(audio_model, train_loader, val_loader, args)
+    train(audio_model, train_loader, val_loader, args) #[Hyosun] fine-tuning: 여기서 fusion? Yes
 else: #[Hyosun] pretrain => [Hyosun] traintest_mask.py의 trainmask()로 연결
     print('Now starting self-supervised pretraining for {:d} epochs'.format(args.n_epochs))
-    trainmask(audio_model, train_loader, val_loader, args)
+    trainmask(audio_model, train_loader, val_loader, args)#[Hyosun] real train masks
 
 # if the dataset has a seperate evaluation set (e.g., speechcommands), then select the model using the validation set and eval on the evaluation set.
 # this is only for fine-tuning

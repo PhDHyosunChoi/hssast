@@ -25,4 +25,10 @@ src/finetune/esc50/data/ESC-50-master
 src/finetune/esc50/exp/*
 src/pretrain/exp/*
 #[/Hyosun] added
+
+#[Hyosun] TAU added
+src/prep_data/TAU/data/TAU
+src/finetune/TAU/data/TAU
+src/finetune/TAU/exp/*
+#[/Hyosun] TAU added
 venvssast/*

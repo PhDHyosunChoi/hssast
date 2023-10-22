@@ -190,7 +190,7 @@ def train(audio_model, train_loader, test_loader, args):
         stats, valid_loss = validate(audio_model, test_loader, args, epoch)
         #[Hyosun] acc is saved in stats as stats[0] [/Hyosun]
 
-        # ensemble results
+        # ensemble results #[Hyosun:comment] put results together
         cum_stats = validate_ensemble(args, epoch)
         cum_mAP = np.mean([stat['AP'] for stat in cum_stats])
         cum_mAUC = np.mean([stat['auc'] for stat in cum_stats])
@@ -357,6 +357,9 @@ def validate_ensemble(args, epoch):
         predictions = np.loadtxt(exp_dir+'/predictions/predictions_' + str(epoch) + '.csv', delimiter=',')
         cum_predictions = cum_predictions + predictions
         # remove the prediction file to save storage space
+        # [Hyosun] insert the saving logic as prediction.txt files here =======
+        # 
+        # [/Hyosun] insert the saving logic as prediction.txt files here ======
         os.remove(exp_dir+'/predictions/predictions_' + str(epoch-1) + '.csv')
 
     cum_predictions = cum_predictions / epoch

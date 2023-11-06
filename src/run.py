@@ -150,6 +150,7 @@ else: #[Hyosun] set-up model for fine-tuning
                        comp_fusion_method=args.comp_fusion_method,            #[Hyosun] comp_fusion_method added
                        comp_fusion_multi_layer=args.comp_fusion_multi_layer,  #[Hyosun] comp_fusion_multi_layer added
                        pooling_ty=args.pooling_ty,                            #[Hyosun] pooling_ty added
+                       mlp_layers=args.mlp_layers,                            #[Hyosun] mlp_layers added
                        #[/Hyosun] comp_logic added
                        label_dim=args.n_class, fshape=args.fshape, tshape=args.tshape, fstride=args.fstride, tstride=args.tstride,
                        input_fdim=args.num_mel_bins, input_tdim=args.target_length, model_size=args.model_size, pretrain_stage=False,
@@ -180,15 +181,17 @@ else: #[Hyosun] pretrain => [Hyosun] traintest_mask.py의 trainmask()로 연결
 
 # if the dataset has a seperate evaluation set (e.g., speechcommands), then select the model using the validation set and eval on the evaluation set.
 # this is only for fine-tuning
-if args.data_eval != None:
+#[Hyosun:comment] Except for ESC50, TAU: skip this if-statement logic because it doesn't have --data-eval (the same as data_eval)[/Hyosun]
+if args.data_eval != None: #[Hyosun:comment] For TAU data: --data-train ${tr_data} --data-val ${te_data} but no --data-eval[/Hyosun]
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
     sd = torch.load(args.exp_dir + '/models/best_audio_model.pth', map_location=device)
     if not isinstance(audio_model, torch.nn.DataParallel):
         audio_model = torch.nn.DataParallel(audio_model)
     audio_model.load_state_dict(sd, strict=False)
 
-    # best models on the validation set => [Hyosun]traintest_mask.py의 validate()함수로 연결
+    # best models on the validation set => [Hyosun]traintest.py의 validate()함수로 연결
     args.loss_fn = torch.nn.BCEWithLogitsLoss()
+    print("[Hyosun:run.py] args.data_eval != None and args.loss_fn: ", args.loss_fn, " for validate")
     stats, _ = validate(audio_model, val_loader, args, 'valid_set')
     # note it is NOT mean of class-wise accuracy
     val_acc = stats[0]['acc']

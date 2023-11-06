@@ -61,7 +61,8 @@ class ASTModel(nn.Module):
                  comp_fusion,               #[Hyosun] comp_fusion added
                  comp_fusion_method,        #[Hyosun] comp_fusion_method added
                  comp_fusion_multi_layer,   #[Hyosun] comp_fusion_multi_layer added
-                 pooling_ty,                #[Hyosun] pooling_ty added #[Hyosun] representation shell만 만들어 
+                 pooling_ty,                #[Hyosun] pooling_ty added
+                 mlp_layers,                #[Hyosun] mlp_layers added #[Hyosun] representation shell만 만들어 
                  label_dim=527,
                  fshape=128, tshape=2, fstride=128, tstride=2,
                  input_fdim=128, input_tdim=1024, model_size='base',
@@ -208,7 +209,8 @@ class ASTModel(nn.Module):
                                    comp_fusion,               #[Hyosun] comp_fusion added
                                    comp_fusion_method,        #[Hyosun] comp_fusion_method added
                                    comp_fusion_multi_layer,   #[Hyosun] comp_fusion_multi_layer added
-                                   pooling_ty,                #[Hyosun] pooling_ty added #[Hyosun] representation shell만 만들어
+                                   pooling_ty,                #[Hyosun] pooling_ty added 
+                                   mlp_layers,                #[Hyosun] mlp_layers added [Hyosun] representation shell만 만들어
                                    fstride=p_fshape, tstride=p_tshape, fshape=p_fshape, tshape=p_tshape,
                                    input_fdim=p_input_fdim, input_tdim=p_input_tdim, pretrain_stage=True, model_size=model_size
                                   )
@@ -242,10 +244,12 @@ class ASTModel(nn.Module):
             #self.temporal_pooling_type = 'mean' #[Hyosun_2023-10-09] commented out: a variable from comp paper, but not used here 
             self.pooling_ty = pooling_ty #[Hyosun] added 2023-09-08
             #self.fusion_embedding_dim
+            self.mlp_layers = mlp_layers #[Hyosun] added 2023-11-06
             print("[Hyosun:astmodels_init()]self.comp_fusion: ", self.comp_fusion)
             print("[Hyosun:astmodels_init()]self.comp_fusion_method: ", self.comp_fusion_method)
             print("[Hyosun:astmodels_init()]self.comp_fusion_multi_layer: ", self.comp_fusion_multi_layer)
             print("[Hyosun:astmodels_init()]self.pooling_ty: ", self.pooling_ty)
+            print("[Hyosun:astmodels_init()]self.mlp_layers: ", self.mlp_layers)
             #/[Hyosun] Composing Multi-Layer Function inserted
 
             # mlp head for fine-tuning [Hyosun] mlp only exists for fine-tuning, i.e. evaluation #########
@@ -262,8 +266,10 @@ class ASTModel(nn.Module):
                 self.mlp_head = nn.Sequential(nn.LayerNorm(self.original_embedding_dim*2), #[Hyosun] modified here: input shape for fusion concat 2023-08-14
                                               nn.Linear(self.original_embedding_dim*2, self.original_embedding_dim*2),
                                               #[Hyosun 2023-10-30] add two more layers for mlp_head() ===
-                                              nn.LayerNorm(self.original_embedding_dim*2), 
-                                              nn.Linear(self.original_embedding_dim*2, self.original_embedding_dim*2),
+                                              #[Hyosun 2023-11-06] remove two layers for mlp_head() =====
+                                              #nn.LayerNorm(self.original_embedding_dim*2), 
+                                              #nn.Linear(self.original_embedding_dim*2, self.original_embedding_dim*2),
+                                              #[/Hyosun 2023-11-06] remove two layers for mlp_head() ====
                                               #[/Hyosun 2023-10-30] add two more layers for mlp_head() ==
                                               nn.LayerNorm(self.original_embedding_dim*2),
                                               nn.Linear(self.original_embedding_dim*2, label_dim)

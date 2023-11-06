@@ -73,11 +73,16 @@ model_size=base
 #[Hyosun] Experiments of lr #[/Hyosun]
 head_lr=1
 
+#[Hyosun] loss specified for the exp result folders
+loss='CE'
+#[/Hyosun]loss specified for the exp result folders
+
 #[Hyosun] comp_fusion logic added
 comp_fusion='True'
 comp_fusion_method='use_all_patch'
 comp_fusion_multi_layer='[4,11]'
 pooling_ty='max_max' #[Hyosun] #choices=["mean", "min", "max", "mean_min", "mean_max"] #[/Hyosun]
+mlp_layers=6
 #[/Hyosun] comp_fusion logic added
 
 #[Hyosun]
@@ -87,7 +92,7 @@ pooling_ty='max_max' #[Hyosun] #choices=["mean", "min", "max", "mean_min", "mean
 #base_exp_dir=/content/drive/MyDrive/ColabNotebooks/Github/hssast/src/finetune/esc50/exp/test #[Hyosun] ssast->hssast
 #base_exp_dir=./exp/test01-${dataset}-f${fstride}-${fshape}-t${tstride}-${tshape}-b${batch_size}-lr${lr}-${task}-${model_size}-${pretrain_exp}-${pretrain_model}-${head_lr}x-noise${noise} #[Hyosun] ssast->hssast
 #base_exp_dir=./exp/"$(date +'%Y-%m-%d/%H:%M:%S%p')"-test01-${dataset}-f${fstride}-${fshape}-t${tstride}-${tshape}-b${batch_size}-lr${lr}-${task}-${model_size}-${pretrain_exp}-${pretrain_model}-${head_lr}x-noise${noise} #[Hyosun] ssast->hssast
-base_exp_dir=./exp/"$(date +'%Y-%m-%d/%H:%M:%S%p')"-test01-${dataset}-comp_fusion-${comp_fusion}-comp_fusion_method-${comp_fusion_method}-comp_fusion_multi_layer-${comp_fusion_multi_layer}-pooling-${pooling_ty}-f${fstride}-${fshape}-t${tstride}-${tshape}-b${batch_size}-lr${lr}-${task}-${model_size}-${pretrain_exp}-${pretrain_model}-${head_lr}x-noise${noise} 
+base_exp_dir=./exp/"$(date +'%Y-%m-%d/%H:%M:%S%p')"-test01-${dataset}-comp_fusion-${comp_fusion}-comp_fusion_method-${comp_fusion_method}-comp_fusion_multi_layer-${comp_fusion_multi_layer}-pooling-${pooling_ty}-mlp${mlp_layers}-loss-${loss}-f${fstride}-${fshape}-t${tstride}-${tshape}-b${batch_size}-lr${lr}-${task}-${model_size}-${pretrain_exp}-${pretrain_model}-${head_lr}x-noise${noise} 
 #                                                            [Hyosun]-comp_fusion-${comp_fusion}-comp_fusion_method-${comp_fusion_method}-pooling-${pooling_ty}-added
 #[/Hyosun]
 
@@ -110,10 +115,13 @@ do
   --pretrained_mdl_path ${pretrain_path} \
   --dataset_mean ${dataset_mean} --dataset_std ${dataset_std} --target_length ${target_length} \
   --num_mel_bins 128 --head_lr ${head_lr} --noise ${noise} \
-  --lrscheduler_start 6 --lrscheduler_step 1 --lrscheduler_decay 0.85 --wa False --loss CE --metrics acc \
-  --comp_fusion ${comp_fusion} --comp_fusion_method ${comp_fusion_method} --comp_fusion_multi_layer ${comp_fusion_multi_layer} --pooling_ty ${pooling_ty}
+  --lrscheduler_start 6 --lrscheduler_step 1 --lrscheduler_decay 0.85 --wa False --loss ${loss} --metrics acc \
+  --comp_fusion ${comp_fusion} --comp_fusion_method ${comp_fusion_method} --comp_fusion_multi_layer ${comp_fusion_multi_layer} --pooling_ty ${pooling_ty} \
+  --mlp_layers ${mlp_layers}
 done
 #[Hyosun] "--comp_fusion $comp_fusion --comp_fusion_method $comp_fusion_method  --pooling_ty $pooling_ty" added [/Hyosun]
+#[Hyosun] editied: --loss CE -> --loss ${loss} [/Hyosun]
+#[Hyosun] added:   --mlp_layers ${mlp_layers}  [/Hyosun]
 
 #[Hyosun] edited 2023-10-17
 #python ./get_esc_result.py --exp_path ${base_exp_dir}

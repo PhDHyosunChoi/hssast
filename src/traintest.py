@@ -102,9 +102,9 @@ def train(audio_model, train_loader, test_loader, args):
     else:
         scheduler = torch.optim.lr_scheduler.MultiStepLR(optimizer, list(range(args.lrscheduler_start, 1000, args.lrscheduler_step)),gamma=args.lrscheduler_decay)
     main_metrics = args.metrics
-    if args.loss == 'BCE':
+    if args.loss == 'BCE':  #[Hyosun:comment] seems mostly for speech or audio datasets
         loss_fn = nn.BCEWithLogitsLoss()
-    elif args.loss == 'CE':
+    elif args.loss == 'CE': #[Hyosun:comment] Data ESC50, TAU <= controlled by bash files
         loss_fn = nn.CrossEntropyLoss()
     args.loss_fn = loss_fn
 

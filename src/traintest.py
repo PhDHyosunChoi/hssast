@@ -357,10 +357,9 @@ def validate_ensemble(args, epoch):
         predictions = np.loadtxt(exp_dir+'/predictions/predictions_' + str(epoch) + '.csv', delimiter=',')
         cum_predictions = cum_predictions + predictions
         # remove the prediction file to save storage space
-        # [Hyosun] insert the saving logic as prediction.txt files here =======
-        # 
-        # [/Hyosun] insert the saving logic as prediction.txt files here ======
-        os.remove(exp_dir+'/predictions/predictions_' + str(epoch-1) + '.csv')
+        # [Hyosun 2023-11-02] commented out removing logic: insert the saving logic as prediction.txt files here =======
+        # os.remove(exp_dir+'/predictions/predictions_' + str(epoch-1) + '.csv')
+        # [/Hyosun 2023-11-02] commented out removing logic: insert the saving logic as prediction.txt files here ======
 
     cum_predictions = cum_predictions / epoch
     np.savetxt(exp_dir+'/predictions/cum_predictions.csv', cum_predictions, delimiter=',')

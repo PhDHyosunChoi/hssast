@@ -256,19 +256,15 @@ class ASTModel(nn.Module):
                 self.mlp_head = nn.Sequential(nn.LayerNorm(self.original_embedding_dim),
                                               nn.Linear(self.original_embedding_dim, label_dim)) #[Hyosun_comment] the original code
             else: #[Hyosun_comment] comp_fusion==True case
-                #[Hyosun 2023-10-27] add two layers for mlp_head() === #[Hyosun 2023-10-30] add two more layers for mlp_head() ===
+                #[Hyosun 2023-10-27] add layer for mlp_head() ===
                 # self.mlp_head = nn.Sequential(nn.LayerNorm(self.original_embedding_dim*2), #[Hyosun] modified here: input shape for fusion concat 2023-08-14
                 #                               nn.Linear(self.original_embedding_dim*2, label_dim))  
                 self.mlp_head = nn.Sequential(nn.LayerNorm(self.original_embedding_dim*2), #[Hyosun] modified here: input shape for fusion concat 2023-08-14
                                               nn.Linear(self.original_embedding_dim*2, self.original_embedding_dim*2),
-                                              #[Hyosun 2023-10-30] add two more layers for mlp_head() ===
-                                              nn.LayerNorm(self.original_embedding_dim*2), 
-                                              nn.Linear(self.original_embedding_dim*2, self.original_embedding_dim*2),
-                                              #[/Hyosun 2023-10-30] add two more layers for mlp_head() ==
                                               nn.LayerNorm(self.original_embedding_dim*2),
                                               nn.Linear(self.original_embedding_dim*2, label_dim)
                                               )  
-                #[/Hyosun 2023-10-27] add two layers for mlp_head()=== #[/Hyosun 2023-10-30] add two more layers for mlp_head()===
+                #[/Hyosun 2023-10-27] add layer for mlp_head()===
             #[/Hyosun] modified for Composing Multi-Layer Fusion 2023-08-16                  
             #[/Hyosun] if-else case added for both non-comp_fusion and comp_fusion cases 2023-10-09                   
             ########################## [/Hyosun] mlp only exists for fine-tuning, i.e. evaluation ########

@@ -91,6 +91,7 @@ parser.add_argument("--comp_fusion", type=str, default='True', help="whether com
 parser.add_argument("--comp_fusion_method", type=str, default="use_all_patch", help="whether to use_all_patch or only cls_token for finetuning", choices=['use_all_patch', 'cls_token'])
 parser.add_argument("--comp_fusion_multi_layer", type=str, default='[4,11]', help="which multi-layers you want to apply fusion for finetuning", choices=['[4,11]','[5,12]', '[]'])
 parser.add_argument("--pooling_ty", type=str, default="mean_max", help="which pooling type you want to use", choices=["mean", "min", "max", "mean_min", "mean_max", "max_max"])
+parser.add_argument("--mlp_layers", type=int, default=4, help="how many mlp_head layers you want to use", choices=[2,4,6])
   #[/Hyosun] comp_fusion logic  added
 
 args = parser.parse_args()

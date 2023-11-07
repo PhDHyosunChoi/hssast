@@ -82,7 +82,7 @@ comp_fusion='True'
 comp_fusion_method='use_all_patch'
 comp_fusion_multi_layer='[4,11]'
 pooling_ty='max_max' #[Hyosun] #choices=["mean", "min", "max", "mean_min", "mean_max"] #[/Hyosun]
-mlp_layers=6
+mlp_layers=4
 #[/Hyosun] comp_fusion logic added
 
 #[Hyosun]
@@ -92,7 +92,7 @@ mlp_layers=6
 #base_exp_dir=/content/drive/MyDrive/ColabNotebooks/Github/hssast/src/finetune/esc50/exp/test #[Hyosun] ssast->hssast
 #base_exp_dir=./exp/test01-${dataset}-f${fstride}-${fshape}-t${tstride}-${tshape}-b${batch_size}-lr${lr}-${task}-${model_size}-${pretrain_exp}-${pretrain_model}-${head_lr}x-noise${noise} #[Hyosun] ssast->hssast
 #base_exp_dir=./exp/"$(date +'%Y-%m-%d/%H:%M:%S%p')"-test01-${dataset}-f${fstride}-${fshape}-t${tstride}-${tshape}-b${batch_size}-lr${lr}-${task}-${model_size}-${pretrain_exp}-${pretrain_model}-${head_lr}x-noise${noise} #[Hyosun] ssast->hssast
-base_exp_dir=./exp/"$(date +'%Y-%m-%d/%H:%M:%S%p')"-test01-${dataset}-comp_fusion-${comp_fusion}-comp_fusion_method-${comp_fusion_method}-comp_fusion_multi_layer-${comp_fusion_multi_layer}-pooling-${pooling_ty}-mlp${mlp_layers}-loss-${loss}-f${fstride}-${fshape}-t${tstride}-${tshape}-b${batch_size}-lr${lr}-${task}-${model_size}-${pretrain_exp}-${pretrain_model}-${head_lr}x-noise${noise} 
+base_exp_dir=./exp/"$(date +'%Y-%m-%d/%H:%M:%S%p')"-test01-${dataset}-comp_fusion-${comp_fusion}-comp_fusion_method-${comp_fusion_method}-comp_fusion_multi_layer-${comp_fusion_multi_layer}-pooling-${pooling_ty}-comp_fusion_mlp${mlp_layers}-loss-${loss}-f${fstride}-${fshape}-t${tstride}-${tshape}-b${batch_size}-lr${lr}-${task}-${model_size}-${pretrain_exp}-${pretrain_model}-${head_lr}x-noise${noise} 
 #                                                            [Hyosun]-comp_fusion-${comp_fusion}-comp_fusion_method-${comp_fusion_method}-pooling-${pooling_ty}-added
 #[/Hyosun]
 

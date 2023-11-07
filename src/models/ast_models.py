@@ -263,17 +263,34 @@ class ASTModel(nn.Module):
                 #[Hyosun 2023-10-27] add two layers for mlp_head() === #[Hyosun 2023-10-30] add two more layers for mlp_head() ===
                 # self.mlp_head = nn.Sequential(nn.LayerNorm(self.original_embedding_dim*2), #[Hyosun] modified here: input shape for fusion concat 2023-08-14
                 #                               nn.Linear(self.original_embedding_dim*2, label_dim))  
-                self.mlp_head = nn.Sequential(nn.LayerNorm(self.original_embedding_dim*2), #[Hyosun] modified here: input shape for fusion concat 2023-08-14
-                                              nn.Linear(self.original_embedding_dim*2, self.original_embedding_dim*2),
-                                              #[Hyosun 2023-10-30] add two more layers for mlp_head() ===
-                                              #[Hyosun 2023-11-06] remove two layers for mlp_head() =====
-                                              #nn.LayerNorm(self.original_embedding_dim*2), 
-                                              #nn.Linear(self.original_embedding_dim*2, self.original_embedding_dim*2),
-                                              #[/Hyosun 2023-11-06] remove two layers for mlp_head() ====
-                                              #[/Hyosun 2023-10-30] add two more layers for mlp_head() ==
-                                              nn.LayerNorm(self.original_embedding_dim*2),
-                                              nn.Linear(self.original_embedding_dim*2, label_dim)
-                                              )  
+                #[Hyosun] using if-statement for various numbers of mlp_layers [/Hyosun]
+                # self.mlp_head = nn.Sequential(nn.LayerNorm(self.original_embedding_dim*2), #[Hyosun] modified here: input shape for fusion concat 2023-08-14
+                #                               nn.Linear(self.original_embedding_dim*2, self.original_embedding_dim*2),
+                #                               #[Hyosun 2023-10-30] add two more layers for mlp_head() ===
+                #                               #[Hyosun 2023-11-06] remove two layers for mlp_head() =====
+                #                               #nn.LayerNorm(self.original_embedding_dim*2), 
+                #                               #nn.Linear(self.original_embedding_dim*2, self.original_embedding_dim*2),
+                #                               #[/Hyosun 2023-11-06] remove two layers for mlp_head() ====
+                #                               #[/Hyosun 2023-10-30] add two more layers for mlp_head() ==
+                #                               nn.LayerNorm(self.original_embedding_dim*2),
+                #                               nn.Linear(self.original_embedding_dim*2, label_dim)
+                #                               ) 
+                comp_fusion_mlp_layers_list = []
+                if self.mlp_layers > 2 : #[Hyosun] self.mlp_layers == 4
+                    comp_fusion_mlp_layers_list.extend([nn.LayerNorm(self.original_embedding_dim*2), #[Hyosun] modified here: input shape for fusion concat 2023-08-14
+                                                   nn.Linear(self.original_embedding_dim*2, self.original_embedding_dim*2)])           
+                if self.mlp_layers > 4 : #[Hyosun] self.mlp_layers == 6
+                    comp_fusion_mlp_layers_list.extend([nn.LayerNorm(self.original_embedding_dim*2), 
+                                                        nn.Linear(self.original_embedding_dim*2, self.original_embedding_dim*2)])
+                if self.mlp_layers > 6 : #[Hyosun] self.mlp_layers == 8
+                    comp_fusion_mlp_layers_list.extend([nn.LayerNorm(self.original_embedding_dim*2), 
+                                                        nn.Linear(self.original_embedding_dim*2, self.original_embedding_dim*2)])
+                #[Hyosun] self.mlp_layers == 2 : it only goes through this for comp_fusion_mlp_layers_list
+                comp_fusion_mlp_layers_list.extend([nn.LayerNorm(self.original_embedding_dim*2),
+                                                    nn.Linear(self.original_embedding_dim*2, label_dim)])
+                self.mlp_head = nn.Sequential(*comp_fusion_mlp_layers_list)
+                print("[Hyosun:ASTModel-init()]comp_fusion==True case\nself.mlp_head:\n", self.mlp_head)
+                #[/Hyosun] using if-statement for various numbers of self.mlp_layers [/Hyosun]
                 #[/Hyosun 2023-10-27] add two layers for mlp_head()=== #[/Hyosun 2023-10-30] add two more layers for mlp_head()===
             #[/Hyosun] modified for Composing Multi-Layer Fusion 2023-08-16                  
             #[/Hyosun] if-else case added for both non-comp_fusion and comp_fusion cases 2023-10-09                   

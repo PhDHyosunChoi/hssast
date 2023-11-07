@@ -96,10 +96,10 @@ def train(audio_model, train_loader, test_loader, args):
     # print('now training with {:s}, main metrics: {:s}, loss function: {:s}, learning rate scheduler: {:s}'.format(str(args.dataset), str(main_metrics), str(loss_fn), str(scheduler)))
     # #[/Hyosun] uncommented, make it alive 2023-09-19
 
-    if args.adaptschedule == True:
+    if args.adaptschedule == True: #[Hyosun:comment] controlled by bash files
         scheduler = torch.optim.lr_scheduler.ReduceLROnPlateau(optimizer, mode='max', factor=0.5, patience=args.lr_patience, verbose=True)
         print('now use adaptive learning rate scheduler.')
-    else:
+    else: #[Hyosun:comment] Data ESC50, TAU <= controlled by bash files
         scheduler = torch.optim.lr_scheduler.MultiStepLR(optimizer, list(range(args.lrscheduler_start, 1000, args.lrscheduler_step)),gamma=args.lrscheduler_decay)
     main_metrics = args.metrics
     if args.loss == 'BCE':  #[Hyosun:comment] seems mostly for speech or audio datasets
@@ -241,7 +241,7 @@ def train(audio_model, train_loader, test_loader, args):
             torch.save(audio_model.state_dict(), "%s/models/best_audio_model.pth" % (exp_dir))
             torch.save(optimizer.state_dict(), "%s/models/best_optim_state.pth" % (exp_dir))
 
-        # save every models
+        # save every models #[Hyosun:comment][edit later] edit as save only the best model [/Hyosun]
         torch.save(audio_model.state_dict(), "%s/models/audio_model.%d.pth" % (exp_dir, epoch))
         if len(train_loader.dataset) > 2e5:
             torch.save(optimizer.state_dict(), "%s/models/optim_state.%d.pth" % (exp_dir, epoch))

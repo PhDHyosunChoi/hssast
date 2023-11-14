@@ -31,4 +31,9 @@ src/prep_data/TAU/data/TAU
 src/finetune/TAU/data/TAU
 src/finetune/TAU/exp/*
 #[/Hyosun] TAU added
+#[Hyosun] Emotions added
+src/finetune/Emotions/data/Emotions
+src/finetune/Emotions/data/Emotions_audio_16k
+src/finetune/Emotions/exp/*
+#[/Hyosun] Emotions added
 venvssast/*

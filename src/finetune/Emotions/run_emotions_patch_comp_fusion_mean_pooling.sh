@@ -61,7 +61,7 @@ lr=1e-4
 freqm=24
 timem=96
 mixup=0
-epoch=35 #50 #10 #50 #50 #5  #50 [Hyosun] The original epoch 50: reduced into 5 for experiments
+epoch=45 #50 #10 #50 #50 #5  #50 [Hyosun] The original epoch 50: reduced into 5 for experiments
 batch_size=48
 fshape=16
 tshape=16
@@ -82,7 +82,7 @@ comp_fusion='True'
 comp_fusion_method='use_all_patch'
 comp_fusion_multi_layer='[4,11]'
 pooling_ty='mean' #[Hyosun] #choices=["mean", "min", "max", "mean_min", "mean_max"] #[/Hyosun]
-mlp_layers=4
+mlp_layers=2
 #[/Hyosun] comp_fusion logic added
 
 #[Hyosun]

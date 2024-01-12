@@ -3,7 +3,7 @@
 # @Author  : Hyosun Choi
 # @Affiliation  : 
 # @Email   : bbeyes81@gmail.com
-# @File    : prep_iurbansound_len.py : This script cut wav audio files into 2s length wav audio files
+# @File    : prep_iurbansound_len1_5.py : This script cut wav audio files into 1.5s length wav audio files
 
 import numpy as np
 import json

@@ -4,6 +4,12 @@
 # @Affiliation  : Massachusetts Institute of Technology
 # @Email   : yuangong@mit.edu
 # @File    : ast_models.py
+# -*- coding: utf-8 -*-
+# @Time    : 16/11/2023 
+# @Edit Author  : Hyosun Choi
+# @Affiliation  : RHUL
+# @Email   : bbeyes81@gmail.com
+# @File    : ast_models.py
 
 # the unified ast models for all pretraining/fine-tuning tasks.
 
@@ -20,10 +26,7 @@ from random import randrange
 from matplotlib import pyplot as plt
 import random
 
-#[Hyosun]Including core operations from the paper
-from comp_fusion.evar.model_utils import (mean_max_pooling, mean_pooling, max_pooling, 
-    MLP, initialize_layers, set_layers_trainable, show_layers_trainable)
-#[/Hyosun]Including core operations from the paper
+
 
 # override the timm package to relax the input shape constraint.
 class PatchEmbed(nn.Module):
@@ -331,26 +334,8 @@ class ASTModel(nn.Module):
 
             new_pos_embed = new_pos_embed.reshape(1, self.original_embedding_dim, num_patches).transpose(1, 2)
             self.v.pos_embed = nn.Parameter(torch.cat([self.v.pos_embed[:, :self.cls_token_num, :].detach(), new_pos_embed], dim=1))
-    # #[Hyosun] Composing Multi-Layer #[Hyosun] 현재 요거 사용안하는중 2023-09-08
-    # def composing_multi_layer(self, layer=[5,12]):
-    #     print("[Hyosun] function Composing Multi-Layer start")
-    #     print("[Hyosun] function Composing Multi-Layer end")
-    #     return 0
-    # #[/Hyosun] Composing Multi-Layer
 
-    #[Hyosun] [현재 요거(from comp_paper)사용안하고 본 코드에 그냥 넣는방식 사용중]
-    # This summarizes the time axis as combined statistics of mean and max operation
-    def temporal_pooling(self, frame_embeddings):
-        if self.temporal_pooling_type == 'mean':
-            return mean_pooling(frame_embeddings)
-        elif self.temporal_pooling_type == 'max':
-            return max_pooling(frame_embeddings)
-        # [Hyosun] z~ = mean(z) + max(z) :from the paper, dim=-1 means time axis(the last element == Time here)
-        elif self.temporal_pooling_type == 'mean_max':
-            return mean_max_pooling(frame_embeddings)
-        # [/Hyosun] z~ = mean(z) + max(z) :from the paper, dim=-1 means time axis(the last element == Time here)
-        assert False, f'Unknown frame pooling type: {self.temporal_pooling_type}'
-    #[/Hyosun] This summarizes the time axis as combined statistics of mean and max operation
+
     
     # get the shape of intermediate representation.
     def get_shape(self, fstride, tstride, input_fdim, input_tdim, fshape, tshape):

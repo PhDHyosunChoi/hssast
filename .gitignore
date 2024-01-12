@@ -59,4 +59,14 @@ src/finetune/Isolated_urbansound/exp/*
 src/finetune/Isolated_urbansound/data/event*
 src/finetune/Isolated_urbansound/exp/*
 #[/Hyosun] Isolated_urbansound/IurbanEvent added
+
+#[Hyosun] no need the whole folder
+src/comp_fusion/*
+#[/Hyosun] no need the whole folder
+
+#[Hyosun] exclude no need scripts
+src/models/[2023-10-11좀다르게fusion_implementation]ast_models.py
+src/models/[20231027-29_two layers added for mlp_head]ast_models.py
+src/models/[the original]ast_models.py
+#[/Hyosun] exclude no need scripts
 venvssast/*

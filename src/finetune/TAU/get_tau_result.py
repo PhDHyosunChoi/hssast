@@ -1,11 +1,11 @@
 # -*- coding: utf-8 -*-
-# @Time    : 11/15/20 1:04 AM
-# @Author  : Yuan Gong
-# @Affiliation  : Massachusetts Institute of Technology
-# @Email   : yuangong@mit.edu
-# @File    : get_esc_result.py
+# @Time    : 25/10/2023
+# @Author  : Hyosun Choi
+# @Affiliation  : RHUL
+# @Email   : bbeyes81@gmail.com
+# @File    : get_tau_result.py
 
-# summarize esc 5-fold cross validation result
+# summarize tau result
 
 import argparse
 import numpy as np

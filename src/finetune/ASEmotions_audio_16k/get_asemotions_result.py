@@ -3,9 +3,9 @@
 # @Author  : Hyosun Choi
 # @Affiliation  : RHUL
 # @Email   : bbeyes81@gmail.com
-# @File    : get_birdsong_result.py
+# @File    : get_asemotions_result.py
 
-# summarize esc 5-fold cross validation result
+# summarize asemotions result
 
 import argparse
 import numpy as np

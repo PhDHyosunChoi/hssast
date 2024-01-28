@@ -46,14 +46,13 @@ pretrain_model=SSAST-Base-Patch-400
 pretrain_path=./${pretrain_model}.pth 
 #[/Hyosun] 
 
-#[Hyosun] tau setting: edited for tau mean=-4.241041 std=3.0622184
-## -- target_length 바꾸면 acc 올라가나?? length 도 바꿀까, 1024정도로?? 2023-10-04
+#[Hyosun] 
 dataset=emotions
 dataset_mean=-1.892599
 dataset_std=4.0277867
 target_length=512
 noise=True
-#[/Hyosun] tau setting: edited for tau mean=-4.241041 std=3.0622184
+#[/Hyosun] 
 
 bal=none
 #[Hyosun] Experiments of lr #[/Hyosun]
@@ -82,7 +81,7 @@ comp_fusion='True'
 comp_fusion_method='use_all_patch'
 comp_fusion_multi_layer='[4,11]'
 pooling_ty='max_max' #[Hyosun] #choices=["mean", "min", "max", "mean_min", "mean_max"] #[/Hyosun]
-mlp_layers=2 #6 #4
+mlp_layers=2
 #[/Hyosun] comp_fusion logic added
 
 #[Hyosun]
@@ -107,7 +106,7 @@ do
 
   CUDA_CACHE_DISABLE=1 python -W ignore ../../run.py --dataset ${dataset} \
   --data-train ${tr_data} --data-val ${te_data} --exp-dir $exp_dir \
-  --label-csv ./data/emotions_class_labels_indices.csv --n_class 10 \
+  --label-csv ./data/emotions_class_labels_indices.csv --n_class 7 \
   --lr $lr --n-epochs ${epoch} --batch-size $batch_size --save_model False \
   --freqm $freqm --timem $timem --mixup ${mixup} --bal ${bal} \
   --tstride $tstride --fstride $fstride --fshape ${fshape} --tshape ${tshape} --warmup False --task ${task} \

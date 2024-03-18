@@ -1,0 +1,1204 @@
+{
+ "data": [
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/RAVDESS/RAVDESS_audio_16k/Actor_04/03-01-02-02-02-01-04.wav",
+   "labels": "/m/07rwj07"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/RAVDESS/RAVDESS_audio_16k/Actor_04/03-01-04-02-01-02-04.wav",
+   "labels": "/m/07rwj02"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/RAVDESS/RAVDESS_audio_16k/Actor_04/03-01-03-01-02-02-04.wav",
+   "labels": "/m/07rwj01"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/RAVDESS/RAVDESS_audio_16k/Actor_04/03-01-01-01-02-02-04.wav",
+   "labels": "/m/07rwj03"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/RAVDESS/RAVDESS_audio_16k/Actor_04/03-01-03-02-02-02-04.wav",
+   "labels": "/m/07rwj01"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/RAVDESS/RAVDESS_audio_16k/Actor_04/03-01-03-01-01-01-04.wav",
+   "labels": "/m/07rwj01"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/RAVDESS/RAVDESS_audio_16k/Actor_04/03-01-04-02-02-01-04.wav",
+   "labels": "/m/07rwj02"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/RAVDESS/RAVDESS_audio_16k/Actor_04/03-01-04-02-02-02-04.wav",
+   "labels": "/m/07rwj02"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/RAVDESS/RAVDESS_audio_16k/Actor_04/03-01-03-02-02-01-04.wav",
+   "labels": "/m/07rwj01"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/RAVDESS/RAVDESS_audio_16k/Actor_04/03-01-04-02-01-01-04.wav",
+   "labels": "/m/07rwj02"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/RAVDESS/RAVDESS_audio_16k/Actor_04/03-01-03-02-01-01-04.wav",
+   "labels": "/m/07rwj01"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/RAVDESS/RAVDESS_audio_16k/Actor_04/03-01-02-01-02-01-04.wav",
+   "labels": "/m/07rwj07"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/RAVDESS/RAVDESS_audio_16k/Actor_04/03-01-03-02-01-02-04.wav",
+   "labels": "/m/07rwj01"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/RAVDESS/RAVDESS_audio_16k/Actor_04/03-01-02-02-01-01-04.wav",
+   "labels": "/m/07rwj07"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/RAVDESS/RAVDESS_audio_16k/Actor_04/03-01-03-01-02-01-04.wav",
+   "labels": "/m/07rwj01"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/RAVDESS/RAVDESS_audio_16k/Actor_04/03-01-05-01-01-02-04.wav",
+   "labels": "/m/07rwj00"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/RAVDESS/RAVDESS_audio_16k/Actor_04/03-01-01-01-01-02-04.wav",
+   "labels": "/m/07rwj03"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/RAVDESS/RAVDESS_audio_16k/Actor_04/03-01-02-02-02-02-04.wav",
+   "labels": "/m/07rwj07"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/RAVDESS/RAVDESS_audio_16k/Actor_04/03-01-02-01-01-02-04.wav",
+   "labels": "/m/07rwj07"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/RAVDESS/RAVDESS_audio_16k/Actor_04/03-01-04-01-01-02-04.wav",
+   "labels": "/m/07rwj02"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/RAVDESS/RAVDESS_audio_16k/Actor_04/03-01-01-01-02-01-04.wav",
+   "labels": "/m/07rwj03"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/RAVDESS/RAVDESS_audio_16k/Actor_04/03-01-05-01-01-01-04.wav",
+   "labels": "/m/07rwj00"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/RAVDESS/RAVDESS_audio_16k/Actor_04/03-01-03-01-01-02-04.wav",
+   "labels": "/m/07rwj01"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/RAVDESS/RAVDESS_audio_16k/Actor_04/03-01-04-01-02-02-04.wav",
+   "labels": "/m/07rwj02"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/RAVDESS/RAVDESS_audio_16k/Actor_04/03-01-04-01-02-01-04.wav",
+   "labels": "/m/07rwj02"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/RAVDESS/RAVDESS_audio_16k/Actor_04/03-01-01-01-01-01-04.wav",
+   "labels": "/m/07rwj03"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/RAVDESS/RAVDESS_audio_16k/Actor_04/03-01-02-01-01-01-04.wav",
+   "labels": "/m/07rwj07"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/RAVDESS/RAVDESS_audio_16k/Actor_04/03-01-02-02-01-02-04.wav",
+   "labels": "/m/07rwj07"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/RAVDESS/RAVDESS_audio_16k/Actor_04/03-01-02-01-02-02-04.wav",
+   "labels": "/m/07rwj07"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/RAVDESS/RAVDESS_audio_16k/Actor_04/03-01-04-01-01-01-04.wav",
+   "labels": "/m/07rwj02"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/RAVDESS/RAVDESS_audio_16k/Actor_04/03-01-08-02-01-02-04.wav",
+   "labels": "/m/07rwj06"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/RAVDESS/RAVDESS_audio_16k/Actor_04/03-01-06-02-01-01-04.wav",
+   "labels": "/m/07rwj04"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/RAVDESS/RAVDESS_audio_16k/Actor_04/03-01-06-02-01-02-04.wav",
+   "labels": "/m/07rwj04"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/RAVDESS/RAVDESS_audio_16k/Actor_04/03-01-08-02-02-01-04.wav",
+   "labels": "/m/07rwj06"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/RAVDESS/RAVDESS_audio_16k/Actor_04/03-01-06-02-02-01-04.wav",
+   "labels": "/m/07rwj04"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/RAVDESS/RAVDESS_audio_16k/Actor_04/03-01-07-02-01-02-04.wav",
+   "labels": "/m/07rwj05"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/RAVDESS/RAVDESS_audio_16k/Actor_04/03-01-07-02-02-01-04.wav",
+   "labels": "/m/07rwj05"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/RAVDESS/RAVDESS_audio_16k/Actor_04/03-01-07-01-02-01-04.wav",
+   "labels": "/m/07rwj05"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/RAVDESS/RAVDESS_audio_16k/Actor_04/03-01-05-02-02-01-04.wav",
+   "labels": "/m/07rwj00"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/RAVDESS/RAVDESS_audio_16k/Actor_04/03-01-05-01-02-02-04.wav",
+   "labels": "/m/07rwj00"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/RAVDESS/RAVDESS_audio_16k/Actor_04/03-01-05-02-02-02-04.wav",
+   "labels": "/m/07rwj00"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/RAVDESS/RAVDESS_audio_16k/Actor_04/03-01-05-02-01-02-04.wav",
+   "labels": "/m/07rwj00"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/RAVDESS/RAVDESS_audio_16k/Actor_04/03-01-08-01-02-01-04.wav",
+   "labels": "/m/07rwj06"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/RAVDESS/RAVDESS_audio_16k/Actor_04/03-01-05-02-01-01-04.wav",
+   "labels": "/m/07rwj00"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/RAVDESS/RAVDESS_audio_16k/Actor_04/03-01-08-01-02-02-04.wav",
+   "labels": "/m/07rwj06"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/RAVDESS/RAVDESS_audio_16k/Actor_04/03-01-06-01-02-01-04.wav",
+   "labels": "/m/07rwj04"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/RAVDESS/RAVDESS_audio_16k/Actor_04/03-01-06-01-01-01-04.wav",
+   "labels": "/m/07rwj04"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/RAVDESS/RAVDESS_audio_16k/Actor_04/03-01-08-02-01-01-04.wav",
+   "labels": "/m/07rwj06"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/RAVDESS/RAVDESS_audio_16k/Actor_04/03-01-08-01-01-02-04.wav",
+   "labels": "/m/07rwj06"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/RAVDESS/RAVDESS_audio_16k/Actor_04/03-01-06-02-02-02-04.wav",
+   "labels": "/m/07rwj04"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/RAVDESS/RAVDESS_audio_16k/Actor_04/03-01-06-01-02-02-04.wav",
+   "labels": "/m/07rwj04"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/RAVDESS/RAVDESS_audio_16k/Actor_04/03-01-07-01-01-02-04.wav",
+   "labels": "/m/07rwj05"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/RAVDESS/RAVDESS_audio_16k/Actor_04/03-01-08-02-02-02-04.wav",
+   "labels": "/m/07rwj06"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/RAVDESS/RAVDESS_audio_16k/Actor_04/03-01-07-01-01-01-04.wav",
+   "labels": "/m/07rwj05"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/RAVDESS/RAVDESS_audio_16k/Actor_04/03-01-06-01-01-02-04.wav",
+   "labels": "/m/07rwj04"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/RAVDESS/RAVDESS_audio_16k/Actor_04/03-01-07-01-02-02-04.wav",
+   "labels": "/m/07rwj05"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/RAVDESS/RAVDESS_audio_16k/Actor_04/03-01-07-02-02-02-04.wav",
+   "labels": "/m/07rwj05"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/RAVDESS/RAVDESS_audio_16k/Actor_04/03-01-07-02-01-01-04.wav",
+   "labels": "/m/07rwj05"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/RAVDESS/RAVDESS_audio_16k/Actor_04/03-01-05-01-02-01-04.wav",
+   "labels": "/m/07rwj00"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/RAVDESS/RAVDESS_audio_16k/Actor_04/03-01-08-01-01-01-04.wav",
+   "labels": "/m/07rwj06"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/RAVDESS/RAVDESS_audio_16k/Actor_05/03-01-02-01-02-01-05.wav",
+   "labels": "/m/07rwj07"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/RAVDESS/RAVDESS_audio_16k/Actor_05/03-01-03-02-01-01-05.wav",
+   "labels": "/m/07rwj01"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/RAVDESS/RAVDESS_audio_16k/Actor_05/03-01-04-01-01-02-05.wav",
+   "labels": "/m/07rwj02"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/RAVDESS/RAVDESS_audio_16k/Actor_05/03-01-01-01-02-01-05.wav",
+   "labels": "/m/07rwj03"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/RAVDESS/RAVDESS_audio_16k/Actor_05/03-01-03-02-01-02-05.wav",
+   "labels": "/m/07rwj01"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/RAVDESS/RAVDESS_audio_16k/Actor_05/03-01-01-01-01-02-05.wav",
+   "labels": "/m/07rwj03"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/RAVDESS/RAVDESS_audio_16k/Actor_05/03-01-03-02-02-02-05.wav",
+   "labels": "/m/07rwj01"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/RAVDESS/RAVDESS_audio_16k/Actor_05/03-01-04-01-02-02-05.wav",
+   "labels": "/m/07rwj02"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/RAVDESS/RAVDESS_audio_16k/Actor_05/03-01-03-01-02-01-05.wav",
+   "labels": "/m/07rwj01"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/RAVDESS/RAVDESS_audio_16k/Actor_05/03-01-02-01-02-02-05.wav",
+   "labels": "/m/07rwj07"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/RAVDESS/RAVDESS_audio_16k/Actor_05/03-01-02-02-01-01-05.wav",
+   "labels": "/m/07rwj07"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/RAVDESS/RAVDESS_audio_16k/Actor_05/03-01-01-01-02-02-05.wav",
+   "labels": "/m/07rwj03"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/RAVDESS/RAVDESS_audio_16k/Actor_05/03-01-03-01-01-01-05.wav",
+   "labels": "/m/07rwj01"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/RAVDESS/RAVDESS_audio_16k/Actor_05/03-01-02-02-02-01-05.wav",
+   "labels": "/m/07rwj07"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/RAVDESS/RAVDESS_audio_16k/Actor_05/03-01-02-02-02-02-05.wav",
+   "labels": "/m/07rwj07"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/RAVDESS/RAVDESS_audio_16k/Actor_05/03-01-03-02-02-01-05.wav",
+   "labels": "/m/07rwj01"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/RAVDESS/RAVDESS_audio_16k/Actor_05/03-01-03-01-01-02-05.wav",
+   "labels": "/m/07rwj01"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/RAVDESS/RAVDESS_audio_16k/Actor_05/03-01-02-01-01-01-05.wav",
+   "labels": "/m/07rwj07"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/RAVDESS/RAVDESS_audio_16k/Actor_05/03-01-03-01-02-02-05.wav",
+   "labels": "/m/07rwj01"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/RAVDESS/RAVDESS_audio_16k/Actor_05/03-01-01-01-01-01-05.wav",
+   "labels": "/m/07rwj03"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/RAVDESS/RAVDESS_audio_16k/Actor_05/03-01-02-01-01-02-05.wav",
+   "labels": "/m/07rwj07"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/RAVDESS/RAVDESS_audio_16k/Actor_05/03-01-02-02-01-02-05.wav",
+   "labels": "/m/07rwj07"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/RAVDESS/RAVDESS_audio_16k/Actor_05/03-01-04-01-02-01-05.wav",
+   "labels": "/m/07rwj02"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/RAVDESS/RAVDESS_audio_16k/Actor_05/03-01-04-02-01-01-05.wav",
+   "labels": "/m/07rwj02"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/RAVDESS/RAVDESS_audio_16k/Actor_05/03-01-04-01-01-01-05.wav",
+   "labels": "/m/07rwj02"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/RAVDESS/RAVDESS_audio_16k/Actor_05/03-01-06-01-01-01-05.wav",
+   "labels": "/m/07rwj04"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/RAVDESS/RAVDESS_audio_16k/Actor_05/03-01-07-02-02-02-05.wav",
+   "labels": "/m/07rwj05"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/RAVDESS/RAVDESS_audio_16k/Actor_05/03-01-05-02-02-02-05.wav",
+   "labels": "/m/07rwj00"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/RAVDESS/RAVDESS_audio_16k/Actor_05/03-01-06-01-02-01-05.wav",
+   "labels": "/m/07rwj04"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/RAVDESS/RAVDESS_audio_16k/Actor_05/03-01-04-02-02-02-05.wav",
+   "labels": "/m/07rwj02"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/RAVDESS/RAVDESS_audio_16k/Actor_05/03-01-08-02-01-02-05.wav",
+   "labels": "/m/07rwj06"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/RAVDESS/RAVDESS_audio_16k/Actor_05/03-01-05-01-02-02-05.wav",
+   "labels": "/m/07rwj00"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/RAVDESS/RAVDESS_audio_16k/Actor_05/03-01-07-01-01-02-05.wav",
+   "labels": "/m/07rwj05"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/RAVDESS/RAVDESS_audio_16k/Actor_05/03-01-05-02-01-01-05.wav",
+   "labels": "/m/07rwj00"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/RAVDESS/RAVDESS_audio_16k/Actor_05/03-01-07-02-01-02-05.wav",
+   "labels": "/m/07rwj05"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/RAVDESS/RAVDESS_audio_16k/Actor_05/03-01-08-01-02-02-05.wav",
+   "labels": "/m/07rwj06"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/RAVDESS/RAVDESS_audio_16k/Actor_05/03-01-06-02-01-01-05.wav",
+   "labels": "/m/07rwj04"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/RAVDESS/RAVDESS_audio_16k/Actor_05/03-01-04-02-01-02-05.wav",
+   "labels": "/m/07rwj02"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/RAVDESS/RAVDESS_audio_16k/Actor_05/03-01-08-01-01-02-05.wav",
+   "labels": "/m/07rwj06"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/RAVDESS/RAVDESS_audio_16k/Actor_05/03-01-07-02-01-01-05.wav",
+   "labels": "/m/07rwj05"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/RAVDESS/RAVDESS_audio_16k/Actor_05/03-01-07-01-02-01-05.wav",
+   "labels": "/m/07rwj05"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/RAVDESS/RAVDESS_audio_16k/Actor_05/03-01-07-02-02-01-05.wav",
+   "labels": "/m/07rwj05"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/RAVDESS/RAVDESS_audio_16k/Actor_05/03-01-06-01-02-02-05.wav",
+   "labels": "/m/07rwj04"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/RAVDESS/RAVDESS_audio_16k/Actor_05/03-01-07-01-02-02-05.wav",
+   "labels": "/m/07rwj05"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/RAVDESS/RAVDESS_audio_16k/Actor_05/03-01-05-01-02-01-05.wav",
+   "labels": "/m/07rwj00"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/RAVDESS/RAVDESS_audio_16k/Actor_05/03-01-04-02-02-01-05.wav",
+   "labels": "/m/07rwj02"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/RAVDESS/RAVDESS_audio_16k/Actor_05/03-01-05-01-01-02-05.wav",
+   "labels": "/m/07rwj00"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/RAVDESS/RAVDESS_audio_16k/Actor_05/03-01-05-02-01-02-05.wav",
+   "labels": "/m/07rwj00"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/RAVDESS/RAVDESS_audio_16k/Actor_05/03-01-06-02-01-02-05.wav",
+   "labels": "/m/07rwj04"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/RAVDESS/RAVDESS_audio_16k/Actor_05/03-01-06-02-02-02-05.wav",
+   "labels": "/m/07rwj04"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/RAVDESS/RAVDESS_audio_16k/Actor_05/03-01-06-01-01-02-05.wav",
+   "labels": "/m/07rwj04"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/RAVDESS/RAVDESS_audio_16k/Actor_05/03-01-08-02-01-01-05.wav",
+   "labels": "/m/07rwj06"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/RAVDESS/RAVDESS_audio_16k/Actor_05/03-01-08-01-02-01-05.wav",
+   "labels": "/m/07rwj06"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/RAVDESS/RAVDESS_audio_16k/Actor_05/03-01-07-01-01-01-05.wav",
+   "labels": "/m/07rwj05"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/RAVDESS/RAVDESS_audio_16k/Actor_05/03-01-08-02-02-02-05.wav",
+   "labels": "/m/07rwj06"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/RAVDESS/RAVDESS_audio_16k/Actor_05/03-01-08-02-02-01-05.wav",
+   "labels": "/m/07rwj06"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/RAVDESS/RAVDESS_audio_16k/Actor_05/03-01-05-02-02-01-05.wav",
+   "labels": "/m/07rwj00"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/RAVDESS/RAVDESS_audio_16k/Actor_05/03-01-06-02-02-01-05.wav",
+   "labels": "/m/07rwj04"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/RAVDESS/RAVDESS_audio_16k/Actor_05/03-01-05-01-01-01-05.wav",
+   "labels": "/m/07rwj00"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/RAVDESS/RAVDESS_audio_16k/Actor_05/03-01-08-01-01-01-05.wav",
+   "labels": "/m/07rwj06"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/RAVDESS/RAVDESS_audio_16k/Actor_06/03-01-02-02-01-01-06.wav",
+   "labels": "/m/07rwj07"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/RAVDESS/RAVDESS_audio_16k/Actor_06/03-01-02-01-01-01-06.wav",
+   "labels": "/m/07rwj07"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/RAVDESS/RAVDESS_audio_16k/Actor_06/03-01-02-02-02-01-06.wav",
+   "labels": "/m/07rwj07"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/RAVDESS/RAVDESS_audio_16k/Actor_06/03-01-02-01-01-02-06.wav",
+   "labels": "/m/07rwj07"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/RAVDESS/RAVDESS_audio_16k/Actor_06/03-01-02-02-01-02-06.wav",
+   "labels": "/m/07rwj07"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/RAVDESS/RAVDESS_audio_16k/Actor_06/03-01-03-01-01-02-06.wav",
+   "labels": "/m/07rwj01"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/RAVDESS/RAVDESS_audio_16k/Actor_06/03-01-02-01-02-02-06.wav",
+   "labels": "/m/07rwj07"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/RAVDESS/RAVDESS_audio_16k/Actor_06/03-01-01-01-01-01-06.wav",
+   "labels": "/m/07rwj03"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/RAVDESS/RAVDESS_audio_16k/Actor_06/03-01-03-01-01-01-06.wav",
+   "labels": "/m/07rwj01"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/RAVDESS/RAVDESS_audio_16k/Actor_06/03-01-03-02-01-01-06.wav",
+   "labels": "/m/07rwj01"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/RAVDESS/RAVDESS_audio_16k/Actor_06/03-01-02-01-02-01-06.wav",
+   "labels": "/m/07rwj07"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/RAVDESS/RAVDESS_audio_16k/Actor_06/03-01-01-01-01-02-06.wav",
+   "labels": "/m/07rwj03"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/RAVDESS/RAVDESS_audio_16k/Actor_06/03-01-01-01-02-01-06.wav",
+   "labels": "/m/07rwj03"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/RAVDESS/RAVDESS_audio_16k/Actor_06/03-01-03-01-02-01-06.wav",
+   "labels": "/m/07rwj01"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/RAVDESS/RAVDESS_audio_16k/Actor_06/03-01-03-01-02-02-06.wav",
+   "labels": "/m/07rwj01"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/RAVDESS/RAVDESS_audio_16k/Actor_06/03-01-02-02-02-02-06.wav",
+   "labels": "/m/07rwj07"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/RAVDESS/RAVDESS_audio_16k/Actor_06/03-01-01-01-02-02-06.wav",
+   "labels": "/m/07rwj03"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/RAVDESS/RAVDESS_audio_16k/Actor_06/03-01-07-01-02-02-06.wav",
+   "labels": "/m/07rwj05"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/RAVDESS/RAVDESS_audio_16k/Actor_06/03-01-07-01-01-01-06.wav",
+   "labels": "/m/07rwj05"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/RAVDESS/RAVDESS_audio_16k/Actor_06/03-01-08-02-02-01-06.wav",
+   "labels": "/m/07rwj06"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/RAVDESS/RAVDESS_audio_16k/Actor_06/03-01-06-01-01-02-06.wav",
+   "labels": "/m/07rwj04"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/RAVDESS/RAVDESS_audio_16k/Actor_06/03-01-04-02-02-02-06.wav",
+   "labels": "/m/07rwj02"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/RAVDESS/RAVDESS_audio_16k/Actor_06/03-01-08-01-01-02-06.wav",
+   "labels": "/m/07rwj06"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/RAVDESS/RAVDESS_audio_16k/Actor_06/03-01-06-02-01-01-06.wav",
+   "labels": "/m/07rwj04"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/RAVDESS/RAVDESS_audio_16k/Actor_06/03-01-05-02-02-01-06.wav",
+   "labels": "/m/07rwj00"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/RAVDESS/RAVDESS_audio_16k/Actor_06/03-01-08-01-01-01-06.wav",
+   "labels": "/m/07rwj06"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/RAVDESS/RAVDESS_audio_16k/Actor_06/03-01-07-02-02-02-06.wav",
+   "labels": "/m/07rwj05"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/RAVDESS/RAVDESS_audio_16k/Actor_06/03-01-03-02-02-02-06.wav",
+   "labels": "/m/07rwj01"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/RAVDESS/RAVDESS_audio_16k/Actor_06/03-01-05-01-02-01-06.wav",
+   "labels": "/m/07rwj00"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/RAVDESS/RAVDESS_audio_16k/Actor_06/03-01-06-01-02-02-06.wav",
+   "labels": "/m/07rwj04"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/RAVDESS/RAVDESS_audio_16k/Actor_06/03-01-05-01-01-02-06.wav",
+   "labels": "/m/07rwj00"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/RAVDESS/RAVDESS_audio_16k/Actor_06/03-01-04-01-02-02-06.wav",
+   "labels": "/m/07rwj02"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/RAVDESS/RAVDESS_audio_16k/Actor_06/03-01-08-02-01-02-06.wav",
+   "labels": "/m/07rwj06"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/RAVDESS/RAVDESS_audio_16k/Actor_06/03-01-04-02-01-01-06.wav",
+   "labels": "/m/07rwj02"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/RAVDESS/RAVDESS_audio_16k/Actor_06/03-01-07-01-01-02-06.wav",
+   "labels": "/m/07rwj05"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/RAVDESS/RAVDESS_audio_16k/Actor_06/03-01-05-02-01-01-06.wav",
+   "labels": "/m/07rwj00"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/RAVDESS/RAVDESS_audio_16k/Actor_06/03-01-03-02-01-02-06.wav",
+   "labels": "/m/07rwj01"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/RAVDESS/RAVDESS_audio_16k/Actor_06/03-01-07-02-01-02-06.wav",
+   "labels": "/m/07rwj05"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/RAVDESS/RAVDESS_audio_16k/Actor_06/03-01-04-01-01-01-06.wav",
+   "labels": "/m/07rwj02"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/RAVDESS/RAVDESS_audio_16k/Actor_06/03-01-04-02-01-02-06.wav",
+   "labels": "/m/07rwj02"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/RAVDESS/RAVDESS_audio_16k/Actor_06/03-01-05-01-02-02-06.wav",
+   "labels": "/m/07rwj00"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/RAVDESS/RAVDESS_audio_16k/Actor_06/03-01-07-02-02-01-06.wav",
+   "labels": "/m/07rwj05"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/RAVDESS/RAVDESS_audio_16k/Actor_06/03-01-07-02-01-01-06.wav",
+   "labels": "/m/07rwj05"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/RAVDESS/RAVDESS_audio_16k/Actor_06/03-01-03-02-02-01-06.wav",
+   "labels": "/m/07rwj01"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/RAVDESS/RAVDESS_audio_16k/Actor_06/03-01-06-02-01-02-06.wav",
+   "labels": "/m/07rwj04"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/RAVDESS/RAVDESS_audio_16k/Actor_06/03-01-06-01-02-01-06.wav",
+   "labels": "/m/07rwj04"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/RAVDESS/RAVDESS_audio_16k/Actor_06/03-01-05-01-01-01-06.wav",
+   "labels": "/m/07rwj00"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/RAVDESS/RAVDESS_audio_16k/Actor_06/03-01-04-01-02-01-06.wav",
+   "labels": "/m/07rwj02"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/RAVDESS/RAVDESS_audio_16k/Actor_06/03-01-07-01-02-01-06.wav",
+   "labels": "/m/07rwj05"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/RAVDESS/RAVDESS_audio_16k/Actor_06/03-01-06-02-02-01-06.wav",
+   "labels": "/m/07rwj04"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/RAVDESS/RAVDESS_audio_16k/Actor_06/03-01-05-02-02-02-06.wav",
+   "labels": "/m/07rwj00"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/RAVDESS/RAVDESS_audio_16k/Actor_06/03-01-08-01-02-02-06.wav",
+   "labels": "/m/07rwj06"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/RAVDESS/RAVDESS_audio_16k/Actor_06/03-01-08-02-02-02-06.wav",
+   "labels": "/m/07rwj06"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/RAVDESS/RAVDESS_audio_16k/Actor_06/03-01-06-02-02-02-06.wav",
+   "labels": "/m/07rwj04"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/RAVDESS/RAVDESS_audio_16k/Actor_06/03-01-08-01-02-01-06.wav",
+   "labels": "/m/07rwj06"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/RAVDESS/RAVDESS_audio_16k/Actor_06/03-01-06-01-01-01-06.wav",
+   "labels": "/m/07rwj04"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/RAVDESS/RAVDESS_audio_16k/Actor_06/03-01-04-02-02-01-06.wav",
+   "labels": "/m/07rwj02"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/RAVDESS/RAVDESS_audio_16k/Actor_06/03-01-05-02-01-02-06.wav",
+   "labels": "/m/07rwj00"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/RAVDESS/RAVDESS_audio_16k/Actor_06/03-01-08-02-01-01-06.wav",
+   "labels": "/m/07rwj06"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/RAVDESS/RAVDESS_audio_16k/Actor_06/03-01-04-01-01-02-06.wav",
+   "labels": "/m/07rwj02"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/RAVDESS/RAVDESS_audio_16k/Actor_18/03-01-02-02-02-02-18.wav",
+   "labels": "/m/07rwj07"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/RAVDESS/RAVDESS_audio_16k/Actor_18/03-01-03-01-02-01-18.wav",
+   "labels": "/m/07rwj01"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/RAVDESS/RAVDESS_audio_16k/Actor_18/03-01-03-01-02-02-18.wav",
+   "labels": "/m/07rwj01"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/RAVDESS/RAVDESS_audio_16k/Actor_18/03-01-02-02-01-01-18.wav",
+   "labels": "/m/07rwj07"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/RAVDESS/RAVDESS_audio_16k/Actor_18/03-01-02-01-02-02-18.wav",
+   "labels": "/m/07rwj07"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/RAVDESS/RAVDESS_audio_16k/Actor_18/03-01-02-01-01-02-18.wav",
+   "labels": "/m/07rwj07"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/RAVDESS/RAVDESS_audio_16k/Actor_18/03-01-04-01-01-02-18.wav",
+   "labels": "/m/07rwj02"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/RAVDESS/RAVDESS_audio_16k/Actor_18/03-01-02-02-01-02-18.wav",
+   "labels": "/m/07rwj07"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/RAVDESS/RAVDESS_audio_16k/Actor_18/03-01-04-01-01-01-18.wav",
+   "labels": "/m/07rwj02"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/RAVDESS/RAVDESS_audio_16k/Actor_18/03-01-01-01-02-02-18.wav",
+   "labels": "/m/07rwj03"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/RAVDESS/RAVDESS_audio_16k/Actor_18/03-01-03-02-01-01-18.wav",
+   "labels": "/m/07rwj01"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/RAVDESS/RAVDESS_audio_16k/Actor_18/03-01-03-02-01-02-18.wav",
+   "labels": "/m/07rwj01"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/RAVDESS/RAVDESS_audio_16k/Actor_18/03-01-04-01-02-02-18.wav",
+   "labels": "/m/07rwj02"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/RAVDESS/RAVDESS_audio_16k/Actor_18/03-01-01-01-01-01-18.wav",
+   "labels": "/m/07rwj03"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/RAVDESS/RAVDESS_audio_16k/Actor_18/03-01-01-01-01-02-18.wav",
+   "labels": "/m/07rwj03"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/RAVDESS/RAVDESS_audio_16k/Actor_18/03-01-02-02-02-01-18.wav",
+   "labels": "/m/07rwj07"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/RAVDESS/RAVDESS_audio_16k/Actor_18/03-01-02-01-02-01-18.wav",
+   "labels": "/m/07rwj07"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/RAVDESS/RAVDESS_audio_16k/Actor_18/03-01-03-02-02-01-18.wav",
+   "labels": "/m/07rwj01"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/RAVDESS/RAVDESS_audio_16k/Actor_18/03-01-03-02-02-02-18.wav",
+   "labels": "/m/07rwj01"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/RAVDESS/RAVDESS_audio_16k/Actor_18/03-01-04-02-01-01-18.wav",
+   "labels": "/m/07rwj02"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/RAVDESS/RAVDESS_audio_16k/Actor_18/03-01-02-01-01-01-18.wav",
+   "labels": "/m/07rwj07"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/RAVDESS/RAVDESS_audio_16k/Actor_18/03-01-03-01-01-01-18.wav",
+   "labels": "/m/07rwj01"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/RAVDESS/RAVDESS_audio_16k/Actor_18/03-01-04-01-02-01-18.wav",
+   "labels": "/m/07rwj02"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/RAVDESS/RAVDESS_audio_16k/Actor_18/03-01-03-01-01-02-18.wav",
+   "labels": "/m/07rwj01"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/RAVDESS/RAVDESS_audio_16k/Actor_18/03-01-04-02-01-02-18.wav",
+   "labels": "/m/07rwj02"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/RAVDESS/RAVDESS_audio_16k/Actor_18/03-01-01-01-02-01-18.wav",
+   "labels": "/m/07rwj03"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/RAVDESS/RAVDESS_audio_16k/Actor_18/03-01-08-02-01-01-18.wav",
+   "labels": "/m/07rwj06"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/RAVDESS/RAVDESS_audio_16k/Actor_18/03-01-08-01-02-02-18.wav",
+   "labels": "/m/07rwj06"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/RAVDESS/RAVDESS_audio_16k/Actor_18/03-01-04-02-02-01-18.wav",
+   "labels": "/m/07rwj02"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/RAVDESS/RAVDESS_audio_16k/Actor_18/03-01-08-01-01-02-18.wav",
+   "labels": "/m/07rwj06"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/RAVDESS/RAVDESS_audio_16k/Actor_18/03-01-05-02-01-02-18.wav",
+   "labels": "/m/07rwj00"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/RAVDESS/RAVDESS_audio_16k/Actor_18/03-01-07-01-01-02-18.wav",
+   "labels": "/m/07rwj05"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/RAVDESS/RAVDESS_audio_16k/Actor_18/03-01-06-02-01-02-18.wav",
+   "labels": "/m/07rwj04"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/RAVDESS/RAVDESS_audio_16k/Actor_18/03-01-07-02-01-01-18.wav",
+   "labels": "/m/07rwj05"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/RAVDESS/RAVDESS_audio_16k/Actor_18/03-01-05-01-02-02-18.wav",
+   "labels": "/m/07rwj00"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/RAVDESS/RAVDESS_audio_16k/Actor_18/03-01-05-01-01-02-18.wav",
+   "labels": "/m/07rwj00"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/RAVDESS/RAVDESS_audio_16k/Actor_18/03-01-05-02-02-02-18.wav",
+   "labels": "/m/07rwj00"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/RAVDESS/RAVDESS_audio_16k/Actor_18/03-01-08-02-01-02-18.wav",
+   "labels": "/m/07rwj06"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/RAVDESS/RAVDESS_audio_16k/Actor_18/03-01-08-01-01-01-18.wav",
+   "labels": "/m/07rwj06"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/RAVDESS/RAVDESS_audio_16k/Actor_18/03-01-08-02-02-01-18.wav",
+   "labels": "/m/07rwj06"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/RAVDESS/RAVDESS_audio_16k/Actor_18/03-01-07-02-02-02-18.wav",
+   "labels": "/m/07rwj05"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/RAVDESS/RAVDESS_audio_16k/Actor_18/03-01-05-02-02-01-18.wav",
+   "labels": "/m/07rwj00"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/RAVDESS/RAVDESS_audio_16k/Actor_18/03-01-07-02-02-01-18.wav",
+   "labels": "/m/07rwj05"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/RAVDESS/RAVDESS_audio_16k/Actor_18/03-01-07-01-02-02-18.wav",
+   "labels": "/m/07rwj05"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/RAVDESS/RAVDESS_audio_16k/Actor_18/03-01-06-01-02-01-18.wav",
+   "labels": "/m/07rwj04"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/RAVDESS/RAVDESS_audio_16k/Actor_18/03-01-06-02-02-02-18.wav",
+   "labels": "/m/07rwj04"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/RAVDESS/RAVDESS_audio_16k/Actor_18/03-01-06-01-01-01-18.wav",
+   "labels": "/m/07rwj04"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/RAVDESS/RAVDESS_audio_16k/Actor_18/03-01-06-01-01-02-18.wav",
+   "labels": "/m/07rwj04"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/RAVDESS/RAVDESS_audio_16k/Actor_18/03-01-08-02-02-02-18.wav",
+   "labels": "/m/07rwj06"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/RAVDESS/RAVDESS_audio_16k/Actor_18/03-01-07-01-01-01-18.wav",
+   "labels": "/m/07rwj05"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/RAVDESS/RAVDESS_audio_16k/Actor_18/03-01-05-01-01-01-18.wav",
+   "labels": "/m/07rwj00"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/RAVDESS/RAVDESS_audio_16k/Actor_18/03-01-08-01-02-01-18.wav",
+   "labels": "/m/07rwj06"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/RAVDESS/RAVDESS_audio_16k/Actor_18/03-01-06-02-01-01-18.wav",
+   "labels": "/m/07rwj04"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/RAVDESS/RAVDESS_audio_16k/Actor_18/03-01-05-02-01-01-18.wav",
+   "labels": "/m/07rwj00"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/RAVDESS/RAVDESS_audio_16k/Actor_18/03-01-04-02-02-02-18.wav",
+   "labels": "/m/07rwj02"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/RAVDESS/RAVDESS_audio_16k/Actor_18/03-01-07-01-02-01-18.wav",
+   "labels": "/m/07rwj05"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/RAVDESS/RAVDESS_audio_16k/Actor_18/03-01-07-02-01-02-18.wav",
+   "labels": "/m/07rwj05"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/RAVDESS/RAVDESS_audio_16k/Actor_18/03-01-06-02-02-01-18.wav",
+   "labels": "/m/07rwj04"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/RAVDESS/RAVDESS_audio_16k/Actor_18/03-01-05-01-02-01-18.wav",
+   "labels": "/m/07rwj00"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/RAVDESS/RAVDESS_audio_16k/Actor_18/03-01-06-01-02-02-18.wav",
+   "labels": "/m/07rwj04"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/RAVDESS/RAVDESS_audio_16k/Actor_22/03-01-05-01-02-01-22.wav",
+   "labels": "/m/07rwj00"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/RAVDESS/RAVDESS_audio_16k/Actor_22/03-01-05-01-01-02-22.wav",
+   "labels": "/m/07rwj00"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/RAVDESS/RAVDESS_audio_16k/Actor_22/03-01-04-02-01-02-22.wav",
+   "labels": "/m/07rwj02"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/RAVDESS/RAVDESS_audio_16k/Actor_22/03-01-03-01-01-01-22.wav",
+   "labels": "/m/07rwj01"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/RAVDESS/RAVDESS_audio_16k/Actor_22/03-01-05-01-02-02-22.wav",
+   "labels": "/m/07rwj00"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/RAVDESS/RAVDESS_audio_16k/Actor_22/03-01-04-01-01-01-22.wav",
+   "labels": "/m/07rwj02"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/RAVDESS/RAVDESS_audio_16k/Actor_22/03-01-04-02-01-01-22.wav",
+   "labels": "/m/07rwj02"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/RAVDESS/RAVDESS_audio_16k/Actor_22/03-01-04-01-02-01-22.wav",
+   "labels": "/m/07rwj02"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/RAVDESS/RAVDESS_audio_16k/Actor_22/03-01-01-01-02-01-22.wav",
+   "labels": "/m/07rwj03"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/RAVDESS/RAVDESS_audio_16k/Actor_22/03-01-06-01-01-02-22.wav",
+   "labels": "/m/07rwj04"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/RAVDESS/RAVDESS_audio_16k/Actor_22/03-01-05-02-02-02-22.wav",
+   "labels": "/m/07rwj00"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/RAVDESS/RAVDESS_audio_16k/Actor_22/03-01-07-02-01-02-22.wav",
+   "labels": "/m/07rwj05"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/RAVDESS/RAVDESS_audio_16k/Actor_22/03-01-02-01-01-02-22.wav",
+   "labels": "/m/07rwj07"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/RAVDESS/RAVDESS_audio_16k/Actor_22/03-01-01-01-02-02-22.wav",
+   "labels": "/m/07rwj03"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/RAVDESS/RAVDESS_audio_16k/Actor_22/03-01-02-02-01-01-22.wav",
+   "labels": "/m/07rwj07"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/RAVDESS/RAVDESS_audio_16k/Actor_22/03-01-02-02-01-02-22.wav",
+   "labels": "/m/07rwj07"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/RAVDESS/RAVDESS_audio_16k/Actor_22/03-01-03-02-01-01-22.wav",
+   "labels": "/m/07rwj01"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/RAVDESS/RAVDESS_audio_16k/Actor_22/03-01-04-02-02-01-22.wav",
+   "labels": "/m/07rwj02"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/RAVDESS/RAVDESS_audio_16k/Actor_22/03-01-07-01-01-01-22.wav",
+   "labels": "/m/07rwj05"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/RAVDESS/RAVDESS_audio_16k/Actor_22/03-01-04-01-02-02-22.wav",
+   "labels": "/m/07rwj02"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/RAVDESS/RAVDESS_audio_16k/Actor_22/03-01-02-01-02-02-22.wav",
+   "labels": "/m/07rwj07"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/RAVDESS/RAVDESS_audio_16k/Actor_22/03-01-01-01-01-01-22.wav",
+   "labels": "/m/07rwj03"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/RAVDESS/RAVDESS_audio_16k/Actor_22/03-01-07-01-01-02-22.wav",
+   "labels": "/m/07rwj05"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/RAVDESS/RAVDESS_audio_16k/Actor_22/03-01-03-02-02-02-22.wav",
+   "labels": "/m/07rwj01"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/RAVDESS/RAVDESS_audio_16k/Actor_22/03-01-02-02-02-01-22.wav",
+   "labels": "/m/07rwj07"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/RAVDESS/RAVDESS_audio_16k/Actor_22/03-01-04-02-02-02-22.wav",
+   "labels": "/m/07rwj02"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/RAVDESS/RAVDESS_audio_16k/Actor_22/03-01-06-01-02-02-22.wav",
+   "labels": "/m/07rwj04"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/RAVDESS/RAVDESS_audio_16k/Actor_22/03-01-03-01-01-02-22.wav",
+   "labels": "/m/07rwj01"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/RAVDESS/RAVDESS_audio_16k/Actor_22/03-01-06-01-01-01-22.wav",
+   "labels": "/m/07rwj04"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/RAVDESS/RAVDESS_audio_16k/Actor_22/03-01-06-02-02-02-22.wav",
+   "labels": "/m/07rwj04"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/RAVDESS/RAVDESS_audio_16k/Actor_22/03-01-07-02-02-01-22.wav",
+   "labels": "/m/07rwj05"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/RAVDESS/RAVDESS_audio_16k/Actor_22/03-01-07-01-02-01-22.wav",
+   "labels": "/m/07rwj05"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/RAVDESS/RAVDESS_audio_16k/Actor_22/03-01-03-01-02-01-22.wav",
+   "labels": "/m/07rwj01"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/RAVDESS/RAVDESS_audio_16k/Actor_22/03-01-03-01-02-02-22.wav",
+   "labels": "/m/07rwj01"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/RAVDESS/RAVDESS_audio_16k/Actor_22/03-01-07-01-02-02-22.wav",
+   "labels": "/m/07rwj05"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/RAVDESS/RAVDESS_audio_16k/Actor_22/03-01-06-02-01-02-22.wav",
+   "labels": "/m/07rwj04"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/RAVDESS/RAVDESS_audio_16k/Actor_22/03-01-05-02-01-02-22.wav",
+   "labels": "/m/07rwj00"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/RAVDESS/RAVDESS_audio_16k/Actor_22/03-01-02-01-01-01-22.wav",
+   "labels": "/m/07rwj07"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/RAVDESS/RAVDESS_audio_16k/Actor_22/03-01-05-02-02-01-22.wav",
+   "labels": "/m/07rwj00"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/RAVDESS/RAVDESS_audio_16k/Actor_22/03-01-03-02-01-02-22.wav",
+   "labels": "/m/07rwj01"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/RAVDESS/RAVDESS_audio_16k/Actor_22/03-01-06-01-02-01-22.wav",
+   "labels": "/m/07rwj04"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/RAVDESS/RAVDESS_audio_16k/Actor_22/03-01-04-01-01-02-22.wav",
+   "labels": "/m/07rwj02"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/RAVDESS/RAVDESS_audio_16k/Actor_22/03-01-06-02-01-01-22.wav",
+   "labels": "/m/07rwj04"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/RAVDESS/RAVDESS_audio_16k/Actor_22/03-01-03-02-02-01-22.wav",
+   "labels": "/m/07rwj01"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/RAVDESS/RAVDESS_audio_16k/Actor_22/03-01-02-02-02-02-22.wav",
+   "labels": "/m/07rwj07"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/RAVDESS/RAVDESS_audio_16k/Actor_22/03-01-06-02-02-01-22.wav",
+   "labels": "/m/07rwj04"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/RAVDESS/RAVDESS_audio_16k/Actor_22/03-01-07-02-01-01-22.wav",
+   "labels": "/m/07rwj05"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/RAVDESS/RAVDESS_audio_16k/Actor_22/03-01-05-02-01-01-22.wav",
+   "labels": "/m/07rwj00"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/RAVDESS/RAVDESS_audio_16k/Actor_22/03-01-05-01-01-01-22.wav",
+   "labels": "/m/07rwj00"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/RAVDESS/RAVDESS_audio_16k/Actor_22/03-01-01-01-01-02-22.wav",
+   "labels": "/m/07rwj03"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/RAVDESS/RAVDESS_audio_16k/Actor_22/03-01-02-01-02-01-22.wav",
+   "labels": "/m/07rwj07"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/RAVDESS/RAVDESS_audio_16k/Actor_22/03-01-08-01-01-02-22.wav",
+   "labels": "/m/07rwj06"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/RAVDESS/RAVDESS_audio_16k/Actor_22/03-01-08-01-02-01-22.wav",
+   "labels": "/m/07rwj06"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/RAVDESS/RAVDESS_audio_16k/Actor_22/03-01-08-02-01-01-22.wav",
+   "labels": "/m/07rwj06"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/RAVDESS/RAVDESS_audio_16k/Actor_22/03-01-07-02-02-02-22.wav",
+   "labels": "/m/07rwj05"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/RAVDESS/RAVDESS_audio_16k/Actor_22/03-01-08-01-01-01-22.wav",
+   "labels": "/m/07rwj06"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/RAVDESS/RAVDESS_audio_16k/Actor_22/03-01-08-01-02-02-22.wav",
+   "labels": "/m/07rwj06"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/RAVDESS/RAVDESS_audio_16k/Actor_22/03-01-08-02-02-02-22.wav",
+   "labels": "/m/07rwj06"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/RAVDESS/RAVDESS_audio_16k/Actor_22/03-01-08-02-02-01-22.wav",
+   "labels": "/m/07rwj06"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/RAVDESS/RAVDESS_audio_16k/Actor_22/03-01-08-02-01-02-22.wav",
+   "labels": "/m/07rwj06"
+  }
+ ]
+}

@@ -75,7 +75,7 @@ parser.add_argument("--cluster_factor", type=int, default=3, help="mask cluterin
 parser.add_argument("--epoch_iter", type=int, default=2000, help="for pretraining, how many iterations to verify and save models")
 
 # fine-tuning arguments
-parser.add_argument("--pretrained_mdl_path", type=str, default=None, help="the ssl pretrained models path")
+parser.add_argument("--pretrained_mdl_path", type=str, default=None, help="the ssl pretrained models or [Hyosun]the fine-tuned models path")
 parser.add_argument("--head_lr", type=int, default=1, help="the factor of mlp-head_lr/lr, used in some fine-tuning experiments only")
 parser.add_argument("--noise", help='if augment noise in finetuning', type=ast.literal_eval)
 parser.add_argument("--metrics", type=str, default="mAP", help="the main evaluation metrics in finetuning", choices=["mAP", "acc"])
@@ -93,7 +93,10 @@ parser.add_argument("--comp_fusion_multi_layer", type=str, default='[4,11]', hel
 parser.add_argument("--pooling_ty", type=str, default="mean_max", help="which pooling type you want to use", choices=["mean", "min", "max", "mean_min", "mean_max", "max_max"])
 parser.add_argument("--mlp_layers", type=int, default=4, help="how many mlp_head layers you want to use for comp_fusion", choices=[0,2,4,6,8])
   #[/Hyosun] comp_fusion logic  added
-
+  #[Hyosun] classification_only added 2024-01-28
+parser.add_argument("--classification_only", type=str, default="False", help="whether to apply classification only", choices=["True", "False"])
+parser.add_argument("--best_model_dir", type=str, default="", help="The best model path")
+  #[/Hyosun] classification_only added 2024-01-28
 args = parser.parse_args()
 
 # # dataset spectrogram mean and std, used to normalize the input
@@ -141,28 +144,32 @@ if 'pretrain' in args.task:
                        input_fdim=args.num_mel_bins, input_tdim=args.target_length, model_size=args.model_size, pretrain_stage=True)
 # in the fine-tuning stage [Hyosun] focus and use!!!
 else: #[Hyosun] set-up model for fine-tuning
+    # if args.classification_only=="False": #[Hyosun]fine-tuning
     print("[Hyosun:run.py] args.comp_fusion: ", args.comp_fusion)
     print("[Hyosun:run.py] args.comp_fusion_method: ", args.comp_fusion_method)
     print("[Hyosun:run.py] args.comp_fusion_multi_layer: ", args.comp_fusion_multi_layer)
     print("[Hyosun:run.py] args.pooling_ty: ", args.pooling_ty)
     audio_model = ASTModel(
-                       #[Hyosun] comp_logic added
-                       comp_fusion=args.comp_fusion,                          #[Hyosun] comp_fusion added
-                       comp_fusion_method=args.comp_fusion_method,            #[Hyosun] comp_fusion_method added
-                       comp_fusion_multi_layer=args.comp_fusion_multi_layer,  #[Hyosun] comp_fusion_multi_layer added
-                       pooling_ty=args.pooling_ty,                            #[Hyosun] pooling_ty added
-                       mlp_layers=args.mlp_layers,                            #[Hyosun] mlp_layers added
-                       #[/Hyosun] comp_logic added
-                       label_dim=args.n_class, fshape=args.fshape, tshape=args.tshape, fstride=args.fstride, tstride=args.tstride,
-                       input_fdim=args.num_mel_bins, input_tdim=args.target_length, model_size=args.model_size, pretrain_stage=False,
-                       load_pretrained_mdl_path=args.pretrained_mdl_path #[Hyosun] call the model that are already saved, using args.pretrained_mdl_path 
+                    #[Hyosun] comp_logic added
+                    comp_fusion=args.comp_fusion,                          #[Hyosun] comp_fusion added
+                    comp_fusion_method=args.comp_fusion_method,            #[Hyosun] comp_fusion_method added
+                    comp_fusion_multi_layer=args.comp_fusion_multi_layer,  #[Hyosun] comp_fusion_multi_layer added
+                    pooling_ty=args.pooling_ty,                            #[Hyosun] pooling_ty added
+                    mlp_layers=args.mlp_layers,                            #[Hyosun] mlp_layers added
+                    #[/Hyosun] comp_logic added
+                    label_dim=args.n_class, fshape=args.fshape, tshape=args.tshape, fstride=args.fstride, tstride=args.tstride,
+                    input_fdim=args.num_mel_bins, input_tdim=args.target_length, model_size=args.model_size, pretrain_stage=False,
+                    load_pretrained_mdl_path=args.pretrained_mdl_path, #[Hyosun] call the model that are already saved, using args.pretrained_mdl_path 
+                    classification_only=args.classification_only           #[Hyosun] classification_only added
     )
-                      #  #[Hyosun] comp_logic added
-                      #  comp_fusion=args.comp_fusion,                      #[Hyosun] comp_fusion added
-                      #  comp_fusion_method=args.comp_fusion_method,        #[Hyosun] comp_fusion_method added
-                      #  comp_fusion_multi_layer=args.comp_fusion_multi_layer,  #[Hyosun] comp_fusion_multi_layer added
-                      #  pooling_ty=args.pooling_ty)                        #[Hyosun] pooling_ty added
-                      #  #[/Hyosun] comp_logic added
+                    #  #[Hyosun] comp_logic added
+                    #  comp_fusion=args.comp_fusion,                      #[Hyosun] comp_fusion added
+                    #  comp_fusion_method=args.comp_fusion_method,        #[Hyosun] comp_fusion_method added
+                    #  comp_fusion_multi_layer=args.comp_fusion_multi_layer,  #[Hyosun] comp_fusion_multi_layer added
+                    #  pooling_ty=args.pooling_ty)                        #[Hyosun] pooling_ty added
+                    #  #[/Hyosun] comp_logic added
+    # else: #[Hyosun] classification_only
+
 if not isinstance(audio_model, torch.nn.DataParallel):
     audio_model = torch.nn.DataParallel(audio_model)
 
@@ -172,11 +179,50 @@ if os.path.exists("%s/models" % args.exp_dir) == False:
 with open("%s/args.pkl" % args.exp_dir, "wb") as f:
     pickle.dump(args, f)
 
-#[Hyosun commented] Pretrain or Fine-tuning here
-if 'pretrain' not in args.task: #[Hyosun] fine-tuning: traintest.py의 train()으로 연결
-    print('Now starting fine-tuning for {:d} epochs'.format(args.n_epochs))
-    train(audio_model, train_loader, val_loader, args) #[Hyosun] fine-tuning: 여기서 fusion? Yes
-else: #[Hyosun] pretrain => [Hyosun] traintest_mask.py의 trainmask()로 연결
+#[Hyosun commented] Pretrain, Fine-tuning, or classification_only here
+if 'pretrain' not in args.task: #[Hyosun] fine-tuning: connects to traintest.py's train(), or classification only[/Hyosun]
+    #[Hyosun] fine-tuning: if-structure added 2024-01-28[/Hyosun]
+    if args.classification_only=="False":
+        print('Now starting fine-tuning for {:d} epochs'.format(args.n_epochs))
+        train(audio_model, train_loader, val_loader, args) #[Hyosun] fine-tuning: 여기서 fusion? Yes
+    #[Hyosun] classification_only added 2024-01-28
+    else:#[Hyosun] args.classification_only=="True":
+        device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+        sd = torch.load(args.pretrained_mdl_path, map_location=device)
+        if not isinstance(audio_model, torch.nn.DataParallel):
+            audio_model = torch.nn.DataParallel(audio_model)
+        audio_model.load_state_dict(sd, strict=False)
+
+        #[Hyosun] added 2024-02-01
+        import torch
+        from torch import nn
+        # best models on the validation set => [Hyosun]connects to traintest.py's validate()
+        # args.loss_fn = torch.nn.BCEWithLogitsLoss() #[Hyosun] already asigned as nn.CrossEntropyLoss() at traintest.py    
+        if args.loss == 'BCE':  #[Hyosun:comment] seems mostly for speech or audio datasets
+            loss_fn = nn.BCEWithLogitsLoss()
+        elif args.loss == 'CE': #[Hyosun:comment] Data ESC50, TAU <= controlled by bash files
+            loss_fn = nn.CrossEntropyLoss()
+        args.loss_fn = loss_fn
+        
+        # audio_output = audio_model(audio_input, args.task) #[Hyosun] call forward(): fusion here? Yes inside forward()
+        # if isinstance(loss_fn, torch.nn.CrossEntropyLoss):
+        #     loss = loss_fn(audio_output, torch.argmax(labels.long(), axis=1))
+        # else:
+        #     loss = loss_fn(audio_output, labels)
+        #[/Hyosun] added 2024-02-01
+
+        print("[Hyosun:run.py] args.classification_only==True and args.loss: ", args.loss, " for val idate")
+        stats, _ = validate(audio_model, val_loader, args, 'valid_set')
+        # note it is NOT mean of class-wise accuracy
+        val_acc = stats[0]['acc']
+        val_mAUC = np.mean([stat['auc'] for stat in stats])
+        print('---------------evaluate on the validation set---------------')
+        print("Accuracy: {:.6f}".format(val_acc))
+        print("AUC: {:.6f}".format(val_mAUC))
+        #[Hyosun] save the results [/Hyosun]
+        np.savetxt(args.exp_dir + '/val_result_classification_only.csv', [val_acc, val_mAUC])
+    #[/Hyosun] classification_only added 2024-01-28
+else: #[Hyosun] pretrain => [Hyosun] connects to traintest_mask.py's trainmask()
     print('Now starting self-supervised pretraining for {:d} epochs'.format(args.n_epochs))
     trainmask(audio_model, train_loader, val_loader, args)#[Hyosun] real train masks
 

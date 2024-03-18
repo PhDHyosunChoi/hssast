@@ -5,7 +5,7 @@
 # @Email   : yuangong@mit.edu
 # @File    : ast_models.py
 # -*- coding: utf-8 -*-
-# @Time    : 16/11/2023 
+# @Time    : 01/07/2023 
 # @Edit Author  : Hyosun Choi
 # @Affiliation  : RHUL
 # @Email   : bbeyes81@gmail.com
@@ -69,7 +69,8 @@ class ASTModel(nn.Module):
                  label_dim=527,
                  fshape=128, tshape=2, fstride=128, tstride=2,
                  input_fdim=128, input_tdim=1024, model_size='base',
-                 pretrain_stage=True, load_pretrained_mdl_path=None
+                 pretrain_stage=True, load_pretrained_mdl_path=None,
+                 classification_only='False' #[Hyosun] added 
     ):
                 #  comp_fusion,                         #[Hyosun] comp_fusion added
                 #  comp_fusion_method,                  #[Hyosun] comp_fusion_method added
@@ -94,8 +95,16 @@ class ASTModel(nn.Module):
         if pretrain_stage == True: #[Hyosun] pretrain =====================================================================================
             if load_pretrained_mdl_path != None: #[Hyosun comment] In case we don't use the pretrained model
                 raise ValueError('Setting load_pretrained_mdl_path at pretraining stage is useless, pretraining is always from scratch, please change it to None.')
-            if fstride != fshape or tstride != tshape:
-                raise ValueError('fstride != fshape or tstride != tshape, they must be same at the pretraining stage, patch split overlapping is not supported.')
+            if classification_only=="False": #[Hyosun] if-structure added
+                if fstride != fshape or tstride != tshape:
+                    raise ValueError('fstride != fshape or tstride != tshape, they must be same at the pretraining stage, patch split overlapping is not supported.')
+            print("[Hyosun:ast_models:pretrain_stage] fstride:%d fshape:%d tstride:%d tshape:%d" %(fstride, fshape, tstride,  tshape)) #[Hyosun] added            
+            #[Hyosun] classification_only=="True": 2024-02-01
+            if classification_only=="True": #[Hyosun] if-structure added
+                fstride, tstride, fshape, tshape = 16, 16, 16, 16
+                input_fdim, input_tdim = 128, 1024
+                print("[Hyosun:ast_models:pretrain_stage:classification_only==True:after assignment] fstride:%d fshape:%d tstride:%d tshape:%d" %(fstride, fshape, tstride,  tshape)) #[Hyosun] added                                           
+            #[/Hyosun]classification_only=="True": 2024-02-01               
 
             # if AudioSet pretraining is not used (but ImageNet pretraining may still apply)
             if model_size == 'tiny':
@@ -140,6 +149,12 @@ class ASTModel(nn.Module):
             # self.pooling_ty = pooling_ty #[Hyosun] added 2023-09-08
             # #self.fusion_embedding_dim
             # #/[Hyosun] Composing Multi-Layer Function inserted
+
+            # #[Hyosun] classification_only 2024-01-31
+            # if classification_only=="True":
+            #     fstride, tstride, fshape, tshape = 16, 16, 16, 16
+            #     input_fdim, input_tdim = 128, 1024
+            # #[/Hyosun] classification_only 2024-01-31
 
             # SSL Pretraining Code
             self.softmax = nn.Softmax(dim=-1)
@@ -195,39 +210,95 @@ class ASTModel(nn.Module):
             device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
             if load_pretrained_mdl_path == None:
                 raise ValueError('Please set load_pretrained_mdl_path to load a pretrained models.')
+            # # [Hyosun 2024-01-28] added for downstream classification 
+            # load_pretrained_mdl_path = torch.nn.DataParallel(load_pretrained_mdl_path)
+            # # [/Hyosun 2024-01-28] added for downstream classification
             sd = torch.load(load_pretrained_mdl_path, map_location=device)
+            # # [Hyosun 2024-01-28] added for downstream classification 
+            # sd = torch.nn.DataParallel(sd)
+            # # [/Hyosun 2024-01-28] added for downstream classification            
             # get the fshape and tshape, input_fdim and input_tdim in the pretraining stage
-            try:
-                p_fshape, p_tshape = sd['module.v.patch_embed.proj.weight'].shape[2], sd['module.v.patch_embed.proj.weight'].shape[3]
-                p_input_fdim, p_input_tdim = sd['module.p_input_fdim'].item(), sd['module.p_input_tdim'].item()
-            except:
-                raise  ValueError('The model loaded is not from a torch.nn.Dataparallel object. Wrap it with torch.nn.Dataparallel and try again.')
 
-            print('now load a SSL pretrained models from ' + load_pretrained_mdl_path)
-            # during pretraining, fstride=fshape and tstride=tshape because no patch overlapping is used
-            # here, input_fdim and input_tdim should be that used in pretraining, not that in the fine-tuning.
-            # we need to know input_fdim and input_tdim to do positional embedding cut/interpolation.
-            # generally it should be better to use same input_fdim during pretraining and finetuning, but input_tdim can be safely different
-            audio_model = ASTModel(
-                                   comp_fusion,               #[Hyosun] comp_fusion added
-                                   comp_fusion_method,        #[Hyosun] comp_fusion_method added
-                                   comp_fusion_multi_layer,   #[Hyosun] comp_fusion_multi_layer added
-                                   pooling_ty,                #[Hyosun] pooling_ty added 
-                                   mlp_layers,                #[Hyosun] mlp_layers added [Hyosun] representation shell만 만들어
-                                   fstride=p_fshape, tstride=p_tshape, fshape=p_fshape, tshape=p_tshape,
-                                   input_fdim=p_input_fdim, input_tdim=p_input_tdim, pretrain_stage=True, model_size=model_size
-                                  )
-                                  #  comp_fusion,               #[Hyosun] comp_fusion added
-                                  #  comp_fusion_method, #[Hyosun] comp_fusion_method added
-                                  #  comp_fusion_multi_layer,  #[Hyosun] comp_fusion_multi_layer added
-                                  #  pooling_ty)                 #[Hyosun] pooling_ty added #[Hyosun] representation shell만 만들어
-                                  #  comp_fusion=p_comp_fusion,               #[Hyosun] comp_fusion added
-                                  #  comp_fusion_method=p_comp_fusion_method, #[Hyosun] comp_fusion_method added
-                                  #  comp_fusion_multi_layer=p_comp_fusion_multi_layer,  #[Hyosun] comp_fusion_multi_layer added
-                                  #  pooling_ty=p_pooling_ty)                 #[Hyosun] pooling_ty added #[Hyosun] representation shell만 만들어
+            #[Hyosun] classification_only=='False': 2024-01-28
+            if classification_only=='False': #[Hyosun] Fine-tuning
+            #/Hyosun] classification_only=='False': 2024-01-28
+
+                #[Hyosun] uncommented  2024-01-30
+                #[Hyosun] commented out 2024-01-30
+                try:
+                    p_fshape, p_tshape = sd['module.v.patch_embed.proj.weight'].shape[2], sd['module.v.patch_embed.proj.weight'].shape[3]
+                    p_input_fdim, p_input_tdim = sd['module.p_input_fdim'].item(), sd['module.p_input_tdim'].item()
+                except:
+                    raise  ValueError('The model loaded is not from a torch.nn.Dataparallel object. Wrap it with torch.nn.Dataparallel and try again.')               
+                print("[Hyosun:ast_models:fine-tuning] p_fshape:%d, p_tshape:%d, p_input_fdim:%d, p_input_tdim:%d" %(p_fshape, p_tshape, p_input_fdim, p_input_tdim) )
+                #[/Hyosun]commented out 2024-01-30
+                #[/Hyosun]uncommented  2024-01-30
+
+
+                print('now load a SSL pretrained models from ' + load_pretrained_mdl_path)
+                # during pretraining, fstride=fshape and tstride=tshape because no patch overlapping is used
+                # here, input_fdim and input_tdim should be that used in pretraining, not that in the fine-tuning.
+                # we need to know input_fdim and input_tdim to do positional embedding cut/interpolation.
+                # generally it should be better to use same input_fdim during pretraining and finetuning, but input_tdim can be safely different
+                audio_model = ASTModel(
+                                    comp_fusion,               #[Hyosun] comp_fusion added
+                                    comp_fusion_method,        #[Hyosun] comp_fusion_method added
+                                    comp_fusion_multi_layer,   #[Hyosun] comp_fusion_multi_layer added
+                                    pooling_ty,                #[Hyosun] pooling_ty added 
+                                    mlp_layers,                #[Hyosun] mlp_layers added [Hyosun] representation shell만 만들어
+                                    fstride=p_fshape, tstride=p_tshape, fshape=p_fshape, tshape=p_tshape,
+                                    input_fdim=p_input_fdim, input_tdim=p_input_tdim, pretrain_stage=True, model_size=model_size,
+                                    classification_only='False' #[Hyosun] added
+                                    )
+                                    #  comp_fusion,               #[Hyosun] comp_fusion added
+                                    #  comp_fusion_method, #[Hyosun] comp_fusion_method added
+                                    #  comp_fusion_multi_layer,  #[Hyosun] comp_fusion_multi_layer added
+                                    #  pooling_ty)                 #[Hyosun] pooling_ty added #[Hyosun] representation shell만 만들어
+                                    #  comp_fusion=p_comp_fusion,               #[Hyosun] comp_fusion added
+                                    #  comp_fusion_method=p_comp_fusion_method, #[Hyosun] comp_fusion_method added
+                                    #  comp_fusion_multi_layer=p_comp_fusion_multi_layer,  #[Hyosun] comp_fusion_multi_layer added
+                                    #  pooling_ty=p_pooling_ty)                 #[Hyosun] pooling_ty added #[Hyosun] representation shell만 만들어
+            
+            #[Hyosun] classification_only=='True': 2024-01-28
+            else: # [Hyosun] args.classification_only=='True':
+                print('now load a SSL pretrained models from ' + load_pretrained_mdl_path)
+                # during pretraining, fstride=fshape and tstride=tshape because no patch overlapping is used
+                # here, input_fdim and input_tdim should be that used in pretraining, not that in the fine-tuning.
+                # we need to know input_fdim and input_tdim to do positional embedding cut/interpolation.
+                # generally it should be better to use same input_fdim during pretraining and finetuning, but input_tdim can be safely different
+                # fstride, tstride, fshape, tshape = 16, 16, 16, 16
+                # input_fdim, input_tdim = 128, 1024
+                print("[Hyosun]ast_models: classification_only: fstride:%d, tstride:%d, fshape:%d, tshape:%d"% (fstride, tstride, fshape, tshape))
+                audio_model = ASTModel(
+                                    comp_fusion,               #[Hyosun] comp_fusion added
+                                    comp_fusion_method,        #[Hyosun] comp_fusion_method added
+                                    comp_fusion_multi_layer,   #[Hyosun] comp_fusion_multi_layer added
+                                    pooling_ty,                #[Hyosun] pooling_ty added 
+                                    mlp_layers,                #[Hyosun] mlp_layers added [Hyosun] representation shell만 만들어
+                                    fstride, tstride, fshape, tshape,
+                                    input_fdim, input_tdim, pretrain_stage=True, model_size=model_size,
+                                    classification_only='True' #[Hyosun] added
+                                    )
+
+                print("[Hyosun:ast_models: pretrain_stage == False: classification_only:after ASTModel init] fstride:%d fshape:%d tstride:%d tshape:%d" %(fstride, fshape, tstride,  tshape)) #[Hyosun] added                                           
+            #/Hyosun] classification_only=='True': 2024-01-28
 
             audio_model = torch.nn.DataParallel(audio_model) #[Hyosun] representation shell만 만들어
-            audio_model.load_state_dict(sd, strict=False)    #[Hyosun] [important]assign pretrained weights contents(를 이제 넣어) into our model shell
+            #[Hyosun] uncommented  2024-01-30
+            #[Hyosun] commented out 2024-01-30
+            # try:
+            #     p_fshape, p_tshape = sd['module.v.patch_embed.proj.weight'].shape[2], sd['module.v.patch_embed.proj.weight'].shape[3]               
+            #     p_input_fdim, p_input_tdim = sd['module.p_input_fdim'].item(), sd['module.p_input_tdim'].item()
+            # except:
+            #     raise  ValueError('The model loaded is not from a torch.nn.Dataparallel object. Wrap it with torch.nn.Dataparallel and try again.')
+            # print("[Hyosun] p_fshape:%d, p_tshape:%d, p_input_fdim:%d, p_input_tdim:%d" %(p_fshape, p_tshape, p_input_fdim, p_input_tdim) )
+            #[/Hyosun]commented out 2024-01-30
+            #[/Hyosun]uncommented  2024-01-30
+
+            #[Hyosun] classification_only=='True': 2024-01-28
+            if classification_only=='False':
+                audio_model.load_state_dict(sd, strict=False)    #[Hyosun] [important]assign pretrained weights contents(를 이제 넣어) into our model shell
+            #/Hyosun] classification_only=='True': 2024-01-28
 
             self.v = audio_model.module.v
             self.original_embedding_dim = self.v.pos_embed.shape[2]
@@ -306,20 +377,49 @@ class ASTModel(nn.Module):
             self.v.patch_embed.num_patches = num_patches
             print('fine-tuning patch split stride: frequncey={:d}, time={:d}'.format(fstride, tstride))
             print('fine-tuning number of patches={:d}'.format(num_patches))
+            
+            # # [Hyosun] commented out 2024-01-30
+            # # [Hyosun] inserted
+            # try:
+            #     p_fshape, p_tshape = sd['module.v.patch_embed.proj.weight'].shape[2], sd['module.v.patch_embed.proj.weight'].shape[3]
+            #     p_input_fdim, p_input_tdim = sd['module.p_input_fdim'].item(), sd['module.p_input_tdim'].item()
+            # except:
+            #     raise  ValueError('The model loaded is not from a torch.nn.Dataparallel object. Wrap it with torch.nn.Dataparallel and try again.')
+            # print("[Hyosun] p_fshape:%d, p_tshape:%d, p_input_fdim:%d, p_input_tdim:%d" %(p_fshape, p_tshape, p_input_fdim, p_input_tdim) )
+            # #[/Hyosun] inserted
+            # #[/Hyosun] commented out 2024-01-30
 
-            # patch shape should be same for pretraining and fine-tuning
-            if fshape != p_fshape or tshape != p_tshape:
-                raise ValueError('The patch shape of pretraining and fine-tuning is not consistant, pretraining: f={:d}, t={:d}, finetuning: f={:d}, t={:d}'.format(p_fshape, p_tshape, fshape, tshape))
+            #[Hyosun] classification_only=='False': 2024-02-01
+            if classification_only=='False':
+                # patch shape should be same for pretraining and fine-tuning
+                if fshape != p_fshape or tshape != p_tshape: #[Hyosun] pretraining's fshape
+                    raise ValueError('The patch shape of pretraining and fine-tuning is not consistant, pretraining: f={:d}, t={:d}, finetuning: f={:d}, t={:d}'.format(p_fshape, p_tshape, fshape, tshape))
+            #[/Hyosun] classification_only=='False': 2024-02-01
 
-            # patch split stride generally should be different for pretraining and fine-tuning, as patch split overlapping is only used in finetuning
-            # during pretraining, p_fshape = p_fstride and p_tshape = p_tstride
-            if fstride != p_fshape or tstride != p_tshape:
-                # initialize a new patch embedding layer with desired new stride.
-                new_proj = torch.nn.Conv2d(1, self.original_embedding_dim, kernel_size=(fshape, tshape), stride=(fstride, tstride))
-                # but the weights of patch embedding layer is still got from the pretrained models
-                new_proj.weight = torch.nn.Parameter(torch.sum(self.v.patch_embed.proj.weight, dim=1).unsqueeze(1))
-                new_proj.bias = self.v.patch_embed.proj.bias
-                self.v.patch_embed.proj = new_proj
+
+            #[Hyosun] classification_only=='False': 2024-02-01
+            if classification_only=='False':
+                # patch split stride generally should be different for pretraining and fine-tuning, as patch split overlapping is only used in finetuning
+                # during pretraining, p_fshape = p_fstride and p_tshape = p_tstride
+                if fstride != p_fshape or tstride != p_tshape:
+                    # initialize a new patch embedding layer with desired new stride.
+                    new_proj = torch.nn.Conv2d(1, self.original_embedding_dim, kernel_size=(fshape, tshape), stride=(fstride, tstride))
+                    # but the weights of patch embedding layer is still got from the pretrained models
+                    new_proj.weight = torch.nn.Parameter(torch.sum(self.v.patch_embed.proj.weight, dim=1).unsqueeze(1))
+                    new_proj.bias = self.v.patch_embed.proj.bias
+                    self.v.patch_embed.proj = new_proj
+            else: #classification_only=='True':
+                # patch split stride generally should be different for pretraining and fine-tuning, as patch split overlapping is only used in finetuning
+                # during pretraining, p_fshape = p_fstride and p_tshape = p_tstride
+                if fstride != fshape or tstride != tshape:
+                    # initialize a new patch embedding layer with desired new stride.
+                    new_proj = torch.nn.Conv2d(1, self.original_embedding_dim, kernel_size=(fshape, tshape), stride=(fstride, tstride))
+                    # but the weights of patch embedding layer is still got from the pretrained models
+                    new_proj.weight = torch.nn.Parameter(torch.sum(self.v.patch_embed.proj.weight, dim=1).unsqueeze(1))
+                    new_proj.bias = self.v.patch_embed.proj.bias
+                    self.v.patch_embed.proj = new_proj
+            #[/Hyosun] classification_only=='False': 2024-02-01
+
 
             new_pos_embed = self.v.pos_embed[:, self.cls_token_num:, :].detach().reshape(1, p_num_patches, self.original_embedding_dim).transpose(1, 2).reshape(1, self.original_embedding_dim, p_f_dim, p_t_dim)
             # cut or interpolate the positional embedding
@@ -334,8 +434,18 @@ class ASTModel(nn.Module):
 
             new_pos_embed = new_pos_embed.reshape(1, self.original_embedding_dim, num_patches).transpose(1, 2)
             self.v.pos_embed = nn.Parameter(torch.cat([self.v.pos_embed[:, :self.cls_token_num, :].detach(), new_pos_embed], dim=1))
+            # [Hyosun]
+            # p_fshape, p_tshape = sd['module.v.patch_embed.proj.weight'].shape[2], sd['module.v.patch_embed.proj.weight'].shape[3]
+            # p_input_fdim, p_input_tdim = sd['module.p_input_fdim'].item(), sd['module.p_input_tdim'].item()
+            # [/Hyosun]
 
-
+            # [Hyosun] run here!!! 2024-01-31
+            #[Hyosun] classification_only=='True': 2024-01-28
+            if classification_only=='True':
+                audio_model.load_state_dict(sd, strict=False)    #[Hyosun] [important]assign pretrained weights contents(를 이제 넣어) into our model shell
+            #/Hyosun] classification_only=='True': 2024-01-28
+            # audio_model.load_state_dict(sd, strict=False)    #[Hyosun] [important]assign pretrained weights contents(를 이제 넣어) into our model shell
+            # [Hyosun] run here!!! 2024-01-31           
     
     # get the shape of intermediate representation.
     def get_shape(self, fstride, tstride, input_fdim, input_tdim, fshape, tshape):

@@ -35,6 +35,10 @@ src/finetune/TAU/exp/*
 src/finetune/Emotions/data/Emotions
 src/finetune/Emotions/data/Emotions_audio_16k
 src/finetune/Emotions/exp/*
+src/finetune/Emotions/event_evaluation/event/*
+src/finetune/Emotions/event_evaluation/*.ipynb
+src/finetune/Emotions/no-upload/*
+src/finetune/Emotions/no-use*
 #[/Hyosun] Emotions added
 #[Hyosun] ASEmotion added
 src/finetune/ASEmotions_audio_16k/ASEmotions_audio_16k_intolabels_2s(2s-10s)/*
@@ -49,16 +53,58 @@ src/finetune/CornellBirdcall/data/BirdSong_audio_16k_10s
 src/finetune/CornellBirdcall/data/BirdSong_mp3
 src/finetune/CornellBirdcall/data/BirdSong_mp3*
 src/finetune/CornellBirdcall/exp/*
+src/finetune/CornellBirdcall/*.ipynb
+src/finetune/CornellBirdcall/event_evaluation/event/*
+src/finetune/CornellBirdcall/event_evaluation/*.ipynb
 #[/Hyosun] BirdSong added
 #[Hyosun] Isolated_urbansound/Iurban added
 src/finetune/Isolated_urbansound/data/iurban*
 src/finetune/Isolated_urbansound/data/00.iurban*
-src/finetune/Isolated_urbansound/exp/*
+src/finetune/Isolated_urbansound/*.ipynb
 #[/Hyosun] Isolated_urbansound/Iurban added
 #[Hyosun] Isolated_urbansound/IurbanEvent added
 src/finetune/Isolated_urbansound/data/event*
 src/finetune/Isolated_urbansound/exp/*
 #[/Hyosun] Isolated_urbansound/IurbanEvent added
+
+#[Hyosun] CornellBirdcall_evaluation 
+src/finetune/CornellBirdcall_evaluation/data/BirdSong*
+src/finetune/CornellBirdcall_evaluation/exp/*
+src/finetune/CornellBirdcall_evaluation/*.pth
+src/finetune/CornellBirdcall_evaluation/*.ipynb
+#[/Hyosun]CornellBirdcall_evaluation 
+#[Hyosun] CREMA-D
+src/finetune/CREMA-D/Audio*
+src/finetune/CREMA-D/exp/*
+src/finetune/CREMA-D/Video*
+src/finetune/CREMA-D/*.ipynb
+#[/Hyosun]CREMA-D
+#[Hyosun] Isolated_urbansound_event_evaluation
+src/finetune/Isolated_urbansound_event_evaluation/data/event
+src/finetune/Isolated_urbansound_event_evaluation/data/event_audio_16k
+src/finetune/Isolated_urbansound_event_evaluation/exp/*
+src/finetune/Isolated_urbansound_event_evaluation/*.ipynb
+src/finetune/Isolated_urbansound_event_evaluation/*.pth
+#[/Hyosun] Isolated_urbansound_event_evaluation
+#[Hyosun] RAVDESS
+src/finetune/RAVDESS/exp/*
+src/finetune/RAVDESS/RAVDESS*
+src/finetune/RAVDESS/*.ipynb
+#[/Hyosun]RAVDESS
+#[Hyosun] SAVEE
+src/finetune/SAVEE/SAVEE*
+src/finetune/SAVEE/exp*
+src/finetune/SAVEE/*.ipynb
+#[/Hyosun]SAVEE
+#[Hyosun] TESS
+src/finetune/TESS/exp/*
+src/finetune/TESS/TESS*
+src/finetune/TESS/*.ipynb
+#[/Hyosun]TESS
+
+
+
+
 
 #[Hyosun] no need the whole folder
 src/comp_fusion/*

@@ -1,0 +1,4004 @@
+{
+ "data": [
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/aldfly/XC264715.wav",
+   "labels": "/m/07rwj00"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/aldfly/XC370881.wav",
+   "labels": "/m/07rwj00"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/aldfly/XC370826.wav",
+   "labels": "/m/07rwj00"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/aldfly/XC189592.wav",
+   "labels": "/m/07rwj00"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/aldfly/XC135454.wav",
+   "labels": "/m/07rwj00"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/aldfly/XC135455.wav",
+   "labels": "/m/07rwj00"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/aldfly/XC195541.wav",
+   "labels": "/m/07rwj00"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/aldfly/XC318444.wav",
+   "labels": "/m/07rwj00"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/aldfly/XC334685.wav",
+   "labels": "/m/07rwj00"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/aldfly/XC189590.wav",
+   "labels": "/m/07rwj00"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/aldfly/XC319017.wav",
+   "labels": "/m/07rwj00"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/aldfly/XC138639.wav",
+   "labels": "/m/07rwj00"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/aldfly/XC302253.wav",
+   "labels": "/m/07rwj00"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/aldfly/XC181484.wav",
+   "labels": "/m/07rwj00"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/aldfly/XC194088.wav",
+   "labels": "/m/07rwj00"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/aldfly/XC78890.wav",
+   "labels": "/m/07rwj00"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/aldfly/XC16967.wav",
+   "labels": "/m/07rwj00"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/aldfly/XC406251.wav",
+   "labels": "/m/07rwj00"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/aldfly/XC317112.wav",
+   "labels": "/m/07rwj00"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/aldfly/XC283162.wav",
+   "labels": "/m/07rwj00"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/amecro/XC361336.wav",
+   "labels": "/m/07rwj01"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/amecro/XC114560.wav",
+   "labels": "/m/07rwj01"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/amecro/XC393299.wav",
+   "labels": "/m/07rwj01"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/amecro/XC181497.wav",
+   "labels": "/m/07rwj01"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/amecro/XC112598.wav",
+   "labels": "/m/07rwj01"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/amecro/XC317205.wav",
+   "labels": "/m/07rwj01"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/amecro/XC325935.wav",
+   "labels": "/m/07rwj01"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/amecro/XC388685.wav",
+   "labels": "/m/07rwj01"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/amecro/XC115938.wav",
+   "labels": "/m/07rwj01"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/amecro/XC195540.wav",
+   "labels": "/m/07rwj01"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/amecro/XC115939.wav",
+   "labels": "/m/07rwj01"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/amecro/XC481933.wav",
+   "labels": "/m/07rwj01"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/amecro/XC114561.wav",
+   "labels": "/m/07rwj01"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/amecro/XC172875.wav",
+   "labels": "/m/07rwj01"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/amecro/XC121396.wav",
+   "labels": "/m/07rwj01"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/amecro/XC363862.wav",
+   "labels": "/m/07rwj01"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/amecro/XC351540.wav",
+   "labels": "/m/07rwj01"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/amecro/XC188842.wav",
+   "labels": "/m/07rwj01"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/amecro/XC320383.wav",
+   "labels": "/m/07rwj01"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/amecro/XC137865.wav",
+   "labels": "/m/07rwj01"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/amegfi/XC388255.wav",
+   "labels": "/m/07rwj02"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/amegfi/XC504150.wav",
+   "labels": "/m/07rwj02"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/amegfi/XC333998.wav",
+   "labels": "/m/07rwj02"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/amegfi/XC372211.wav",
+   "labels": "/m/07rwj02"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/amegfi/XC179304.wav",
+   "labels": "/m/07rwj02"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/amegfi/XC367697.wav",
+   "labels": "/m/07rwj02"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/amegfi/XC179074.wav",
+   "labels": "/m/07rwj02"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/amegfi/XC315598.wav",
+   "labels": "/m/07rwj02"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/amegfi/XC182406.wav",
+   "labels": "/m/07rwj02"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/amegfi/XC210732.wav",
+   "labels": "/m/07rwj02"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/amegfi/XC294424.wav",
+   "labels": "/m/07rwj02"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/amegfi/XC133569.wav",
+   "labels": "/m/07rwj02"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/amegfi/XC124312.wav",
+   "labels": "/m/07rwj02"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/amegfi/XC428425.wav",
+   "labels": "/m/07rwj02"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/amegfi/XC315299.wav",
+   "labels": "/m/07rwj02"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/amegfi/XC205514.wav",
+   "labels": "/m/07rwj02"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/amegfi/XC131637.wav",
+   "labels": "/m/07rwj02"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/amegfi/XC476270.wav",
+   "labels": "/m/07rwj02"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/amegfi/XC429266.wav",
+   "labels": "/m/07rwj02"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/amegfi/XC496109.wav",
+   "labels": "/m/07rwj02"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/amepip/XC277590.wav",
+   "labels": "/m/07rwj03"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/amepip/XC113724.wav",
+   "labels": "/m/07rwj03"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/amepip/XC277582.wav",
+   "labels": "/m/07rwj03"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/amepip/XC277550.wav",
+   "labels": "/m/07rwj03"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/amepip/XC358830.wav",
+   "labels": "/m/07rwj03"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/amepip/XC338292.wav",
+   "labels": "/m/07rwj03"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/amepip/XC277579.wav",
+   "labels": "/m/07rwj03"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/amepip/XC179713.wav",
+   "labels": "/m/07rwj03"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/amepip/XC287461.wav",
+   "labels": "/m/07rwj03"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/amepip/XC277553.wav",
+   "labels": "/m/07rwj03"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/amepip/XC203607.wav",
+   "labels": "/m/07rwj03"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/amepip/XC113723.wav",
+   "labels": "/m/07rwj03"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/amepip/XC309672.wav",
+   "labels": "/m/07rwj03"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/amepip/XC111040.wav",
+   "labels": "/m/07rwj03"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/amepip/XC406871.wav",
+   "labels": "/m/07rwj03"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/amepip/XC135087.wav",
+   "labels": "/m/07rwj03"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/amepip/XC406876.wav",
+   "labels": "/m/07rwj03"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/amepip/XC111043.wav",
+   "labels": "/m/07rwj03"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/amepip/XC277586.wav",
+   "labels": "/m/07rwj03"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/amepip/XC113721.wav",
+   "labels": "/m/07rwj03"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/amered/XC187783.wav",
+   "labels": "/m/07rwj04"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/amered/XC135440.wav",
+   "labels": "/m/07rwj04"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/amered/XC139938.wav",
+   "labels": "/m/07rwj04"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/amered/XC31114.wav",
+   "labels": "/m/07rwj04"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/amered/XC193127.wav",
+   "labels": "/m/07rwj04"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/amered/XC325943.wav",
+   "labels": "/m/07rwj04"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/amered/XC142592.wav",
+   "labels": "/m/07rwj04"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/amered/XC187609.wav",
+   "labels": "/m/07rwj04"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/amered/XC391158.wav",
+   "labels": "/m/07rwj04"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/amered/XC371041.wav",
+   "labels": "/m/07rwj04"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/amered/XC308434.wav",
+   "labels": "/m/07rwj04"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/amered/XC389300.wav",
+   "labels": "/m/07rwj04"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/amered/XC193134.wav",
+   "labels": "/m/07rwj04"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/amered/XC293012.wav",
+   "labels": "/m/07rwj04"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/amered/XC31117.wav",
+   "labels": "/m/07rwj04"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/amered/XC293013.wav",
+   "labels": "/m/07rwj04"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/amered/XC31116.wav",
+   "labels": "/m/07rwj04"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/amered/XC205267.wav",
+   "labels": "/m/07rwj04"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/amered/XC293615.wav",
+   "labels": "/m/07rwj04"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/amered/XC79972.wav",
+   "labels": "/m/07rwj04"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/amerob/XC165272.wav",
+   "labels": "/m/07rwj05"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/amerob/XC165302.wav",
+   "labels": "/m/07rwj05"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/amerob/XC165300.wav",
+   "labels": "/m/07rwj05"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/amerob/XC424786.wav",
+   "labels": "/m/07rwj05"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/amerob/XC367008.wav",
+   "labels": "/m/07rwj05"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/amerob/XC468991.wav",
+   "labels": "/m/07rwj05"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/amerob/XC302644.wav",
+   "labels": "/m/07rwj05"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/amerob/XC446458.wav",
+   "labels": "/m/07rwj05"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/amerob/XC464766.wav",
+   "labels": "/m/07rwj05"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/amerob/XC146297.wav",
+   "labels": "/m/07rwj05"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/amerob/XC495411.wav",
+   "labels": "/m/07rwj05"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/amerob/XC139086.wav",
+   "labels": "/m/07rwj05"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/amerob/XC474615.wav",
+   "labels": "/m/07rwj05"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/amerob/XC446460.wav",
+   "labels": "/m/07rwj05"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/amerob/XC407819.wav",
+   "labels": "/m/07rwj05"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/amerob/XC416294.wav",
+   "labels": "/m/07rwj05"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/amerob/XC446462.wav",
+   "labels": "/m/07rwj05"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/amerob/XC406326.wav",
+   "labels": "/m/07rwj05"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/amerob/XC385843.wav",
+   "labels": "/m/07rwj05"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/amerob/XC165304.wav",
+   "labels": "/m/07rwj05"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/annhum/XC289049.wav",
+   "labels": "/m/07rwj06"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/annhum/XC198499.wav",
+   "labels": "/m/07rwj06"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/annhum/XC501895.wav",
+   "labels": "/m/07rwj06"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/annhum/XC282320.wav",
+   "labels": "/m/07rwj06"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/annhum/XC451240.wav",
+   "labels": "/m/07rwj06"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/annhum/XC406522.wav",
+   "labels": "/m/07rwj06"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/annhum/XC216179.wav",
+   "labels": "/m/07rwj06"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/annhum/XC132258.wav",
+   "labels": "/m/07rwj06"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/annhum/XC160911.wav",
+   "labels": "/m/07rwj06"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/annhum/XC121435.wav",
+   "labels": "/m/07rwj06"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/annhum/XC442358.wav",
+   "labels": "/m/07rwj06"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/annhum/XC348361.wav",
+   "labels": "/m/07rwj06"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/annhum/XC160907.wav",
+   "labels": "/m/07rwj06"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/annhum/XC160914.wav",
+   "labels": "/m/07rwj06"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/annhum/XC160910.wav",
+   "labels": "/m/07rwj06"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/annhum/XC132248.wav",
+   "labels": "/m/07rwj06"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/annhum/XC196689.wav",
+   "labels": "/m/07rwj06"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/annhum/XC348985.wav",
+   "labels": "/m/07rwj06"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/annhum/XC406526.wav",
+   "labels": "/m/07rwj06"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/annhum/XC120842.wav",
+   "labels": "/m/07rwj06"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/astfly/XC122825.wav",
+   "labels": "/m/07rwj07"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/astfly/XC122818.wav",
+   "labels": "/m/07rwj07"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/astfly/XC122824.wav",
+   "labels": "/m/07rwj07"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/astfly/XC122822.wav",
+   "labels": "/m/07rwj07"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/astfly/XC268649.wav",
+   "labels": "/m/07rwj07"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/astfly/XC308580.wav",
+   "labels": "/m/07rwj07"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/astfly/XC233489.wav",
+   "labels": "/m/07rwj07"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/astfly/XC122908.wav",
+   "labels": "/m/07rwj07"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/astfly/XC122892.wav",
+   "labels": "/m/07rwj07"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/astfly/XC122896.wav",
+   "labels": "/m/07rwj07"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/astfly/XC268648.wav",
+   "labels": "/m/07rwj07"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/astfly/XC268658.wav",
+   "labels": "/m/07rwj07"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/astfly/XC122918.wav",
+   "labels": "/m/07rwj07"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/astfly/XC122909.wav",
+   "labels": "/m/07rwj07"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/astfly/XC185157.wav",
+   "labels": "/m/07rwj07"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/astfly/XC205473.wav",
+   "labels": "/m/07rwj07"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/astfly/XC286838.wav",
+   "labels": "/m/07rwj07"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/astfly/XC268659.wav",
+   "labels": "/m/07rwj07"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/astfly/XC419831.wav",
+   "labels": "/m/07rwj07"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/astfly/XC122924.wav",
+   "labels": "/m/07rwj07"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/balori/XC375494.wav",
+   "labels": "/m/07rwj08"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/balori/XC182675.wav",
+   "labels": "/m/07rwj08"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/balori/XC367800.wav",
+   "labels": "/m/07rwj08"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/balori/XC236929.wav",
+   "labels": "/m/07rwj08"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/balori/XC323704.wav",
+   "labels": "/m/07rwj08"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/balori/XC185568.wav",
+   "labels": "/m/07rwj08"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/balori/XC244358.wav",
+   "labels": "/m/07rwj08"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/balori/XC181121.wav",
+   "labels": "/m/07rwj08"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/balori/XC315277.wav",
+   "labels": "/m/07rwj08"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/balori/XC382084.wav",
+   "labels": "/m/07rwj08"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/balori/XC367190.wav",
+   "labels": "/m/07rwj08"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/balori/XC184648.wav",
+   "labels": "/m/07rwj08"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/balori/XC367802.wav",
+   "labels": "/m/07rwj08"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/balori/XC319908.wav",
+   "labels": "/m/07rwj08"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/balori/XC368307.wav",
+   "labels": "/m/07rwj08"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/balori/XC179064.wav",
+   "labels": "/m/07rwj08"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/balori/XC16971.wav",
+   "labels": "/m/07rwj08"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/balori/XC255284.wav",
+   "labels": "/m/07rwj08"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/balori/XC383954.wav",
+   "labels": "/m/07rwj08"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/balori/XC166220.wav",
+   "labels": "/m/07rwj08"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/banswa/XC375948.wav",
+   "labels": "/m/07rwj09"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/banswa/XC493058.wav",
+   "labels": "/m/07rwj09"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/banswa/XC184471.wav",
+   "labels": "/m/07rwj09"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/banswa/XC423997.wav",
+   "labels": "/m/07rwj09"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/banswa/XC299501.wav",
+   "labels": "/m/07rwj09"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/banswa/XC279143.wav",
+   "labels": "/m/07rwj09"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/banswa/XC279142.wav",
+   "labels": "/m/07rwj09"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/banswa/XC380322.wav",
+   "labels": "/m/07rwj09"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/banswa/XC317472.wav",
+   "labels": "/m/07rwj09"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/banswa/XC302256.wav",
+   "labels": "/m/07rwj09"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/banswa/XC331099.wav",
+   "labels": "/m/07rwj09"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/banswa/XC331098.wav",
+   "labels": "/m/07rwj09"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/banswa/XC279140.wav",
+   "labels": "/m/07rwj09"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/banswa/XC475679.wav",
+   "labels": "/m/07rwj09"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/banswa/XC498255.wav",
+   "labels": "/m/07rwj09"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/banswa/XC304582.wav",
+   "labels": "/m/07rwj09"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/banswa/XC490386.wav",
+   "labels": "/m/07rwj09"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/banswa/XC377394.wav",
+   "labels": "/m/07rwj09"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/banswa/XC279018.wav",
+   "labels": "/m/07rwj09"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/banswa/XC498256.wav",
+   "labels": "/m/07rwj09"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/barswa/XC188601.wav",
+   "labels": "/m/07rwj10"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/barswa/XC361812.wav",
+   "labels": "/m/07rwj10"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/barswa/XC378710.wav",
+   "labels": "/m/07rwj10"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/barswa/XC331266.wav",
+   "labels": "/m/07rwj10"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/barswa/XC252931.wav",
+   "labels": "/m/07rwj10"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/barswa/XC343867.wav",
+   "labels": "/m/07rwj10"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/barswa/XC361741.wav",
+   "labels": "/m/07rwj10"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/barswa/XC142632.wav",
+   "labels": "/m/07rwj10"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/barswa/XC375583.wav",
+   "labels": "/m/07rwj10"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/barswa/XC142977.wav",
+   "labels": "/m/07rwj10"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/barswa/XC288343.wav",
+   "labels": "/m/07rwj10"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/barswa/XC363068.wav",
+   "labels": "/m/07rwj10"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/barswa/XC471778.wav",
+   "labels": "/m/07rwj10"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/barswa/XC156257.wav",
+   "labels": "/m/07rwj10"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/barswa/XC383822.wav",
+   "labels": "/m/07rwj10"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/barswa/XC413887.wav",
+   "labels": "/m/07rwj10"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/barswa/XC383831.wav",
+   "labels": "/m/07rwj10"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/barswa/XC376077.wav",
+   "labels": "/m/07rwj10"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/barswa/XC471591.wav",
+   "labels": "/m/07rwj10"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/barswa/XC134349.wav",
+   "labels": "/m/07rwj10"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/bewwre/XC217857.wav",
+   "labels": "/m/07rwj11"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/bewwre/XC324443.wav",
+   "labels": "/m/07rwj11"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/bewwre/XC318283.wav",
+   "labels": "/m/07rwj11"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/bewwre/XC217841.wav",
+   "labels": "/m/07rwj11"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/bewwre/XC172752.wav",
+   "labels": "/m/07rwj11"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/bewwre/XC371790.wav",
+   "labels": "/m/07rwj11"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/bewwre/XC217847.wav",
+   "labels": "/m/07rwj11"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/bewwre/XC323981.wav",
+   "labels": "/m/07rwj11"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/bewwre/XC168584.wav",
+   "labels": "/m/07rwj11"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/bewwre/XC217854.wav",
+   "labels": "/m/07rwj11"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/bewwre/XC217843.wav",
+   "labels": "/m/07rwj11"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/bewwre/XC351078.wav",
+   "labels": "/m/07rwj11"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/bewwre/XC173148.wav",
+   "labels": "/m/07rwj11"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/bewwre/XC294191.wav",
+   "labels": "/m/07rwj11"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/bewwre/XC217851.wav",
+   "labels": "/m/07rwj11"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/bewwre/XC325229.wav",
+   "labels": "/m/07rwj11"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/bewwre/XC217924.wav",
+   "labels": "/m/07rwj11"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/bewwre/XC216178.wav",
+   "labels": "/m/07rwj11"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/bewwre/XC163210.wav",
+   "labels": "/m/07rwj11"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/bewwre/XC217853.wav",
+   "labels": "/m/07rwj11"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/bkbwar/XC135053.wav",
+   "labels": "/m/07rwj12"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/bkbwar/XC261094.wav",
+   "labels": "/m/07rwj12"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/bkbwar/XC317114.wav",
+   "labels": "/m/07rwj12"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/bkbwar/XC184710.wav",
+   "labels": "/m/07rwj12"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/bkbwar/XC184458.wav",
+   "labels": "/m/07rwj12"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/bkbwar/XC177049.wav",
+   "labels": "/m/07rwj12"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/bkbwar/XC313760.wav",
+   "labels": "/m/07rwj12"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/bkbwar/XC486859.wav",
+   "labels": "/m/07rwj12"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/bkbwar/XC139446.wav",
+   "labels": "/m/07rwj12"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/bkbwar/XC133792.wav",
+   "labels": "/m/07rwj12"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/bkbwar/XC331288.wav",
+   "labels": "/m/07rwj12"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/bkbwar/XC172916.wav",
+   "labels": "/m/07rwj12"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/bkbwar/XC172917.wav",
+   "labels": "/m/07rwj12"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/bkbwar/XC317728.wav",
+   "labels": "/m/07rwj12"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/bkbwar/XC135055.wav",
+   "labels": "/m/07rwj12"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/bkbwar/XC134439.wav",
+   "labels": "/m/07rwj12"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/bkbwar/XC253814.wav",
+   "labels": "/m/07rwj12"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/bkbwar/XC53619.wav",
+   "labels": "/m/07rwj12"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/bkbwar/XC275582.wav",
+   "labels": "/m/07rwj12"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/bkbwar/XC172915.wav",
+   "labels": "/m/07rwj12"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/bkcchi/XC311564.wav",
+   "labels": "/m/07rwj13"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/bkcchi/XC465052.wav",
+   "labels": "/m/07rwj13"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/bkcchi/XC120878.wav",
+   "labels": "/m/07rwj13"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/bkcchi/XC433239.wav",
+   "labels": "/m/07rwj13"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/bkcchi/XC299852.wav",
+   "labels": "/m/07rwj13"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/bkcchi/XC139055.wav",
+   "labels": "/m/07rwj13"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/bkcchi/XC421003.wav",
+   "labels": "/m/07rwj13"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/bkcchi/XC178779.wav",
+   "labels": "/m/07rwj13"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/bkcchi/XC433166.wav",
+   "labels": "/m/07rwj13"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/bkcchi/XC407827.wav",
+   "labels": "/m/07rwj13"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/bkcchi/XC164791.wav",
+   "labels": "/m/07rwj13"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/bkcchi/XC388592.wav",
+   "labels": "/m/07rwj13"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/bkcchi/XC135478.wav",
+   "labels": "/m/07rwj13"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/bkcchi/XC149941.wav",
+   "labels": "/m/07rwj13"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/bkcchi/XC134017.wav",
+   "labels": "/m/07rwj13"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/bkcchi/XC465050.wav",
+   "labels": "/m/07rwj13"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/bkcchi/XC156532.wav",
+   "labels": "/m/07rwj13"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/bkcchi/XC184306.wav",
+   "labels": "/m/07rwj13"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/bkcchi/XC178778.wav",
+   "labels": "/m/07rwj13"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/bkcchi/XC114073.wav",
+   "labels": "/m/07rwj13"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/bkhgro/XC146080.wav",
+   "labels": "/m/07rwj14"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/bkhgro/XC376298.wav",
+   "labels": "/m/07rwj14"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/bkhgro/XC181382.wav",
+   "labels": "/m/07rwj14"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/bkhgro/XC484151.wav",
+   "labels": "/m/07rwj14"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/bkhgro/XC325473.wav",
+   "labels": "/m/07rwj14"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/bkhgro/XC205288.wav",
+   "labels": "/m/07rwj14"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/bkhgro/XC205289.wav",
+   "labels": "/m/07rwj14"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/bkhgro/XC367594.wav",
+   "labels": "/m/07rwj14"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/bkhgro/XC252840.wav",
+   "labels": "/m/07rwj14"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/bkhgro/XC217932.wav",
+   "labels": "/m/07rwj14"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/bkhgro/XC278099.wav",
+   "labels": "/m/07rwj14"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/bkhgro/XC270189.wav",
+   "labels": "/m/07rwj14"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/bkhgro/XC416122.wav",
+   "labels": "/m/07rwj14"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/bkhgro/XC135492.wav",
+   "labels": "/m/07rwj14"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/bkhgro/XC31670.wav",
+   "labels": "/m/07rwj14"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/bkhgro/XC372614.wav",
+   "labels": "/m/07rwj14"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/bkhgro/XC374107.wav",
+   "labels": "/m/07rwj14"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/bkhgro/XC157638.wav",
+   "labels": "/m/07rwj14"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/bkhgro/XC217930.wav",
+   "labels": "/m/07rwj14"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/bkhgro/XC479929.wav",
+   "labels": "/m/07rwj14"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/bkpwar/XC251802.wav",
+   "labels": "/m/07rwj15"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/bkpwar/XC190956.wav",
+   "labels": "/m/07rwj15"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/bkpwar/XC328709.wav",
+   "labels": "/m/07rwj15"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/bkpwar/XC209760.wav",
+   "labels": "/m/07rwj15"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/bkpwar/XC177088.wav",
+   "labels": "/m/07rwj15"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/bkpwar/XC190957.wav",
+   "labels": "/m/07rwj15"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/bkpwar/XC133998.wav",
+   "labels": "/m/07rwj15"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/bkpwar/XC328786.wav",
+   "labels": "/m/07rwj15"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/bkpwar/XC147879.wav",
+   "labels": "/m/07rwj15"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/bkpwar/XC137527.wav",
+   "labels": "/m/07rwj15"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/bkpwar/XC328802.wav",
+   "labels": "/m/07rwj15"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/bkpwar/XC328792.wav",
+   "labels": "/m/07rwj15"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/bkpwar/XC257130.wav",
+   "labels": "/m/07rwj15"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/bkpwar/XC330578.wav",
+   "labels": "/m/07rwj15"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/bkpwar/XC316998.wav",
+   "labels": "/m/07rwj15"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/bkpwar/XC317729.wav",
+   "labels": "/m/07rwj15"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/bkpwar/XC177098.wav",
+   "labels": "/m/07rwj15"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/bkpwar/XC241395.wav",
+   "labels": "/m/07rwj15"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/bkpwar/XC416889.wav",
+   "labels": "/m/07rwj15"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/bkpwar/XC319516.wav",
+   "labels": "/m/07rwj15"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/blkpho/XC391570.wav",
+   "labels": "/m/07rwj16"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/blkpho/XC490385.wav",
+   "labels": "/m/07rwj16"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/blkpho/XC277557.wav",
+   "labels": "/m/07rwj16"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/blkpho/XC192013.wav",
+   "labels": "/m/07rwj16"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/blkpho/XC306142.wav",
+   "labels": "/m/07rwj16"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/blkpho/XC449553.wav",
+   "labels": "/m/07rwj16"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/blkpho/XC435715.wav",
+   "labels": "/m/07rwj16"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/blkpho/XC120844.wav",
+   "labels": "/m/07rwj16"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/blkpho/XC168397.wav",
+   "labels": "/m/07rwj16"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/blkpho/XC124992.wav",
+   "labels": "/m/07rwj16"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/blkpho/XC124438.wav",
+   "labels": "/m/07rwj16"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/blkpho/XC451252.wav",
+   "labels": "/m/07rwj16"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/blkpho/XC454882.wav",
+   "labels": "/m/07rwj16"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/blkpho/XC277800.wav",
+   "labels": "/m/07rwj16"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/blkpho/XC192011.wav",
+   "labels": "/m/07rwj16"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/blkpho/XC124439.wav",
+   "labels": "/m/07rwj16"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/blkpho/XC264717.wav",
+   "labels": "/m/07rwj16"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/blkpho/XC382730.wav",
+   "labels": "/m/07rwj16"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/blkpho/XC363445.wav",
+   "labels": "/m/07rwj16"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/blkpho/XC318152.wav",
+   "labels": "/m/07rwj16"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/blugrb1/XC253386.wav",
+   "labels": "/m/07rwj17"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/blugrb1/XC265423.wav",
+   "labels": "/m/07rwj17"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/blugrb1/XC261423.wav",
+   "labels": "/m/07rwj17"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/blugrb1/XC440607.wav",
+   "labels": "/m/07rwj17"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/blugrb1/XC492384.wav",
+   "labels": "/m/07rwj17"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/blugrb1/XC332948.wav",
+   "labels": "/m/07rwj17"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/blugrb1/XC196699.wav",
+   "labels": "/m/07rwj17"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/blugrb1/XC445622.wav",
+   "labels": "/m/07rwj17"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/blugrb1/XC52312.wav",
+   "labels": "/m/07rwj17"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/blugrb1/XC283403.wav",
+   "labels": "/m/07rwj17"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/blugrb1/XC388493.wav",
+   "labels": "/m/07rwj17"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/blugrb1/XC270198.wav",
+   "labels": "/m/07rwj17"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/blugrb1/XC490508.wav",
+   "labels": "/m/07rwj17"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/blugrb1/XC265422.wav",
+   "labels": "/m/07rwj17"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/blugrb1/XC489429.wav",
+   "labels": "/m/07rwj17"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/blugrb1/XC382040.wav",
+   "labels": "/m/07rwj17"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/blugrb1/XC246200.wav",
+   "labels": "/m/07rwj17"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/blugrb1/XC383439.wav",
+   "labels": "/m/07rwj17"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/blugrb1/XC283406.wav",
+   "labels": "/m/07rwj17"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/blugrb1/XC253397.wav",
+   "labels": "/m/07rwj17"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/blujay/XC315101.wav",
+   "labels": "/m/07rwj18"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/blujay/XC310243.wav",
+   "labels": "/m/07rwj18"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/blujay/XC234669.wav",
+   "labels": "/m/07rwj18"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/blujay/XC174959.wav",
+   "labels": "/m/07rwj18"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/blujay/XC32024.wav",
+   "labels": "/m/07rwj18"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/blujay/XC233403.wav",
+   "labels": "/m/07rwj18"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/blujay/XC282295.wav",
+   "labels": "/m/07rwj18"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/blujay/XC288988.wav",
+   "labels": "/m/07rwj18"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/blujay/XC331890.wav",
+   "labels": "/m/07rwj18"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/blujay/XC165317.wav",
+   "labels": "/m/07rwj18"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/blujay/XC282294.wav",
+   "labels": "/m/07rwj18"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/blujay/XC282293.wav",
+   "labels": "/m/07rwj18"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/blujay/XC282296.wav",
+   "labels": "/m/07rwj18"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/blujay/XC356764.wav",
+   "labels": "/m/07rwj18"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/blujay/XC155439.wav",
+   "labels": "/m/07rwj18"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/blujay/XC57384.wav",
+   "labels": "/m/07rwj18"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/blujay/XC134994.wav",
+   "labels": "/m/07rwj18"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/blujay/XC346014.wav",
+   "labels": "/m/07rwj18"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/blujay/XC475108.wav",
+   "labels": "/m/07rwj18"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/blujay/XC381588.wav",
+   "labels": "/m/07rwj18"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/bnhcow/XC339565.wav",
+   "labels": "/m/07rwj19"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/bnhcow/XC418533.wav",
+   "labels": "/m/07rwj19"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/bnhcow/XC267975.wav",
+   "labels": "/m/07rwj19"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/bnhcow/XC476558.wav",
+   "labels": "/m/07rwj19"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/bnhcow/XC129650.wav",
+   "labels": "/m/07rwj19"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/bnhcow/XC146086.wav",
+   "labels": "/m/07rwj19"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/bnhcow/XC255914.wav",
+   "labels": "/m/07rwj19"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/bnhcow/XC326246.wav",
+   "labels": "/m/07rwj19"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/bnhcow/XC367805.wav",
+   "labels": "/m/07rwj19"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/bnhcow/XC267958.wav",
+   "labels": "/m/07rwj19"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/bnhcow/XC440560.wav",
+   "labels": "/m/07rwj19"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/bnhcow/XC325000.wav",
+   "labels": "/m/07rwj19"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/bnhcow/XC440561.wav",
+   "labels": "/m/07rwj19"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/bnhcow/XC326247.wav",
+   "labels": "/m/07rwj19"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/bnhcow/XC267970.wav",
+   "labels": "/m/07rwj19"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/bnhcow/XC139916.wav",
+   "labels": "/m/07rwj19"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/bnhcow/XC267971.wav",
+   "labels": "/m/07rwj19"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/bnhcow/XC267976.wav",
+   "labels": "/m/07rwj19"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/bnhcow/XC312718.wav",
+   "labels": "/m/07rwj19"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/bnhcow/XC440562.wav",
+   "labels": "/m/07rwj19"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/boboli/XC50588.wav",
+   "labels": "/m/07rwj20"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/boboli/XC50589.wav",
+   "labels": "/m/07rwj20"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/boboli/XC394751.wav",
+   "labels": "/m/07rwj20"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/boboli/XC177472.wav",
+   "labels": "/m/07rwj20"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/boboli/XC185815.wav",
+   "labels": "/m/07rwj20"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/boboli/XC296888.wav",
+   "labels": "/m/07rwj20"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/boboli/XC153879.wav",
+   "labels": "/m/07rwj20"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/boboli/XC318350.wav",
+   "labels": "/m/07rwj20"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/boboli/XC333314.wav",
+   "labels": "/m/07rwj20"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/boboli/XC292085.wav",
+   "labels": "/m/07rwj20"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/boboli/XC199590.wav",
+   "labels": "/m/07rwj20"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/boboli/XC278925.wav",
+   "labels": "/m/07rwj20"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/boboli/XC428385.wav",
+   "labels": "/m/07rwj20"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/boboli/XC48028.wav",
+   "labels": "/m/07rwj20"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/boboli/XC185817.wav",
+   "labels": "/m/07rwj20"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/boboli/XC155548.wav",
+   "labels": "/m/07rwj20"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/boboli/XC381414.wav",
+   "labels": "/m/07rwj20"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/boboli/XC31049.wav",
+   "labels": "/m/07rwj20"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/boboli/XC237361.wav",
+   "labels": "/m/07rwj20"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/boboli/XC185812.wav",
+   "labels": "/m/07rwj20"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/brdowl/XC405771.wav",
+   "labels": "/m/07rwj21"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/brdowl/XC142218.wav",
+   "labels": "/m/07rwj21"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/brdowl/XC419947.wav",
+   "labels": "/m/07rwj21"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/brdowl/XC498643.wav",
+   "labels": "/m/07rwj21"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/brdowl/XC215846.wav",
+   "labels": "/m/07rwj21"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/brdowl/XC283951.wav",
+   "labels": "/m/07rwj21"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/brdowl/XC384034.wav",
+   "labels": "/m/07rwj21"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/brdowl/XC335766.wav",
+   "labels": "/m/07rwj21"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/brdowl/XC264267.wav",
+   "labels": "/m/07rwj21"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/brdowl/XC408876.wav",
+   "labels": "/m/07rwj21"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/brdowl/XC451898.wav",
+   "labels": "/m/07rwj21"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/brdowl/XC326495.wav",
+   "labels": "/m/07rwj21"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/brdowl/XC144080.wav",
+   "labels": "/m/07rwj21"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/brdowl/XC356414.wav",
+   "labels": "/m/07rwj21"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/brdowl/XC413729.wav",
+   "labels": "/m/07rwj21"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/brdowl/XC326496.wav",
+   "labels": "/m/07rwj21"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/brdowl/XC498645.wav",
+   "labels": "/m/07rwj21"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/brdowl/XC368856.wav",
+   "labels": "/m/07rwj21"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/brdowl/XC498644.wav",
+   "labels": "/m/07rwj21"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/brdowl/XC368855.wav",
+   "labels": "/m/07rwj21"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/brespa/XC125094.wav",
+   "labels": "/m/07rwj22"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/brespa/XC188128.wav",
+   "labels": "/m/07rwj22"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/brespa/XC172939.wav",
+   "labels": "/m/07rwj22"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/brespa/XC205470.wav",
+   "labels": "/m/07rwj22"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/brespa/XC188115.wav",
+   "labels": "/m/07rwj22"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/brespa/XC325013.wav",
+   "labels": "/m/07rwj22"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/brespa/XC181640.wav",
+   "labels": "/m/07rwj22"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/brespa/XC125095.wav",
+   "labels": "/m/07rwj22"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/brespa/XC188671.wav",
+   "labels": "/m/07rwj22"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/brespa/XC469888.wav",
+   "labels": "/m/07rwj22"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/brespa/XC420721.wav",
+   "labels": "/m/07rwj22"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/brespa/XC188112.wav",
+   "labels": "/m/07rwj22"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/brespa/XC372760.wav",
+   "labels": "/m/07rwj22"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/brespa/XC322426.wav",
+   "labels": "/m/07rwj22"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/brespa/XC125096.wav",
+   "labels": "/m/07rwj22"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/brespa/XC369989.wav",
+   "labels": "/m/07rwj22"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/brespa/XC125093.wav",
+   "labels": "/m/07rwj22"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/brespa/XC125727.wav",
+   "labels": "/m/07rwj22"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/brespa/XC125091.wav",
+   "labels": "/m/07rwj22"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/brespa/XC205474.wav",
+   "labels": "/m/07rwj22"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/brncre/XC121043.wav",
+   "labels": "/m/07rwj23"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/brncre/XC248099.wav",
+   "labels": "/m/07rwj23"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/brncre/XC440573.wav",
+   "labels": "/m/07rwj23"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/brncre/XC477136.wav",
+   "labels": "/m/07rwj23"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/brncre/XC134505.wav",
+   "labels": "/m/07rwj23"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/brncre/XC153402.wav",
+   "labels": "/m/07rwj23"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/brncre/XC435717.wav",
+   "labels": "/m/07rwj23"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/brncre/XC324485.wav",
+   "labels": "/m/07rwj23"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/brncre/XC420871.wav",
+   "labels": "/m/07rwj23"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/brncre/XC161897.wav",
+   "labels": "/m/07rwj23"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/brncre/XC328787.wav",
+   "labels": "/m/07rwj23"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/brncre/XC440574.wav",
+   "labels": "/m/07rwj23"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/brncre/XC306584.wav",
+   "labels": "/m/07rwj23"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/brncre/XC473427.wav",
+   "labels": "/m/07rwj23"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/brncre/XC482568.wav",
+   "labels": "/m/07rwj23"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/brncre/XC440576.wav",
+   "labels": "/m/07rwj23"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/brncre/XC251806.wav",
+   "labels": "/m/07rwj23"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/brncre/XC324491.wav",
+   "labels": "/m/07rwj23"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/brncre/XC91412.wav",
+   "labels": "/m/07rwj23"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/brncre/XC501259.wav",
+   "labels": "/m/07rwj23"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/brnthr/XC139961.wav",
+   "labels": "/m/07rwj24"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/brnthr/XC465733.wav",
+   "labels": "/m/07rwj24"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/brnthr/XC370857.wav",
+   "labels": "/m/07rwj24"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/brnthr/XC287459.wav",
+   "labels": "/m/07rwj24"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/brnthr/XC451865.wav",
+   "labels": "/m/07rwj24"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/brnthr/XC420133.wav",
+   "labels": "/m/07rwj24"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/brnthr/XC469721.wav",
+   "labels": "/m/07rwj24"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/brnthr/XC383951.wav",
+   "labels": "/m/07rwj24"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/brnthr/XC374113.wav",
+   "labels": "/m/07rwj24"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/brnthr/XC144655.wav",
+   "labels": "/m/07rwj24"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/brnthr/XC373486.wav",
+   "labels": "/m/07rwj24"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/brnthr/XC373484.wav",
+   "labels": "/m/07rwj24"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/brnthr/XC364466.wav",
+   "labels": "/m/07rwj24"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/brnthr/XC367193.wav",
+   "labels": "/m/07rwj24"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/brnthr/XC373480.wav",
+   "labels": "/m/07rwj24"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/brnthr/XC205924.wav",
+   "labels": "/m/07rwj24"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/brnthr/XC173361.wav",
+   "labels": "/m/07rwj24"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/brnthr/XC288989.wav",
+   "labels": "/m/07rwj24"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/brnthr/XC138610.wav",
+   "labels": "/m/07rwj24"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/brnthr/XC461195.wav",
+   "labels": "/m/07rwj24"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/btnwar/XC177089.wav",
+   "labels": "/m/07rwj25"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/btnwar/XC351421.wav",
+   "labels": "/m/07rwj25"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/btnwar/XC501261.wav",
+   "labels": "/m/07rwj25"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/btnwar/XC101293.wav",
+   "labels": "/m/07rwj25"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/btnwar/XC409610.wav",
+   "labels": "/m/07rwj25"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/btnwar/XC351422.wav",
+   "labels": "/m/07rwj25"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/btnwar/XC134014.wav",
+   "labels": "/m/07rwj25"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/btnwar/XC389498.wav",
+   "labels": "/m/07rwj25"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/btnwar/XC368513.wav",
+   "labels": "/m/07rwj25"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/btnwar/XC243795.wav",
+   "labels": "/m/07rwj25"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/btnwar/XC187635.wav",
+   "labels": "/m/07rwj25"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/btnwar/XC315711.wav",
+   "labels": "/m/07rwj25"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/btnwar/XC486860.wav",
+   "labels": "/m/07rwj25"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/btnwar/XC382123.wav",
+   "labels": "/m/07rwj25"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/btnwar/XC133794.wav",
+   "labels": "/m/07rwj25"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/btnwar/XC135496.wav",
+   "labels": "/m/07rwj25"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/btnwar/XC135120.wav",
+   "labels": "/m/07rwj25"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/btnwar/XC421770.wav",
+   "labels": "/m/07rwj25"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/btnwar/XC213558.wav",
+   "labels": "/m/07rwj25"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/btnwar/XC315704.wav",
+   "labels": "/m/07rwj25"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/buggna/XC263484.wav",
+   "labels": "/m/07rwj26"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/buggna/XC130507.wav",
+   "labels": "/m/07rwj26"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/buggna/XC168753.wav",
+   "labels": "/m/07rwj26"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/buggna/XC428782.wav",
+   "labels": "/m/07rwj26"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/buggna/XC417993.wav",
+   "labels": "/m/07rwj26"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/buggna/XC130510.wav",
+   "labels": "/m/07rwj26"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/buggna/XC183136.wav",
+   "labels": "/m/07rwj26"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/buggna/XC141458.wav",
+   "labels": "/m/07rwj26"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/buggna/XC309926.wav",
+   "labels": "/m/07rwj26"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/buggna/XC316436.wav",
+   "labels": "/m/07rwj26"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/buggna/XC297504.wav",
+   "labels": "/m/07rwj26"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/buggna/XC428384.wav",
+   "labels": "/m/07rwj26"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/buggna/XC360371.wav",
+   "labels": "/m/07rwj26"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/buggna/XC455031.wav",
+   "labels": "/m/07rwj26"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/buggna/XC144069.wav",
+   "labels": "/m/07rwj26"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/buggna/XC309933.wav",
+   "labels": "/m/07rwj26"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/buggna/XC255294.wav",
+   "labels": "/m/07rwj26"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/buggna/XC253948.wav",
+   "labels": "/m/07rwj26"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/buggna/XC497429.wav",
+   "labels": "/m/07rwj26"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/buggna/XC263485.wav",
+   "labels": "/m/07rwj26"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/buhvir/XC216787.wav",
+   "labels": "/m/07rwj27"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/buhvir/XC282093.wav",
+   "labels": "/m/07rwj27"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/buhvir/XC380122.wav",
+   "labels": "/m/07rwj27"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/buhvir/XC135497.wav",
+   "labels": "/m/07rwj27"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/buhvir/XC188539.wav",
+   "labels": "/m/07rwj27"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/buhvir/XC475682.wav",
+   "labels": "/m/07rwj27"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/buhvir/XC244573.wav",
+   "labels": "/m/07rwj27"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/buhvir/XC380123.wav",
+   "labels": "/m/07rwj27"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/buhvir/XC143936.wav",
+   "labels": "/m/07rwj27"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/buhvir/XC382122.wav",
+   "labels": "/m/07rwj27"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/buhvir/XC389303.wav",
+   "labels": "/m/07rwj27"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/buhvir/XC253812.wav",
+   "labels": "/m/07rwj27"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/buhvir/XC501258.wav",
+   "labels": "/m/07rwj27"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/buhvir/XC306387.wav",
+   "labels": "/m/07rwj27"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/buhvir/XC17105.wav",
+   "labels": "/m/07rwj27"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/buhvir/XC380121.wav",
+   "labels": "/m/07rwj27"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/buhvir/XC215712.wav",
+   "labels": "/m/07rwj27"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/buhvir/XC373655.wav",
+   "labels": "/m/07rwj27"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/buhvir/XC368539.wav",
+   "labels": "/m/07rwj27"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/buhvir/XC243385.wav",
+   "labels": "/m/07rwj27"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/bulori/XC187320.wav",
+   "labels": "/m/07rwj28"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/bulori/XC261335.wav",
+   "labels": "/m/07rwj28"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/bulori/XC259523.wav",
+   "labels": "/m/07rwj28"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/bulori/XC177260.wav",
+   "labels": "/m/07rwj28"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/bulori/XC177262.wav",
+   "labels": "/m/07rwj28"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/bulori/XC261345.wav",
+   "labels": "/m/07rwj28"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/bulori/XC256758.wav",
+   "labels": "/m/07rwj28"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/bulori/XC256983.wav",
+   "labels": "/m/07rwj28"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/bulori/XC342276.wav",
+   "labels": "/m/07rwj28"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/bulori/XC128942.wav",
+   "labels": "/m/07rwj28"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/bulori/XC260163.wav",
+   "labels": "/m/07rwj28"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/bulori/XC261334.wav",
+   "labels": "/m/07rwj28"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/bulori/XC256985.wav",
+   "labels": "/m/07rwj28"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/bulori/XC256760.wav",
+   "labels": "/m/07rwj28"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/bulori/XC260167.wav",
+   "labels": "/m/07rwj28"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/bulori/XC256759.wav",
+   "labels": "/m/07rwj28"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/bulori/XC260164.wav",
+   "labels": "/m/07rwj28"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/bulori/XC256986.wav",
+   "labels": "/m/07rwj28"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/bulori/XC177259.wav",
+   "labels": "/m/07rwj28"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/bulori/XC256984.wav",
+   "labels": "/m/07rwj28"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/bushti/XC475251.wav",
+   "labels": "/m/07rwj29"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/bushti/XC149405.wav",
+   "labels": "/m/07rwj29"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/bushti/XC290041.wav",
+   "labels": "/m/07rwj29"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/bushti/XC131971.wav",
+   "labels": "/m/07rwj29"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/bushti/XC381411.wav",
+   "labels": "/m/07rwj29"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/bushti/XC353369.wav",
+   "labels": "/m/07rwj29"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/bushti/XC149399.wav",
+   "labels": "/m/07rwj29"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/bushti/XC439894.wav",
+   "labels": "/m/07rwj29"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/bushti/XC406523.wav",
+   "labels": "/m/07rwj29"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/bushti/XC290042.wav",
+   "labels": "/m/07rwj29"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/bushti/XC414078.wav",
+   "labels": "/m/07rwj29"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/bushti/XC373906.wav",
+   "labels": "/m/07rwj29"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/bushti/XC290043.wav",
+   "labels": "/m/07rwj29"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/bushti/XC350663.wav",
+   "labels": "/m/07rwj29"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/bushti/XC149388.wav",
+   "labels": "/m/07rwj29"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/bushti/XC149406.wav",
+   "labels": "/m/07rwj29"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/bushti/XC120855.wav",
+   "labels": "/m/07rwj29"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/bushti/XC314418.wav",
+   "labels": "/m/07rwj29"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/bushti/XC391566.wav",
+   "labels": "/m/07rwj29"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/bushti/XC350676.wav",
+   "labels": "/m/07rwj29"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/cacwre/XC373244.wav",
+   "labels": "/m/07rwj30"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/cacwre/XC348376.wav",
+   "labels": "/m/07rwj30"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/cacwre/XC166586.wav",
+   "labels": "/m/07rwj30"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/cacwre/XC491074.wav",
+   "labels": "/m/07rwj30"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/cacwre/XC324057.wav",
+   "labels": "/m/07rwj30"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/cacwre/XC495416.wav",
+   "labels": "/m/07rwj30"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/cacwre/XC384554.wav",
+   "labels": "/m/07rwj30"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/cacwre/XC304426.wav",
+   "labels": "/m/07rwj30"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/cacwre/XC359296.wav",
+   "labels": "/m/07rwj30"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/cacwre/XC488451.wav",
+   "labels": "/m/07rwj30"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/cacwre/XC434587.wav",
+   "labels": "/m/07rwj30"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/cacwre/XC196703.wav",
+   "labels": "/m/07rwj30"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/cacwre/XC132895.wav",
+   "labels": "/m/07rwj30"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/cacwre/XC404725.wav",
+   "labels": "/m/07rwj30"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/cacwre/XC394384.wav",
+   "labels": "/m/07rwj30"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/cacwre/XC166585.wav",
+   "labels": "/m/07rwj30"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/cacwre/XC382096.wav",
+   "labels": "/m/07rwj30"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/cacwre/XC324055.wav",
+   "labels": "/m/07rwj30"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/cacwre/XC394387.wav",
+   "labels": "/m/07rwj30"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/cacwre/XC324054.wav",
+   "labels": "/m/07rwj30"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/cangoo/XC337062.wav",
+   "labels": "/m/07rwj31"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/cangoo/XC181369.wav",
+   "labels": "/m/07rwj31"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/cangoo/XC416534.wav",
+   "labels": "/m/07rwj31"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/cangoo/XC310813.wav",
+   "labels": "/m/07rwj31"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/cangoo/XC165398.wav",
+   "labels": "/m/07rwj31"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/cangoo/XC307648.wav",
+   "labels": "/m/07rwj31"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/cangoo/XC139091.wav",
+   "labels": "/m/07rwj31"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/cangoo/XC189382.wav",
+   "labels": "/m/07rwj31"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/cangoo/XC178135.wav",
+   "labels": "/m/07rwj31"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/cangoo/XC301952.wav",
+   "labels": "/m/07rwj31"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/cangoo/XC27173.wav",
+   "labels": "/m/07rwj31"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/cangoo/XC27165.wav",
+   "labels": "/m/07rwj31"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/cangoo/XC474984.wav",
+   "labels": "/m/07rwj31"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/cangoo/XC210483.wav",
+   "labels": "/m/07rwj31"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/cangoo/XC305662.wav",
+   "labels": "/m/07rwj31"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/cangoo/XC141919.wav",
+   "labels": "/m/07rwj31"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/cangoo/XC325947.wav",
+   "labels": "/m/07rwj31"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/cangoo/XC362377.wav",
+   "labels": "/m/07rwj31"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/cangoo/XC209702.wav",
+   "labels": "/m/07rwj31"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/cangoo/XC173438.wav",
+   "labels": "/m/07rwj31"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/canwar/XC261109.wav",
+   "labels": "/m/07rwj32"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/canwar/XC253813.wav",
+   "labels": "/m/07rwj32"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/canwar/XC315489.wav",
+   "labels": "/m/07rwj32"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/canwar/XC130473.wav",
+   "labels": "/m/07rwj32"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/canwar/XC142582.wav",
+   "labels": "/m/07rwj32"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/canwar/XC182772.wav",
+   "labels": "/m/07rwj32"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/canwar/XC186311.wav",
+   "labels": "/m/07rwj32"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/canwar/XC181483.wav",
+   "labels": "/m/07rwj32"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/canwar/XC246774.wav",
+   "labels": "/m/07rwj32"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/canwar/XC242328.wav",
+   "labels": "/m/07rwj32"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/canwar/XC182002.wav",
+   "labels": "/m/07rwj32"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/canwar/XC178546.wav",
+   "labels": "/m/07rwj32"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/canwar/XC139447.wav",
+   "labels": "/m/07rwj32"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/canwar/XC147212.wav",
+   "labels": "/m/07rwj32"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/canwar/XC486861.wav",
+   "labels": "/m/07rwj32"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/canwar/XC416134.wav",
+   "labels": "/m/07rwj32"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/canwar/XC486862.wav",
+   "labels": "/m/07rwj32"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/canwar/XC135508.wav",
+   "labels": "/m/07rwj32"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/canwar/XC326709.wav",
+   "labels": "/m/07rwj32"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/canwar/XC414864.wav",
+   "labels": "/m/07rwj32"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/canwre/XC314434.wav",
+   "labels": "/m/07rwj33"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/canwre/XC123291.wav",
+   "labels": "/m/07rwj33"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/canwre/XC115815.wav",
+   "labels": "/m/07rwj33"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/canwre/XC265806.wav",
+   "labels": "/m/07rwj33"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/canwre/XC178525.wav",
+   "labels": "/m/07rwj33"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/canwre/XC168592.wav",
+   "labels": "/m/07rwj33"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/canwre/XC381566.wav",
+   "labels": "/m/07rwj33"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/canwre/XC452160.wav",
+   "labels": "/m/07rwj33"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/canwre/XC309702.wav",
+   "labels": "/m/07rwj33"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/canwre/XC451486.wav",
+   "labels": "/m/07rwj33"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/canwre/XC318753.wav",
+   "labels": "/m/07rwj33"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/canwre/XC381415.wav",
+   "labels": "/m/07rwj33"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/canwre/XC122449.wav",
+   "labels": "/m/07rwj33"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/canwre/XC451447.wav",
+   "labels": "/m/07rwj33"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/canwre/XC353626.wav",
+   "labels": "/m/07rwj33"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/canwre/XC451445.wav",
+   "labels": "/m/07rwj33"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/canwre/XC452159.wav",
+   "labels": "/m/07rwj33"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/canwre/XC212097.wav",
+   "labels": "/m/07rwj33"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/canwre/XC451446.wav",
+   "labels": "/m/07rwj33"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/canwre/XC451451.wav",
+   "labels": "/m/07rwj33"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/carwre/XC498647.wav",
+   "labels": "/m/07rwj34"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/carwre/XC173577.wav",
+   "labels": "/m/07rwj34"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/carwre/XC109026.wav",
+   "labels": "/m/07rwj34"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/carwre/XC404722.wav",
+   "labels": "/m/07rwj34"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/carwre/XC408642.wav",
+   "labels": "/m/07rwj34"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/carwre/XC408643.wav",
+   "labels": "/m/07rwj34"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/carwre/XC62772.wav",
+   "labels": "/m/07rwj34"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/carwre/XC365750.wav",
+   "labels": "/m/07rwj34"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/carwre/XC309890.wav",
+   "labels": "/m/07rwj34"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/carwre/XC141460.wav",
+   "labels": "/m/07rwj34"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/carwre/XC140967.wav",
+   "labels": "/m/07rwj34"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/carwre/XC363524.wav",
+   "labels": "/m/07rwj34"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/carwre/XC123347.wav",
+   "labels": "/m/07rwj34"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/carwre/XC463187.wav",
+   "labels": "/m/07rwj34"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/carwre/XC140964.wav",
+   "labels": "/m/07rwj34"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/carwre/XC168621.wav",
+   "labels": "/m/07rwj34"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/carwre/XC363525.wav",
+   "labels": "/m/07rwj34"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/carwre/XC451901.wav",
+   "labels": "/m/07rwj34"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/carwre/XC503061.wav",
+   "labels": "/m/07rwj34"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/carwre/XC503074.wav",
+   "labels": "/m/07rwj34"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/caster1/XC118277.wav",
+   "labels": "/m/07rwj35"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/caster1/XC120515.wav",
+   "labels": "/m/07rwj35"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/caster1/XC154308.wav",
+   "labels": "/m/07rwj35"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/caster1/XC283060.wav",
+   "labels": "/m/07rwj35"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/caster1/XC342985.wav",
+   "labels": "/m/07rwj35"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/caster1/XC324718.wav",
+   "labels": "/m/07rwj35"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/caster1/XC149411.wav",
+   "labels": "/m/07rwj35"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/caster1/XC300718.wav",
+   "labels": "/m/07rwj35"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/caster1/XC496291.wav",
+   "labels": "/m/07rwj35"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/caster1/XC432679.wav",
+   "labels": "/m/07rwj35"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/caster1/XC365792.wav",
+   "labels": "/m/07rwj35"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/caster1/XC256628.wav",
+   "labels": "/m/07rwj35"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/caster1/XC486322.wav",
+   "labels": "/m/07rwj35"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/caster1/XC501715.wav",
+   "labels": "/m/07rwj35"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/caster1/XC265593.wav",
+   "labels": "/m/07rwj35"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/caster1/XC149413.wav",
+   "labels": "/m/07rwj35"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/caster1/XC411277.wav",
+   "labels": "/m/07rwj35"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/caster1/XC278703.wav",
+   "labels": "/m/07rwj35"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/caster1/XC365791.wav",
+   "labels": "/m/07rwj35"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/caster1/XC313388.wav",
+   "labels": "/m/07rwj35"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/chispa/XC382859.wav",
+   "labels": "/m/07rwj36"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/chispa/XC449220.wav",
+   "labels": "/m/07rwj36"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/chispa/XC141461.wav",
+   "labels": "/m/07rwj36"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/chispa/XC482998.wav",
+   "labels": "/m/07rwj36"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/chispa/XC467080.wav",
+   "labels": "/m/07rwj36"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/chispa/XC189596.wav",
+   "labels": "/m/07rwj36"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/chispa/XC327576.wav",
+   "labels": "/m/07rwj36"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/chispa/XC144094.wav",
+   "labels": "/m/07rwj36"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/chispa/XC141462.wav",
+   "labels": "/m/07rwj36"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/chispa/XC379019.wav",
+   "labels": "/m/07rwj36"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/chispa/XC483739.wav",
+   "labels": "/m/07rwj36"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/chispa/XC416327.wav",
+   "labels": "/m/07rwj36"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/chispa/XC312321.wav",
+   "labels": "/m/07rwj36"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/chispa/XC372203.wav",
+   "labels": "/m/07rwj36"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/chispa/XC199341.wav",
+   "labels": "/m/07rwj36"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/chispa/XC467081.wav",
+   "labels": "/m/07rwj36"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/chispa/XC142341.wav",
+   "labels": "/m/07rwj36"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/chispa/XC476560.wav",
+   "labels": "/m/07rwj36"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/chispa/XC363865.wav",
+   "labels": "/m/07rwj36"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/chispa/XC371309.wav",
+   "labels": "/m/07rwj36"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/chswar/XC330193.wav",
+   "labels": "/m/07rwj37"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/chswar/XC317664.wav",
+   "labels": "/m/07rwj37"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/chswar/XC177100.wav",
+   "labels": "/m/07rwj37"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/chswar/XC476559.wav",
+   "labels": "/m/07rwj37"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/chswar/XC486863.wav",
+   "labels": "/m/07rwj37"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/chswar/XC389103.wav",
+   "labels": "/m/07rwj37"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/chswar/XC417994.wav",
+   "labels": "/m/07rwj37"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/chswar/XC184517.wav",
+   "labels": "/m/07rwj37"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/chswar/XC371479.wav",
+   "labels": "/m/07rwj37"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/chswar/XC177059.wav",
+   "labels": "/m/07rwj37"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/chswar/XC166427.wav",
+   "labels": "/m/07rwj37"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/chswar/XC243582.wav",
+   "labels": "/m/07rwj37"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/chswar/XC133793.wav",
+   "labels": "/m/07rwj37"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/chswar/XC479484.wav",
+   "labels": "/m/07rwj37"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/chswar/XC253752.wav",
+   "labels": "/m/07rwj37"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/chswar/XC396183.wav",
+   "labels": "/m/07rwj37"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/chswar/XC177099.wav",
+   "labels": "/m/07rwj37"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/chswar/XC330194.wav",
+   "labels": "/m/07rwj37"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/chswar/XC420914.wav",
+   "labels": "/m/07rwj37"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/chswar/XC202251.wav",
+   "labels": "/m/07rwj37"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/comgra/XC16907.wav",
+   "labels": "/m/07rwj38"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/comgra/XC246978.wav",
+   "labels": "/m/07rwj38"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/comgra/XC466562.wav",
+   "labels": "/m/07rwj38"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/comgra/XC184574.wav",
+   "labels": "/m/07rwj38"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/comgra/XC346076.wav",
+   "labels": "/m/07rwj38"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/comgra/XC197287.wav",
+   "labels": "/m/07rwj38"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/comgra/XC317007.wav",
+   "labels": "/m/07rwj38"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/comgra/XC476561.wav",
+   "labels": "/m/07rwj38"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/comgra/XC196112.wav",
+   "labels": "/m/07rwj38"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/comgra/XC199357.wav",
+   "labels": "/m/07rwj38"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/comgra/XC466349.wav",
+   "labels": "/m/07rwj38"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/comgra/XC345872.wav",
+   "labels": "/m/07rwj38"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/comgra/XC184891.wav",
+   "labels": "/m/07rwj38"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/comgra/XC196111.wav",
+   "labels": "/m/07rwj38"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/comgra/XC130706.wav",
+   "labels": "/m/07rwj38"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/comgra/XC345282.wav",
+   "labels": "/m/07rwj38"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/comgra/XC311953.wav",
+   "labels": "/m/07rwj38"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/comgra/XC196110.wav",
+   "labels": "/m/07rwj38"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/comgra/XC184886.wav",
+   "labels": "/m/07rwj38"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/comgra/XC345873.wav",
+   "labels": "/m/07rwj38"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/comrav/XC293941.wav",
+   "labels": "/m/07rwj39"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/comrav/XC307098.wav",
+   "labels": "/m/07rwj39"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/comrav/XC210862.wav",
+   "labels": "/m/07rwj39"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/comrav/XC174593.wav",
+   "labels": "/m/07rwj39"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/comrav/XC278922.wav",
+   "labels": "/m/07rwj39"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/comrav/XC192239.wav",
+   "labels": "/m/07rwj39"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/comrav/XC307857.wav",
+   "labels": "/m/07rwj39"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/comrav/XC213774.wav",
+   "labels": "/m/07rwj39"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/comrav/XC124416.wav",
+   "labels": "/m/07rwj39"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/comrav/XC127296.wav",
+   "labels": "/m/07rwj39"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/comrav/XC197025.wav",
+   "labels": "/m/07rwj39"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/comrav/XC186315.wav",
+   "labels": "/m/07rwj39"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/comrav/XC189032.wav",
+   "labels": "/m/07rwj39"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/comrav/XC255135.wav",
+   "labels": "/m/07rwj39"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/comrav/XC163615.wav",
+   "labels": "/m/07rwj39"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/comrav/XC124414.wav",
+   "labels": "/m/07rwj39"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/comrav/XC192229.wav",
+   "labels": "/m/07rwj39"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/comrav/XC188462.wav",
+   "labels": "/m/07rwj39"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/comrav/XC119597.wav",
+   "labels": "/m/07rwj39"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/comrav/XC210864.wav",
+   "labels": "/m/07rwj39"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/comred/XC218754.wav",
+   "labels": "/m/07rwj40"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/comred/XC445187.wav",
+   "labels": "/m/07rwj40"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/comred/XC218769.wav",
+   "labels": "/m/07rwj40"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/comred/XC393607.wav",
+   "labels": "/m/07rwj40"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/comred/XC390508.wav",
+   "labels": "/m/07rwj40"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/comred/XC489924.wav",
+   "labels": "/m/07rwj40"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/comred/XC171759.wav",
+   "labels": "/m/07rwj40"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/comred/XC218756.wav",
+   "labels": "/m/07rwj40"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/comred/XC115595.wav",
+   "labels": "/m/07rwj40"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/comred/XC350461.wav",
+   "labels": "/m/07rwj40"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/comred/XC115597.wav",
+   "labels": "/m/07rwj40"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/comred/XC205676.wav",
+   "labels": "/m/07rwj40"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/comred/XC113480.wav",
+   "labels": "/m/07rwj40"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/comred/XC208556.wav",
+   "labels": "/m/07rwj40"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/comred/XC218753.wav",
+   "labels": "/m/07rwj40"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/comred/XC478957.wav",
+   "labels": "/m/07rwj40"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/comred/XC113483.wav",
+   "labels": "/m/07rwj40"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/comred/XC118265.wav",
+   "labels": "/m/07rwj40"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/comred/XC377949.wav",
+   "labels": "/m/07rwj40"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/comred/XC350460.wav",
+   "labels": "/m/07rwj40"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/comter/XC267740.wav",
+   "labels": "/m/07rwj41"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/comter/XC380875.wav",
+   "labels": "/m/07rwj41"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/comter/XC395263.wav",
+   "labels": "/m/07rwj41"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/comter/XC138836.wav",
+   "labels": "/m/07rwj41"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/comter/XC142988.wav",
+   "labels": "/m/07rwj41"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/comter/XC180820.wav",
+   "labels": "/m/07rwj41"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/comter/XC395271.wav",
+   "labels": "/m/07rwj41"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/comter/XC484867.wav",
+   "labels": "/m/07rwj41"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/comter/XC144938.wav",
+   "labels": "/m/07rwj41"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/comter/XC247903.wav",
+   "labels": "/m/07rwj41"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/comter/XC180821.wav",
+   "labels": "/m/07rwj41"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/comter/XC505610.wav",
+   "labels": "/m/07rwj41"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/comter/XC490618.wav",
+   "labels": "/m/07rwj41"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/comter/XC319303.wav",
+   "labels": "/m/07rwj41"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/comter/XC145979.wav",
+   "labels": "/m/07rwj41"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/comter/XC494849.wav",
+   "labels": "/m/07rwj41"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/comter/XC486093.wav",
+   "labels": "/m/07rwj41"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/comter/XC505611.wav",
+   "labels": "/m/07rwj41"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/comter/XC180837.wav",
+   "labels": "/m/07rwj41"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/comter/XC380874.wav",
+   "labels": "/m/07rwj41"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/comyel/XC316231.wav",
+   "labels": "/m/07rwj42"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/comyel/XC479939.wav",
+   "labels": "/m/07rwj42"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/comyel/XC315933.wav",
+   "labels": "/m/07rwj42"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/comyel/XC368514.wav",
+   "labels": "/m/07rwj42"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/comyel/XC321071.wav",
+   "labels": "/m/07rwj42"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/comyel/XC315932.wav",
+   "labels": "/m/07rwj42"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/comyel/XC416047.wav",
+   "labels": "/m/07rwj42"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/comyel/XC142626.wav",
+   "labels": "/m/07rwj42"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/comyel/XC429261.wav",
+   "labels": "/m/07rwj42"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/comyel/XC320340.wav",
+   "labels": "/m/07rwj42"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/comyel/XC417980.wav",
+   "labels": "/m/07rwj42"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/comyel/XC325764.wav",
+   "labels": "/m/07rwj42"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/comyel/XC420910.wav",
+   "labels": "/m/07rwj42"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/comyel/XC429262.wav",
+   "labels": "/m/07rwj42"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/comyel/XC127495.wav",
+   "labels": "/m/07rwj42"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/comyel/XC447421.wav",
+   "labels": "/m/07rwj42"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/comyel/XC416295.wav",
+   "labels": "/m/07rwj42"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/comyel/XC385842.wav",
+   "labels": "/m/07rwj42"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/comyel/XC179467.wav",
+   "labels": "/m/07rwj42"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/comyel/XC479492.wav",
+   "labels": "/m/07rwj42"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/daejun/XC267999.wav",
+   "labels": "/m/07rwj43"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/daejun/XC348366.wav",
+   "labels": "/m/07rwj43"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/daejun/XC121434.wav",
+   "labels": "/m/07rwj43"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/daejun/XC348371.wav",
+   "labels": "/m/07rwj43"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/daejun/XC195544.wav",
+   "labels": "/m/07rwj43"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/daejun/XC483713.wav",
+   "labels": "/m/07rwj43"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/daejun/XC125069.wav",
+   "labels": "/m/07rwj43"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/daejun/XC348370.wav",
+   "labels": "/m/07rwj43"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/daejun/XC104511.wav",
+   "labels": "/m/07rwj43"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/daejun/XC114667.wav",
+   "labels": "/m/07rwj43"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/daejun/XC406330.wav",
+   "labels": "/m/07rwj43"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/daejun/XC382680.wav",
+   "labels": "/m/07rwj43"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/daejun/XC348367.wav",
+   "labels": "/m/07rwj43"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/daejun/XC125078.wav",
+   "labels": "/m/07rwj43"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/daejun/XC477131.wav",
+   "labels": "/m/07rwj43"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/daejun/XC473419.wav",
+   "labels": "/m/07rwj43"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/daejun/XC139056.wav",
+   "labels": "/m/07rwj43"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/daejun/XC195545.wav",
+   "labels": "/m/07rwj43"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/daejun/XC348373.wav",
+   "labels": "/m/07rwj43"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/daejun/XC104512.wav",
+   "labels": "/m/07rwj43"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/dowwoo/XC192207.wav",
+   "labels": "/m/07rwj44"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/dowwoo/XC457432.wav",
+   "labels": "/m/07rwj44"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/dowwoo/XC476563.wav",
+   "labels": "/m/07rwj44"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/dowwoo/XC191447.wav",
+   "labels": "/m/07rwj44"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/dowwoo/XC37360.wav",
+   "labels": "/m/07rwj44"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/dowwoo/XC293614.wav",
+   "labels": "/m/07rwj44"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/dowwoo/XC210866.wav",
+   "labels": "/m/07rwj44"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/dowwoo/XC181734.wav",
+   "labels": "/m/07rwj44"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/dowwoo/XC176356.wav",
+   "labels": "/m/07rwj44"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/dowwoo/XC210867.wav",
+   "labels": "/m/07rwj44"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/dowwoo/XC313765.wav",
+   "labels": "/m/07rwj44"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/dowwoo/XC78061.wav",
+   "labels": "/m/07rwj44"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/dowwoo/XC445797.wav",
+   "labels": "/m/07rwj44"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/dowwoo/XC115431.wav",
+   "labels": "/m/07rwj44"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/dowwoo/XC349453.wav",
+   "labels": "/m/07rwj44"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/dowwoo/XC494452.wav",
+   "labels": "/m/07rwj44"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/dowwoo/XC326864.wav",
+   "labels": "/m/07rwj44"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/dowwoo/XC37361.wav",
+   "labels": "/m/07rwj44"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/dowwoo/XC383942.wav",
+   "labels": "/m/07rwj44"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/dowwoo/XC416732.wav",
+   "labels": "/m/07rwj44"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/easmea/XC163997.wav",
+   "labels": "/m/07rwj45"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/easmea/XC465730.wav",
+   "labels": "/m/07rwj45"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/easmea/XC405770.wav",
+   "labels": "/m/07rwj45"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/easmea/XC140147.wav",
+   "labels": "/m/07rwj45"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/easmea/XC468589.wav",
+   "labels": "/m/07rwj45"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/easmea/XC163992.wav",
+   "labels": "/m/07rwj45"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/easmea/XC163993.wav",
+   "labels": "/m/07rwj45"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/easmea/XC163996.wav",
+   "labels": "/m/07rwj45"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/easmea/XC428221.wav",
+   "labels": "/m/07rwj45"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/easmea/XC407215.wav",
+   "labels": "/m/07rwj45"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/easmea/XC132665.wav",
+   "labels": "/m/07rwj45"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/easmea/XC360824.wav",
+   "labels": "/m/07rwj45"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/easmea/XC379740.wav",
+   "labels": "/m/07rwj45"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/easmea/XC163991.wav",
+   "labels": "/m/07rwj45"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/easmea/XC127730.wav",
+   "labels": "/m/07rwj45"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/easmea/XC371097.wav",
+   "labels": "/m/07rwj45"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/easmea/XC163990.wav",
+   "labels": "/m/07rwj45"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/easmea/XC360825.wav",
+   "labels": "/m/07rwj45"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/easmea/XC211158.wav",
+   "labels": "/m/07rwj45"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/easmea/XC490755.wav",
+   "labels": "/m/07rwj45"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/eastow/XC140988.wav",
+   "labels": "/m/07rwj46"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/eastow/XC293823.wav",
+   "labels": "/m/07rwj46"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/eastow/XC316235.wav",
+   "labels": "/m/07rwj46"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/eastow/XC306352.wav",
+   "labels": "/m/07rwj46"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/eastow/XC476567.wav",
+   "labels": "/m/07rwj46"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/eastow/XC504696.wav",
+   "labels": "/m/07rwj46"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/eastow/XC430295.wav",
+   "labels": "/m/07rwj46"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/eastow/XC429258.wav",
+   "labels": "/m/07rwj46"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/eastow/XC177505.wav",
+   "labels": "/m/07rwj46"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/eastow/XC145788.wav",
+   "labels": "/m/07rwj46"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/eastow/XC466364.wav",
+   "labels": "/m/07rwj46"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/eastow/XC388583.wav",
+   "labels": "/m/07rwj46"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/eastow/XC420913.wav",
+   "labels": "/m/07rwj46"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/eastow/XC177501.wav",
+   "labels": "/m/07rwj46"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/eastow/XC247525.wav",
+   "labels": "/m/07rwj46"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/eastow/XC179667.wav",
+   "labels": "/m/07rwj46"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/eastow/XC317101.wav",
+   "labels": "/m/07rwj46"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/eastow/XC412958.wav",
+   "labels": "/m/07rwj46"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/eastow/XC137047.wav",
+   "labels": "/m/07rwj46"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/eastow/XC469870.wav",
+   "labels": "/m/07rwj46"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/eawpew/XC86752.wav",
+   "labels": "/m/07rwj47"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/eawpew/XC177062.wav",
+   "labels": "/m/07rwj47"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/eawpew/XC402740.wav",
+   "labels": "/m/07rwj47"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/eawpew/XC319843.wav",
+   "labels": "/m/07rwj47"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/eawpew/XC404737.wav",
+   "labels": "/m/07rwj47"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/eawpew/XC52462.wav",
+   "labels": "/m/07rwj47"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/eawpew/XC170130.wav",
+   "labels": "/m/07rwj47"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/eawpew/XC62775.wav",
+   "labels": "/m/07rwj47"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/eawpew/XC312332.wav",
+   "labels": "/m/07rwj47"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/eawpew/XC467287.wav",
+   "labels": "/m/07rwj47"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/eawpew/XC146533.wav",
+   "labels": "/m/07rwj47"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/eawpew/XC487406.wav",
+   "labels": "/m/07rwj47"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/eawpew/XC190358.wav",
+   "labels": "/m/07rwj47"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/eawpew/XC197806.wav",
+   "labels": "/m/07rwj47"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/eawpew/XC428179.wav",
+   "labels": "/m/07rwj47"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/eawpew/XC143935.wav",
+   "labels": "/m/07rwj47"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/eawpew/XC298623.wav",
+   "labels": "/m/07rwj47"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/eawpew/XC294423.wav",
+   "labels": "/m/07rwj47"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/eawpew/XC134189.wav",
+   "labels": "/m/07rwj47"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/eawpew/XC375637.wav",
+   "labels": "/m/07rwj47"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/eucdov/XC363124.wav",
+   "labels": "/m/07rwj48"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/eucdov/XC380916.wav",
+   "labels": "/m/07rwj48"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/eucdov/XC428769.wav",
+   "labels": "/m/07rwj48"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/eucdov/XC459021.wav",
+   "labels": "/m/07rwj48"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/eucdov/XC366103.wav",
+   "labels": "/m/07rwj48"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/eucdov/XC284421.wav",
+   "labels": "/m/07rwj48"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/eucdov/XC376932.wav",
+   "labels": "/m/07rwj48"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/eucdov/XC148870.wav",
+   "labels": "/m/07rwj48"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/eucdov/XC503258.wav",
+   "labels": "/m/07rwj48"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/eucdov/XC129508.wav",
+   "labels": "/m/07rwj48"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/eucdov/XC148871.wav",
+   "labels": "/m/07rwj48"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/eucdov/XC112763.wav",
+   "labels": "/m/07rwj48"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/eucdov/XC112764.wav",
+   "labels": "/m/07rwj48"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/eucdov/XC384380.wav",
+   "labels": "/m/07rwj48"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/eucdov/XC345877.wav",
+   "labels": "/m/07rwj48"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/eucdov/XC492752.wav",
+   "labels": "/m/07rwj48"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/eucdov/XC424168.wav",
+   "labels": "/m/07rwj48"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/eucdov/XC185434.wav",
+   "labels": "/m/07rwj48"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/eucdov/XC373865.wav",
+   "labels": "/m/07rwj48"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/eucdov/XC316794.wav",
+   "labels": "/m/07rwj48"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/evegro/XC466946.wav",
+   "labels": "/m/07rwj49"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/evegro/XC465450.wav",
+   "labels": "/m/07rwj49"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/evegro/XC234336.wav",
+   "labels": "/m/07rwj49"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/evegro/XC255051.wav",
+   "labels": "/m/07rwj49"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/evegro/XC287303.wav",
+   "labels": "/m/07rwj49"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/evegro/XC303573.wav",
+   "labels": "/m/07rwj49"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/evegro/XC234334.wav",
+   "labels": "/m/07rwj49"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/evegro/XC408669.wav",
+   "labels": "/m/07rwj49"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/evegro/XC293837.wav",
+   "labels": "/m/07rwj49"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/evegro/XC374105.wav",
+   "labels": "/m/07rwj49"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/evegro/XC156725.wav",
+   "labels": "/m/07rwj49"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/evegro/XC164554.wav",
+   "labels": "/m/07rwj49"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/evegro/XC287258.wav",
+   "labels": "/m/07rwj49"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/evegro/XC323302.wav",
+   "labels": "/m/07rwj49"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/evegro/XC206152.wav",
+   "labels": "/m/07rwj49"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/evegro/XC292469.wav",
+   "labels": "/m/07rwj49"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/evegro/XC374106.wav",
+   "labels": "/m/07rwj49"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/evegro/XC297473.wav",
+   "labels": "/m/07rwj49"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/evegro/XC302130.wav",
+   "labels": "/m/07rwj49"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/CornellBirdcall_evaluation/data/BirdSong_audio_16k/evegro/XC120880.wav",
+   "labels": "/m/07rwj49"
+  }
+ ]
+}

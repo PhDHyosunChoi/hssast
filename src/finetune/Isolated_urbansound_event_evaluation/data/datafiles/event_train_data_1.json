@@ -1,0 +1,444 @@
+{
+ "data": [
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/Isolated_urbansound_event_evaluation/data/event_audio_16k/bird/bird01.wav",
+   "labels": "/m/07rwj00"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/Isolated_urbansound_event_evaluation/data/event_audio_16k/bird/bird02.wav",
+   "labels": "/m/07rwj00"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/Isolated_urbansound_event_evaluation/data/event_audio_16k/bird/bird03.wav",
+   "labels": "/m/07rwj00"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/Isolated_urbansound_event_evaluation/data/event_audio_16k/bird/bird04.wav",
+   "labels": "/m/07rwj00"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/Isolated_urbansound_event_evaluation/data/event_audio_16k/bird/bird05.wav",
+   "labels": "/m/07rwj00"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/Isolated_urbansound_event_evaluation/data/event_audio_16k/bird/bird06.wav",
+   "labels": "/m/07rwj00"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/Isolated_urbansound_event_evaluation/data/event_audio_16k/bird/bird08.wav",
+   "labels": "/m/07rwj00"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/Isolated_urbansound_event_evaluation/data/event_audio_16k/bird/bird07.wav",
+   "labels": "/m/07rwj00"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/Isolated_urbansound_event_evaluation/data/event_audio_16k/bird/bird09.wav",
+   "labels": "/m/07rwj00"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/Isolated_urbansound_event_evaluation/data/event_audio_16k/bird/bird10.wav",
+   "labels": "/m/07rwj00"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/Isolated_urbansound_event_evaluation/data/event_audio_16k/bird/bird11.wav",
+   "labels": "/m/07rwj00"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/Isolated_urbansound_event_evaluation/data/event_audio_16k/bird/bird12.wav",
+   "labels": "/m/07rwj00"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/Isolated_urbansound_event_evaluation/data/event_audio_16k/bird/bird18.wav",
+   "labels": "/m/07rwj00"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/Isolated_urbansound_event_evaluation/data/event_audio_16k/bird/bird13.wav",
+   "labels": "/m/07rwj00"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/Isolated_urbansound_event_evaluation/data/event_audio_16k/citycar/cityCar01.wav",
+   "labels": "/m/07rwj01"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/Isolated_urbansound_event_evaluation/data/event_audio_16k/citycar/cityCar02.wav",
+   "labels": "/m/07rwj01"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/Isolated_urbansound_event_evaluation/data/event_audio_16k/citycar/cityCar03.wav",
+   "labels": "/m/07rwj01"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/Isolated_urbansound_event_evaluation/data/event_audio_16k/citycar/cityCar04.wav",
+   "labels": "/m/07rwj01"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/Isolated_urbansound_event_evaluation/data/event_audio_16k/citycar/cityCar05.wav",
+   "labels": "/m/07rwj01"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/Isolated_urbansound_event_evaluation/data/event_audio_16k/citycar/cityCar06.wav",
+   "labels": "/m/07rwj01"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/Isolated_urbansound_event_evaluation/data/event_audio_16k/citycar/cityCar07.wav",
+   "labels": "/m/07rwj01"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/Isolated_urbansound_event_evaluation/data/event_audio_16k/citycar/cityCar08.wav",
+   "labels": "/m/07rwj01"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/Isolated_urbansound_event_evaluation/data/event_audio_16k/citycar/cityCar09.wav",
+   "labels": "/m/07rwj01"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/Isolated_urbansound_event_evaluation/data/event_audio_16k/citycar/cityCar10.wav",
+   "labels": "/m/07rwj01"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/Isolated_urbansound_event_evaluation/data/event_audio_16k/citycar/cityCar11.wav",
+   "labels": "/m/07rwj01"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/Isolated_urbansound_event_evaluation/data/event_audio_16k/citycar/cityCar12.wav",
+   "labels": "/m/07rwj01"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/Isolated_urbansound_event_evaluation/data/event_audio_16k/citycar/cityCar13.wav",
+   "labels": "/m/07rwj01"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/Isolated_urbansound_event_evaluation/data/event_audio_16k/citycar/cityCar14.wav",
+   "labels": "/m/07rwj01"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/Isolated_urbansound_event_evaluation/data/event_audio_16k/citycar/cityCar15.wav",
+   "labels": "/m/07rwj01"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/Isolated_urbansound_event_evaluation/data/event_audio_16k/citycar/cityCar16.wav",
+   "labels": "/m/07rwj01"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/Isolated_urbansound_event_evaluation/data/event_audio_16k/citycar/cityCar17.wav",
+   "labels": "/m/07rwj01"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/Isolated_urbansound_event_evaluation/data/event_audio_16k/citycar/cityCar18.wav",
+   "labels": "/m/07rwj01"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/Isolated_urbansound_event_evaluation/data/event_audio_16k/citycar/cityCar19.wav",
+   "labels": "/m/07rwj01"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/Isolated_urbansound_event_evaluation/data/event_audio_16k/citycar/cityCar20.wav",
+   "labels": "/m/07rwj01"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/Isolated_urbansound_event_evaluation/data/event_audio_16k/citycar/cityCar21.wav",
+   "labels": "/m/07rwj01"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/Isolated_urbansound_event_evaluation/data/event_audio_16k/citycar/cityCar22.wav",
+   "labels": "/m/07rwj01"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/Isolated_urbansound_event_evaluation/data/event_audio_16k/construction/constructionSite01.wav",
+   "labels": "/m/07rwj02"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/Isolated_urbansound_event_evaluation/data/event_audio_16k/construction/constructionSite02.wav",
+   "labels": "/m/07rwj02"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/Isolated_urbansound_event_evaluation/data/event_audio_16k/construction/constructionSite03.wav",
+   "labels": "/m/07rwj02"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/Isolated_urbansound_event_evaluation/data/event_audio_16k/construction/constructionSite04.wav",
+   "labels": "/m/07rwj02"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/Isolated_urbansound_event_evaluation/data/event_audio_16k/construction/constructionSite05.wav",
+   "labels": "/m/07rwj02"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/Isolated_urbansound_event_evaluation/data/event_audio_16k/dog/dog19.wav",
+   "labels": "/m/07rwj03"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/Isolated_urbansound_event_evaluation/data/event_audio_16k/dog/dog20.wav",
+   "labels": "/m/07rwj03"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/Isolated_urbansound_event_evaluation/data/event_audio_16k/dog/dog21.wav",
+   "labels": "/m/07rwj03"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/Isolated_urbansound_event_evaluation/data/event_audio_16k/dog/dog18.wav",
+   "labels": "/m/07rwj03"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/Isolated_urbansound_event_evaluation/data/event_audio_16k/dog/dog23.wav",
+   "labels": "/m/07rwj03"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/Isolated_urbansound_event_evaluation/data/event_audio_16k/dog/dog08.wav",
+   "labels": "/m/07rwj03"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/Isolated_urbansound_event_evaluation/data/event_audio_16k/dog/dog11.wav",
+   "labels": "/m/07rwj03"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/Isolated_urbansound_event_evaluation/data/event_audio_16k/dog/dog15.wav",
+   "labels": "/m/07rwj03"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/Isolated_urbansound_event_evaluation/data/event_audio_16k/dog/dog16.wav",
+   "labels": "/m/07rwj03"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/Isolated_urbansound_event_evaluation/data/event_audio_16k/dog/dog17.wav",
+   "labels": "/m/07rwj03"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/Isolated_urbansound_event_evaluation/data/event_audio_16k/dog/dog22.wav",
+   "labels": "/m/07rwj03"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/Isolated_urbansound_event_evaluation/data/event_audio_16k/dog/dog02.wav",
+   "labels": "/m/07rwj03"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/Isolated_urbansound_event_evaluation/data/event_audio_16k/dog/dog03.wav",
+   "labels": "/m/07rwj03"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/Isolated_urbansound_event_evaluation/data/event_audio_16k/dog/dog04.wav",
+   "labels": "/m/07rwj03"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/Isolated_urbansound_event_evaluation/data/event_audio_16k/dog/dog06.wav",
+   "labels": "/m/07rwj03"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/Isolated_urbansound_event_evaluation/data/event_audio_16k/dog/dog07.wav",
+   "labels": "/m/07rwj03"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/Isolated_urbansound_event_evaluation/data/event_audio_16k/dog/dog12.wav",
+   "labels": "/m/07rwj03"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/Isolated_urbansound_event_evaluation/data/event_audio_16k/dog/dog01.wav",
+   "labels": "/m/07rwj03"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/Isolated_urbansound_event_evaluation/data/event_audio_16k/plane/plane01.wav",
+   "labels": "/m/07rwj04"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/Isolated_urbansound_event_evaluation/data/event_audio_16k/plane/plane08.wav",
+   "labels": "/m/07rwj04"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/Isolated_urbansound_event_evaluation/data/event_audio_16k/plane/plane09.wav",
+   "labels": "/m/07rwj04"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/Isolated_urbansound_event_evaluation/data/event_audio_16k/plane/plane02.wav",
+   "labels": "/m/07rwj04"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/Isolated_urbansound_event_evaluation/data/event_audio_16k/plane/plane11.wav",
+   "labels": "/m/07rwj04"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/Isolated_urbansound_event_evaluation/data/event_audio_16k/plane/plane03.wav",
+   "labels": "/m/07rwj04"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/Isolated_urbansound_event_evaluation/data/event_audio_16k/plane/plane06.wav",
+   "labels": "/m/07rwj04"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/Isolated_urbansound_event_evaluation/data/event_audio_16k/plane/plane05.wav",
+   "labels": "/m/07rwj04"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/Isolated_urbansound_event_evaluation/data/event_audio_16k/roadcar/roadCar01.wav",
+   "labels": "/m/07rwj05"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/Isolated_urbansound_event_evaluation/data/event_audio_16k/roadcar/roadCar02.wav",
+   "labels": "/m/07rwj05"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/Isolated_urbansound_event_evaluation/data/event_audio_16k/roadcar/roadCar04.wav",
+   "labels": "/m/07rwj05"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/Isolated_urbansound_event_evaluation/data/event_audio_16k/roadcar/roadCar06.wav",
+   "labels": "/m/07rwj05"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/Isolated_urbansound_event_evaluation/data/event_audio_16k/roadcar/roadCar05.wav",
+   "labels": "/m/07rwj05"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/Isolated_urbansound_event_evaluation/data/event_audio_16k/roadcar/roadCar07.wav",
+   "labels": "/m/07rwj05"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/Isolated_urbansound_event_evaluation/data/event_audio_16k/roadcar/roadCar08.wav",
+   "labels": "/m/07rwj05"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/Isolated_urbansound_event_evaluation/data/event_audio_16k/roadcar/roadCar09.wav",
+   "labels": "/m/07rwj05"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/Isolated_urbansound_event_evaluation/data/event_audio_16k/roadcar/roadCar10.wav",
+   "labels": "/m/07rwj05"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/Isolated_urbansound_event_evaluation/data/event_audio_16k/roadcar/roadCar11.wav",
+   "labels": "/m/07rwj05"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/Isolated_urbansound_event_evaluation/data/event_audio_16k/roadcar/roadCar12.wav",
+   "labels": "/m/07rwj05"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/Isolated_urbansound_event_evaluation/data/event_audio_16k/roadcar/roadCar13.wav",
+   "labels": "/m/07rwj05"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/Isolated_urbansound_event_evaluation/data/event_audio_16k/roadcar/roadCar14.wav",
+   "labels": "/m/07rwj05"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/Isolated_urbansound_event_evaluation/data/event_audio_16k/roadcar/roadCar15.wav",
+   "labels": "/m/07rwj05"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/Isolated_urbansound_event_evaluation/data/event_audio_16k/siren/siren03.wav",
+   "labels": "/m/07rwj06"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/Isolated_urbansound_event_evaluation/data/event_audio_16k/siren/siren04.wav",
+   "labels": "/m/07rwj06"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/Isolated_urbansound_event_evaluation/data/event_audio_16k/siren/siren05.wav",
+   "labels": "/m/07rwj06"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/Isolated_urbansound_event_evaluation/data/event_audio_16k/siren/siren02.wav",
+   "labels": "/m/07rwj06"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/Isolated_urbansound_event_evaluation/data/event_audio_16k/step/stepCity07.wav",
+   "labels": "/m/07rwj07"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/Isolated_urbansound_event_evaluation/data/event_audio_16k/step/stepCity06.wav",
+   "labels": "/m/07rwj07"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/Isolated_urbansound_event_evaluation/data/event_audio_16k/step/stepCity05.wav",
+   "labels": "/m/07rwj07"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/Isolated_urbansound_event_evaluation/data/event_audio_16k/step/stepCity04.wav",
+   "labels": "/m/07rwj07"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/Isolated_urbansound_event_evaluation/data/event_audio_16k/step/stepCity03.wav",
+   "labels": "/m/07rwj07"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/Isolated_urbansound_event_evaluation/data/event_audio_16k/step/stepCity02.wav",
+   "labels": "/m/07rwj07"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/Isolated_urbansound_event_evaluation/data/event_audio_16k/step/stepCity01.wav",
+   "labels": "/m/07rwj07"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/Isolated_urbansound_event_evaluation/data/event_audio_16k/step/stepPark08.wav",
+   "labels": "/m/07rwj07"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/Isolated_urbansound_event_evaluation/data/event_audio_16k/step/stepPark07.wav",
+   "labels": "/m/07rwj07"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/Isolated_urbansound_event_evaluation/data/event_audio_16k/step/stepPark06.wav",
+   "labels": "/m/07rwj07"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/Isolated_urbansound_event_evaluation/data/event_audio_16k/step/stepPark05.wav",
+   "labels": "/m/07rwj07"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/Isolated_urbansound_event_evaluation/data/event_audio_16k/step/stepPark04.wav",
+   "labels": "/m/07rwj07"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/Isolated_urbansound_event_evaluation/data/event_audio_16k/stopcar/stopCar04.wav",
+   "labels": "/m/07rwj08"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/Isolated_urbansound_event_evaluation/data/event_audio_16k/stopcar/stopCar05.wav",
+   "labels": "/m/07rwj08"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/Isolated_urbansound_event_evaluation/data/event_audio_16k/stopcar/stopCar06.wav",
+   "labels": "/m/07rwj08"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/Isolated_urbansound_event_evaluation/data/event_audio_16k/stopcar/stopCar07.wav",
+   "labels": "/m/07rwj08"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/Isolated_urbansound_event_evaluation/data/event_audio_16k/stopcar/stopCar08.wav",
+   "labels": "/m/07rwj08"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/Isolated_urbansound_event_evaluation/data/event_audio_16k/train/train01.wav",
+   "labels": "/m/07rwj09"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/Isolated_urbansound_event_evaluation/data/event_audio_16k/train/train02.wav",
+   "labels": "/m/07rwj09"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/Isolated_urbansound_event_evaluation/data/event_audio_16k/train/train04.wav",
+   "labels": "/m/07rwj09"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/Isolated_urbansound_event_evaluation/data/event_audio_16k/train/train05.wav",
+   "labels": "/m/07rwj09"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/Isolated_urbansound_event_evaluation/data/event_audio_16k/train/train06.wav",
+   "labels": "/m/07rwj09"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/Isolated_urbansound_event_evaluation/data/event_audio_16k/truck/truck01.wav",
+   "labels": "/m/07rwj10"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/Isolated_urbansound_event_evaluation/data/event_audio_16k/truck/truck02.wav",
+   "labels": "/m/07rwj10"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/Isolated_urbansound_event_evaluation/data/event_audio_16k/truck/truck03.wav",
+   "labels": "/m/07rwj10"
+  }
+ ]
+}

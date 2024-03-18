@@ -1,0 +1,964 @@
+{
+ "data": [
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/SAVEE/SAVEE_audio_16k/DC_a01.wav",
+   "labels": "/m/07rwj00"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/SAVEE/SAVEE_audio_16k/DC_a08.wav",
+   "labels": "/m/07rwj00"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/SAVEE/SAVEE_audio_16k/DC_a03.wav",
+   "labels": "/m/07rwj00"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/SAVEE/SAVEE_audio_16k/DC_a06.wav",
+   "labels": "/m/07rwj00"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/SAVEE/SAVEE_audio_16k/DC_a10.wav",
+   "labels": "/m/07rwj00"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/SAVEE/SAVEE_audio_16k/DC_a07.wav",
+   "labels": "/m/07rwj00"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/SAVEE/SAVEE_audio_16k/DC_a04.wav",
+   "labels": "/m/07rwj00"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/SAVEE/SAVEE_audio_16k/DC_a09.wav",
+   "labels": "/m/07rwj00"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/SAVEE/SAVEE_audio_16k/DC_a05.wav",
+   "labels": "/m/07rwj00"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/SAVEE/SAVEE_audio_16k/DC_a11.wav",
+   "labels": "/m/07rwj00"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/SAVEE/SAVEE_audio_16k/DC_a12.wav",
+   "labels": "/m/07rwj00"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/SAVEE/SAVEE_audio_16k/DC_a14.wav",
+   "labels": "/m/07rwj00"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/SAVEE/SAVEE_audio_16k/DC_a13.wav",
+   "labels": "/m/07rwj00"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/SAVEE/SAVEE_audio_16k/DC_a02.wav",
+   "labels": "/m/07rwj00"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/SAVEE/SAVEE_audio_16k/DC_h07.wav",
+   "labels": "/m/07rwj01"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/SAVEE/SAVEE_audio_16k/DC_d04.wav",
+   "labels": "/m/07rwj05"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/SAVEE/SAVEE_audio_16k/DC_d15.wav",
+   "labels": "/m/07rwj05"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/SAVEE/SAVEE_audio_16k/DC_h14.wav",
+   "labels": "/m/07rwj01"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/SAVEE/SAVEE_audio_16k/DC_h05.wav",
+   "labels": "/m/07rwj01"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/SAVEE/SAVEE_audio_16k/DC_d06.wav",
+   "labels": "/m/07rwj05"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/SAVEE/SAVEE_audio_16k/DC_h02.wav",
+   "labels": "/m/07rwj01"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/SAVEE/SAVEE_audio_16k/DC_h01.wav",
+   "labels": "/m/07rwj01"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/SAVEE/SAVEE_audio_16k/DC_h03.wav",
+   "labels": "/m/07rwj01"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/SAVEE/SAVEE_audio_16k/DC_n03.wav",
+   "labels": "/m/07rwj03"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/SAVEE/SAVEE_audio_16k/DC_f07.wav",
+   "labels": "/m/07rwj04"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/SAVEE/SAVEE_audio_16k/DC_d07.wav",
+   "labels": "/m/07rwj05"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/SAVEE/SAVEE_audio_16k/DC_d13.wav",
+   "labels": "/m/07rwj05"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/SAVEE/SAVEE_audio_16k/DC_f09.wav",
+   "labels": "/m/07rwj04"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/SAVEE/SAVEE_audio_16k/DC_d02.wav",
+   "labels": "/m/07rwj05"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/SAVEE/SAVEE_audio_16k/DC_a15.wav",
+   "labels": "/m/07rwj00"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/SAVEE/SAVEE_audio_16k/DC_d05.wav",
+   "labels": "/m/07rwj05"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/SAVEE/SAVEE_audio_16k/DC_h10.wav",
+   "labels": "/m/07rwj01"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/SAVEE/SAVEE_audio_16k/DC_d03.wav",
+   "labels": "/m/07rwj05"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/SAVEE/SAVEE_audio_16k/DC_f15.wav",
+   "labels": "/m/07rwj04"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/SAVEE/SAVEE_audio_16k/DC_f14.wav",
+   "labels": "/m/07rwj04"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/SAVEE/SAVEE_audio_16k/DC_h13.wav",
+   "labels": "/m/07rwj01"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/SAVEE/SAVEE_audio_16k/DC_d14.wav",
+   "labels": "/m/07rwj05"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/SAVEE/SAVEE_audio_16k/DC_d09.wav",
+   "labels": "/m/07rwj05"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/SAVEE/SAVEE_audio_16k/DC_d10.wav",
+   "labels": "/m/07rwj05"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/SAVEE/SAVEE_audio_16k/DC_f03.wav",
+   "labels": "/m/07rwj04"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/SAVEE/SAVEE_audio_16k/DC_n02.wav",
+   "labels": "/m/07rwj03"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/SAVEE/SAVEE_audio_16k/DC_d11.wav",
+   "labels": "/m/07rwj05"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/SAVEE/SAVEE_audio_16k/DC_f02.wav",
+   "labels": "/m/07rwj04"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/SAVEE/SAVEE_audio_16k/DC_h08.wav",
+   "labels": "/m/07rwj01"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/SAVEE/SAVEE_audio_16k/DC_f13.wav",
+   "labels": "/m/07rwj04"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/SAVEE/SAVEE_audio_16k/DC_f01.wav",
+   "labels": "/m/07rwj04"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/SAVEE/SAVEE_audio_16k/DC_h06.wav",
+   "labels": "/m/07rwj01"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/SAVEE/SAVEE_audio_16k/DC_f04.wav",
+   "labels": "/m/07rwj04"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/SAVEE/SAVEE_audio_16k/DC_f11.wav",
+   "labels": "/m/07rwj04"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/SAVEE/SAVEE_audio_16k/DC_h12.wav",
+   "labels": "/m/07rwj01"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/SAVEE/SAVEE_audio_16k/DC_f08.wav",
+   "labels": "/m/07rwj04"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/SAVEE/SAVEE_audio_16k/DC_h09.wav",
+   "labels": "/m/07rwj01"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/SAVEE/SAVEE_audio_16k/DC_f06.wav",
+   "labels": "/m/07rwj04"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/SAVEE/SAVEE_audio_16k/DC_h11.wav",
+   "labels": "/m/07rwj01"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/SAVEE/SAVEE_audio_16k/DC_h04.wav",
+   "labels": "/m/07rwj01"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/SAVEE/SAVEE_audio_16k/DC_d08.wav",
+   "labels": "/m/07rwj05"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/SAVEE/SAVEE_audio_16k/DC_h15.wav",
+   "labels": "/m/07rwj01"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/SAVEE/SAVEE_audio_16k/DC_d12.wav",
+   "labels": "/m/07rwj05"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/SAVEE/SAVEE_audio_16k/DC_n01.wav",
+   "labels": "/m/07rwj03"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/SAVEE/SAVEE_audio_16k/DC_d01.wav",
+   "labels": "/m/07rwj05"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/SAVEE/SAVEE_audio_16k/DC_f10.wav",
+   "labels": "/m/07rwj04"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/SAVEE/SAVEE_audio_16k/DC_f12.wav",
+   "labels": "/m/07rwj04"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/SAVEE/SAVEE_audio_16k/DC_f05.wav",
+   "labels": "/m/07rwj04"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/SAVEE/SAVEE_audio_16k/DC_n06.wav",
+   "labels": "/m/07rwj03"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/SAVEE/SAVEE_audio_16k/DC_su01.wav",
+   "labels": "/m/07rwj06"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/SAVEE/SAVEE_audio_16k/DC_n17.wav",
+   "labels": "/m/07rwj03"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/SAVEE/SAVEE_audio_16k/DC_sa04.wav",
+   "labels": "/m/07rwj02"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/SAVEE/SAVEE_audio_16k/DC_n19.wav",
+   "labels": "/m/07rwj03"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/SAVEE/SAVEE_audio_16k/DC_su07.wav",
+   "labels": "/m/07rwj06"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/SAVEE/SAVEE_audio_16k/DC_sa11.wav",
+   "labels": "/m/07rwj02"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/SAVEE/SAVEE_audio_16k/DC_sa12.wav",
+   "labels": "/m/07rwj02"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/SAVEE/SAVEE_audio_16k/DC_n08.wav",
+   "labels": "/m/07rwj03"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/SAVEE/SAVEE_audio_16k/DC_su02.wav",
+   "labels": "/m/07rwj06"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/SAVEE/SAVEE_audio_16k/DC_sa13.wav",
+   "labels": "/m/07rwj02"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/SAVEE/SAVEE_audio_16k/DC_n21.wav",
+   "labels": "/m/07rwj03"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/SAVEE/SAVEE_audio_16k/DC_n30.wav",
+   "labels": "/m/07rwj03"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/SAVEE/SAVEE_audio_16k/DC_n16.wav",
+   "labels": "/m/07rwj03"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/SAVEE/SAVEE_audio_16k/DC_n24.wav",
+   "labels": "/m/07rwj03"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/SAVEE/SAVEE_audio_16k/DC_su05.wav",
+   "labels": "/m/07rwj06"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/SAVEE/SAVEE_audio_16k/DC_n29.wav",
+   "labels": "/m/07rwj03"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/SAVEE/SAVEE_audio_16k/DC_sa07.wav",
+   "labels": "/m/07rwj02"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/SAVEE/SAVEE_audio_16k/DC_n04.wav",
+   "labels": "/m/07rwj03"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/SAVEE/SAVEE_audio_16k/DC_sa02.wav",
+   "labels": "/m/07rwj02"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/SAVEE/SAVEE_audio_16k/DC_sa01.wav",
+   "labels": "/m/07rwj02"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/SAVEE/SAVEE_audio_16k/DC_su08.wav",
+   "labels": "/m/07rwj06"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/SAVEE/SAVEE_audio_16k/DC_n07.wav",
+   "labels": "/m/07rwj03"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/SAVEE/SAVEE_audio_16k/DC_n26.wav",
+   "labels": "/m/07rwj03"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/SAVEE/SAVEE_audio_16k/DC_sa09.wav",
+   "labels": "/m/07rwj02"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/SAVEE/SAVEE_audio_16k/DC_n05.wav",
+   "labels": "/m/07rwj03"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/SAVEE/SAVEE_audio_16k/DC_sa15.wav",
+   "labels": "/m/07rwj02"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/SAVEE/SAVEE_audio_16k/DC_n22.wav",
+   "labels": "/m/07rwj03"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/SAVEE/SAVEE_audio_16k/DC_su09.wav",
+   "labels": "/m/07rwj06"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/SAVEE/SAVEE_audio_16k/DC_n11.wav",
+   "labels": "/m/07rwj03"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/SAVEE/SAVEE_audio_16k/DC_n13.wav",
+   "labels": "/m/07rwj03"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/SAVEE/SAVEE_audio_16k/DC_n28.wav",
+   "labels": "/m/07rwj03"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/SAVEE/SAVEE_audio_16k/DC_n12.wav",
+   "labels": "/m/07rwj03"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/SAVEE/SAVEE_audio_16k/DC_n23.wav",
+   "labels": "/m/07rwj03"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/SAVEE/SAVEE_audio_16k/DC_n25.wav",
+   "labels": "/m/07rwj03"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/SAVEE/SAVEE_audio_16k/DC_n27.wav",
+   "labels": "/m/07rwj03"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/SAVEE/SAVEE_audio_16k/DC_su03.wav",
+   "labels": "/m/07rwj06"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/SAVEE/SAVEE_audio_16k/DC_n15.wav",
+   "labels": "/m/07rwj03"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/SAVEE/SAVEE_audio_16k/DC_n09.wav",
+   "labels": "/m/07rwj03"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/SAVEE/SAVEE_audio_16k/DC_su06.wav",
+   "labels": "/m/07rwj06"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/SAVEE/SAVEE_audio_16k/DC_n18.wav",
+   "labels": "/m/07rwj03"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/SAVEE/SAVEE_audio_16k/DC_sa05.wav",
+   "labels": "/m/07rwj02"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/SAVEE/SAVEE_audio_16k/DC_su04.wav",
+   "labels": "/m/07rwj06"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/SAVEE/SAVEE_audio_16k/DC_sa03.wav",
+   "labels": "/m/07rwj02"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/SAVEE/SAVEE_audio_16k/DC_n10.wav",
+   "labels": "/m/07rwj03"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/SAVEE/SAVEE_audio_16k/DC_sa06.wav",
+   "labels": "/m/07rwj02"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/SAVEE/SAVEE_audio_16k/DC_sa10.wav",
+   "labels": "/m/07rwj02"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/SAVEE/SAVEE_audio_16k/DC_sa14.wav",
+   "labels": "/m/07rwj02"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/SAVEE/SAVEE_audio_16k/DC_sa08.wav",
+   "labels": "/m/07rwj02"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/SAVEE/SAVEE_audio_16k/DC_n20.wav",
+   "labels": "/m/07rwj03"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/SAVEE/SAVEE_audio_16k/DC_n14.wav",
+   "labels": "/m/07rwj03"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/SAVEE/SAVEE_audio_16k/JE_f11.wav",
+   "labels": "/m/07rwj04"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/SAVEE/SAVEE_audio_16k/JE_d12.wav",
+   "labels": "/m/07rwj05"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/SAVEE/SAVEE_audio_16k/DC_su10.wav",
+   "labels": "/m/07rwj06"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/SAVEE/SAVEE_audio_16k/JE_a05.wav",
+   "labels": "/m/07rwj00"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/SAVEE/SAVEE_audio_16k/JE_d02.wav",
+   "labels": "/m/07rwj05"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/SAVEE/SAVEE_audio_16k/JE_d09.wav",
+   "labels": "/m/07rwj05"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/SAVEE/SAVEE_audio_16k/JE_a13.wav",
+   "labels": "/m/07rwj00"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/SAVEE/SAVEE_audio_16k/JE_f04.wav",
+   "labels": "/m/07rwj04"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/SAVEE/SAVEE_audio_16k/JE_d04.wav",
+   "labels": "/m/07rwj05"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/SAVEE/SAVEE_audio_16k/JE_a14.wav",
+   "labels": "/m/07rwj00"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/SAVEE/SAVEE_audio_16k/JE_f09.wav",
+   "labels": "/m/07rwj04"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/SAVEE/SAVEE_audio_16k/JE_f06.wav",
+   "labels": "/m/07rwj04"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/SAVEE/SAVEE_audio_16k/DC_su14.wav",
+   "labels": "/m/07rwj06"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/SAVEE/SAVEE_audio_16k/JE_f07.wav",
+   "labels": "/m/07rwj04"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/SAVEE/SAVEE_audio_16k/JE_d13.wav",
+   "labels": "/m/07rwj05"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/SAVEE/SAVEE_audio_16k/JE_a07.wav",
+   "labels": "/m/07rwj00"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/SAVEE/SAVEE_audio_16k/JE_a09.wav",
+   "labels": "/m/07rwj00"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/SAVEE/SAVEE_audio_16k/JE_f01.wav",
+   "labels": "/m/07rwj04"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/SAVEE/SAVEE_audio_16k/JE_a06.wav",
+   "labels": "/m/07rwj00"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/SAVEE/SAVEE_audio_16k/DC_su15.wav",
+   "labels": "/m/07rwj06"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/SAVEE/SAVEE_audio_16k/JE_d05.wav",
+   "labels": "/m/07rwj05"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/SAVEE/SAVEE_audio_16k/JE_a10.wav",
+   "labels": "/m/07rwj00"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/SAVEE/SAVEE_audio_16k/JE_d15.wav",
+   "labels": "/m/07rwj05"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/SAVEE/SAVEE_audio_16k/JE_f03.wav",
+   "labels": "/m/07rwj04"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/SAVEE/SAVEE_audio_16k/JE_d08.wav",
+   "labels": "/m/07rwj05"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/SAVEE/SAVEE_audio_16k/JE_f10.wav",
+   "labels": "/m/07rwj04"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/SAVEE/SAVEE_audio_16k/JE_a02.wav",
+   "labels": "/m/07rwj00"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/SAVEE/SAVEE_audio_16k/JE_a11.wav",
+   "labels": "/m/07rwj00"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/SAVEE/SAVEE_audio_16k/DC_su11.wav",
+   "labels": "/m/07rwj06"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/SAVEE/SAVEE_audio_16k/JE_f05.wav",
+   "labels": "/m/07rwj04"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/SAVEE/SAVEE_audio_16k/DC_su12.wav",
+   "labels": "/m/07rwj06"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/SAVEE/SAVEE_audio_16k/JE_d06.wav",
+   "labels": "/m/07rwj05"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/SAVEE/SAVEE_audio_16k/JE_a12.wav",
+   "labels": "/m/07rwj00"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/SAVEE/SAVEE_audio_16k/JE_a08.wav",
+   "labels": "/m/07rwj00"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/SAVEE/SAVEE_audio_16k/JE_a04.wav",
+   "labels": "/m/07rwj00"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/SAVEE/SAVEE_audio_16k/JE_d11.wav",
+   "labels": "/m/07rwj05"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/SAVEE/SAVEE_audio_16k/JE_d10.wav",
+   "labels": "/m/07rwj05"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/SAVEE/SAVEE_audio_16k/JE_a15.wav",
+   "labels": "/m/07rwj00"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/SAVEE/SAVEE_audio_16k/JE_a03.wav",
+   "labels": "/m/07rwj00"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/SAVEE/SAVEE_audio_16k/JE_f02.wav",
+   "labels": "/m/07rwj04"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/SAVEE/SAVEE_audio_16k/JE_f12.wav",
+   "labels": "/m/07rwj04"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/SAVEE/SAVEE_audio_16k/JE_d03.wav",
+   "labels": "/m/07rwj05"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/SAVEE/SAVEE_audio_16k/JE_f08.wav",
+   "labels": "/m/07rwj04"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/SAVEE/SAVEE_audio_16k/JE_d07.wav",
+   "labels": "/m/07rwj05"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/SAVEE/SAVEE_audio_16k/JE_d14.wav",
+   "labels": "/m/07rwj05"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/SAVEE/SAVEE_audio_16k/DC_su13.wav",
+   "labels": "/m/07rwj06"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/SAVEE/SAVEE_audio_16k/JE_a01.wav",
+   "labels": "/m/07rwj00"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/SAVEE/SAVEE_audio_16k/JE_d01.wav",
+   "labels": "/m/07rwj05"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/SAVEE/SAVEE_audio_16k/JE_n11.wav",
+   "labels": "/m/07rwj03"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/SAVEE/SAVEE_audio_16k/JE_f14.wav",
+   "labels": "/m/07rwj04"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/SAVEE/SAVEE_audio_16k/JE_h09.wav",
+   "labels": "/m/07rwj01"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/SAVEE/SAVEE_audio_16k/JE_n26.wav",
+   "labels": "/m/07rwj03"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/SAVEE/SAVEE_audio_16k/JE_h04.wav",
+   "labels": "/m/07rwj01"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/SAVEE/SAVEE_audio_16k/JE_h11.wav",
+   "labels": "/m/07rwj01"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/SAVEE/SAVEE_audio_16k/JE_h03.wav",
+   "labels": "/m/07rwj01"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/SAVEE/SAVEE_audio_16k/JE_n03.wav",
+   "labels": "/m/07rwj03"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/SAVEE/SAVEE_audio_16k/JE_n18.wav",
+   "labels": "/m/07rwj03"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/SAVEE/SAVEE_audio_16k/JE_sa01.wav",
+   "labels": "/m/07rwj02"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/SAVEE/SAVEE_audio_16k/JE_n27.wav",
+   "labels": "/m/07rwj03"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/SAVEE/SAVEE_audio_16k/JE_n12.wav",
+   "labels": "/m/07rwj03"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/SAVEE/SAVEE_audio_16k/JE_h01.wav",
+   "labels": "/m/07rwj01"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/SAVEE/SAVEE_audio_16k/JE_sa03.wav",
+   "labels": "/m/07rwj02"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/SAVEE/SAVEE_audio_16k/JE_n05.wav",
+   "labels": "/m/07rwj03"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/SAVEE/SAVEE_audio_16k/JE_n25.wav",
+   "labels": "/m/07rwj03"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/SAVEE/SAVEE_audio_16k/JE_n07.wav",
+   "labels": "/m/07rwj03"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/SAVEE/SAVEE_audio_16k/JE_n17.wav",
+   "labels": "/m/07rwj03"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/SAVEE/SAVEE_audio_16k/JE_n04.wav",
+   "labels": "/m/07rwj03"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/SAVEE/SAVEE_audio_16k/JE_f15.wav",
+   "labels": "/m/07rwj04"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/SAVEE/SAVEE_audio_16k/JE_f13.wav",
+   "labels": "/m/07rwj04"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/SAVEE/SAVEE_audio_16k/JE_n19.wav",
+   "labels": "/m/07rwj03"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/SAVEE/SAVEE_audio_16k/JE_n02.wav",
+   "labels": "/m/07rwj03"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/SAVEE/SAVEE_audio_16k/JE_n20.wav",
+   "labels": "/m/07rwj03"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/SAVEE/SAVEE_audio_16k/JE_h08.wav",
+   "labels": "/m/07rwj01"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/SAVEE/SAVEE_audio_16k/JE_h15.wav",
+   "labels": "/m/07rwj01"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/SAVEE/SAVEE_audio_16k/JE_n08.wav",
+   "labels": "/m/07rwj03"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/SAVEE/SAVEE_audio_16k/JE_n14.wav",
+   "labels": "/m/07rwj03"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/SAVEE/SAVEE_audio_16k/JE_h07.wav",
+   "labels": "/m/07rwj01"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/SAVEE/SAVEE_audio_16k/JE_n01.wav",
+   "labels": "/m/07rwj03"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/SAVEE/SAVEE_audio_16k/JE_n16.wav",
+   "labels": "/m/07rwj03"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/SAVEE/SAVEE_audio_16k/JE_h14.wav",
+   "labels": "/m/07rwj01"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/SAVEE/SAVEE_audio_16k/JE_h12.wav",
+   "labels": "/m/07rwj01"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/SAVEE/SAVEE_audio_16k/JE_h13.wav",
+   "labels": "/m/07rwj01"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/SAVEE/SAVEE_audio_16k/JE_h10.wav",
+   "labels": "/m/07rwj01"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/SAVEE/SAVEE_audio_16k/JE_n28.wav",
+   "labels": "/m/07rwj03"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/SAVEE/SAVEE_audio_16k/JE_n30.wav",
+   "labels": "/m/07rwj03"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/SAVEE/SAVEE_audio_16k/JE_n23.wav",
+   "labels": "/m/07rwj03"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/SAVEE/SAVEE_audio_16k/JE_n24.wav",
+   "labels": "/m/07rwj03"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/SAVEE/SAVEE_audio_16k/JE_n29.wav",
+   "labels": "/m/07rwj03"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/SAVEE/SAVEE_audio_16k/JE_n13.wav",
+   "labels": "/m/07rwj03"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/SAVEE/SAVEE_audio_16k/JE_sa02.wav",
+   "labels": "/m/07rwj02"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/SAVEE/SAVEE_audio_16k/JE_h05.wav",
+   "labels": "/m/07rwj01"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/SAVEE/SAVEE_audio_16k/JE_n21.wav",
+   "labels": "/m/07rwj03"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/SAVEE/SAVEE_audio_16k/JE_n06.wav",
+   "labels": "/m/07rwj03"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/SAVEE/SAVEE_audio_16k/JE_n15.wav",
+   "labels": "/m/07rwj03"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/SAVEE/SAVEE_audio_16k/JE_n10.wav",
+   "labels": "/m/07rwj03"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/SAVEE/SAVEE_audio_16k/JE_n22.wav",
+   "labels": "/m/07rwj03"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/SAVEE/SAVEE_audio_16k/JE_h06.wav",
+   "labels": "/m/07rwj01"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/SAVEE/SAVEE_audio_16k/JE_h02.wav",
+   "labels": "/m/07rwj01"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/SAVEE/SAVEE_audio_16k/JE_n09.wav",
+   "labels": "/m/07rwj03"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/SAVEE/SAVEE_audio_16k/JE_su01.wav",
+   "labels": "/m/07rwj06"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/SAVEE/SAVEE_audio_16k/JE_sa05.wav",
+   "labels": "/m/07rwj02"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/SAVEE/SAVEE_audio_16k/JE_su06.wav",
+   "labels": "/m/07rwj06"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/SAVEE/SAVEE_audio_16k/JE_sa10.wav",
+   "labels": "/m/07rwj02"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/SAVEE/SAVEE_audio_16k/JE_su15.wav",
+   "labels": "/m/07rwj06"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/SAVEE/SAVEE_audio_16k/JE_sa12.wav",
+   "labels": "/m/07rwj02"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/SAVEE/SAVEE_audio_16k/JE_sa14.wav",
+   "labels": "/m/07rwj02"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/SAVEE/SAVEE_audio_16k/JE_su03.wav",
+   "labels": "/m/07rwj06"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/SAVEE/SAVEE_audio_16k/JE_su04.wav",
+   "labels": "/m/07rwj06"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/SAVEE/SAVEE_audio_16k/JE_sa15.wav",
+   "labels": "/m/07rwj02"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/SAVEE/SAVEE_audio_16k/JE_su13.wav",
+   "labels": "/m/07rwj06"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/SAVEE/SAVEE_audio_16k/JE_su10.wav",
+   "labels": "/m/07rwj06"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/SAVEE/SAVEE_audio_16k/JE_su12.wav",
+   "labels": "/m/07rwj06"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/SAVEE/SAVEE_audio_16k/JE_sa04.wav",
+   "labels": "/m/07rwj02"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/SAVEE/SAVEE_audio_16k/JE_sa11.wav",
+   "labels": "/m/07rwj02"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/SAVEE/SAVEE_audio_16k/JE_sa08.wav",
+   "labels": "/m/07rwj02"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/SAVEE/SAVEE_audio_16k/JE_sa09.wav",
+   "labels": "/m/07rwj02"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/SAVEE/SAVEE_audio_16k/JE_sa06.wav",
+   "labels": "/m/07rwj02"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/SAVEE/SAVEE_audio_16k/JE_su09.wav",
+   "labels": "/m/07rwj06"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/SAVEE/SAVEE_audio_16k/JE_su14.wav",
+   "labels": "/m/07rwj06"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/SAVEE/SAVEE_audio_16k/JE_sa07.wav",
+   "labels": "/m/07rwj02"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/SAVEE/SAVEE_audio_16k/JE_su07.wav",
+   "labels": "/m/07rwj06"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/SAVEE/SAVEE_audio_16k/JE_sa13.wav",
+   "labels": "/m/07rwj02"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/SAVEE/SAVEE_audio_16k/JE_su02.wav",
+   "labels": "/m/07rwj06"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/SAVEE/SAVEE_audio_16k/JE_su08.wav",
+   "labels": "/m/07rwj06"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/SAVEE/SAVEE_audio_16k/JE_su05.wav",
+   "labels": "/m/07rwj06"
+  },
+  {
+   "wav": "/content/drive/MyDrive/hssast/src/finetune/SAVEE/SAVEE_audio_16k/JE_su11.wav",
+   "labels": "/m/07rwj06"
+  }
+ ]
+}

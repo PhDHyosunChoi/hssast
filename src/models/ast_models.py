@@ -69,8 +69,9 @@ class ASTModel(nn.Module):
                  label_dim=527,
                  fshape=128, tshape=2, fstride=128, tstride=2,
                  input_fdim=128, input_tdim=1024, model_size='base',
-                 pretrain_stage=True, load_pretrained_mdl_path=None,
-                 classification_only='False' #[Hyosun] added 
+                 pretrain_stage=True, load_pretrained_mdl_path=None, load_optimizer_path=None, #[Hyosun] optimizer_path added 
+                 classification_only='False', #[Hyosun] added 
+                 continue_train='False'       #[Hyosun] added
     ):
                 #  comp_fusion,                         #[Hyosun] comp_fusion added
                 #  comp_fusion_method,                  #[Hyosun] comp_fusion_method added
@@ -95,20 +96,24 @@ class ASTModel(nn.Module):
         if pretrain_stage == True: #[Hyosun] pretrain =====================================================================================
             if load_pretrained_mdl_path != None: #[Hyosun comment] In case we don't use the pretrained model
                 raise ValueError('Setting load_pretrained_mdl_path at pretraining stage is useless, pretraining is always from scratch, please change it to None.')
-            if classification_only=="False": #[Hyosun] if-structure added
+            #[Hyosun] normal fine-tuning: and continue_train=="False": added 2024-04-30 
+            if classification_only=="False" and continue_train=="False": #[Hyosun] if-structure added
                 if fstride != fshape or tstride != tshape:
                     raise ValueError('fstride != fshape or tstride != tshape, they must be same at the pretraining stage, patch split overlapping is not supported.')
             print("[Hyosun:ast_models:pretrain_stage] fstride:%d fshape:%d tstride:%d tshape:%d" %(fstride, fshape, tstride,  tshape)) #[Hyosun] added            
-            #[Hyosun] classification_only=="True": 2024-02-01
-            if classification_only=="True": #[Hyosun] if-structure added
+            #[Hyosun] classification_only=="True" : 2024-02-01 or continue_train=="True" added 2024-04-30
+            if classification_only=="True" or continue_train=="True": #[Hyosun] if-structure added
                 fstride, tstride, fshape, tshape = 16, 16, 16, 16
                 input_fdim, input_tdim = 128, 1024
-                print("[Hyosun:ast_models:pretrain_stage:classification_only==True:after assignment] fstride:%d fshape:%d tstride:%d tshape:%d" %(fstride, fshape, tstride,  tshape)) #[Hyosun] added                                           
-            #[/Hyosun]classification_only=="True": 2024-02-01               
+                print("[Hyosun:ast_models:pretrain_stage:classification_only==True or continue_train==True:after assignment] fstride:%d fshape:%d tstride:%d tshape:%d" %(fstride, fshape, tstride,  tshape)) #[Hyosun] added                                           
+            #[/Hyosun]classification_only=="True": 2024-02-01 or continue_train=="True" added 2024-04-30               
 
             # if AudioSet pretraining is not used (but ImageNet pretraining may still apply)
             if model_size == 'tiny':
-                self.v = timm.create_model('vit_deit_tiny_distilled_patch16_224', pretrained=False)
+                # self.v = timm.create_model('vit_deit_tiny_distilled_patch16_224', pretrained=False) # the original line
+                # Hyosun 2024-08-10 Experiment start
+                self.v = timm.create_model('vit_deit_tiny_distilled_patch16_224', pretrained=True) 
+                # Hyosun 2024-08-10 Experiment end
                 self.heads, self.depth = 3, 12
                 self.cls_token_num = 2
             elif model_size == 'small':
@@ -172,12 +177,10 @@ class ASTModel(nn.Module):
             self.cpredlayer = nn.Sequential(nn.Linear(self.original_embedding_dim, self.original_embedding_dim), nn.ReLU(), nn.Linear(self.original_embedding_dim, 256))
             
             # masked patch reconstruction (generative objective) layer
-            # [Hyosun] Back to the original code: scrapped out the experiment which commented the original line and add the modified line 2023-10-09
             # [Hyosun] Experiment_SSL_part : commented the original line and add the modified line
-            self.gpredlayer = nn.Sequential(nn.Linear(self.original_embedding_dim, self.original_embedding_dim), nn.ReLU(), nn.Linear(self.original_embedding_dim, 256)) #[The original line]
-            # self.gpredlayer = nn.Sequential(nn.Linear(self.original_embedding_dim, self.original_embedding_dim), nn.Linear(self.original_embedding_dim, self.original_embedding_dim), nn.ReLU(), nn.Linear(self.original_embedding_dim, 256)) #[Hyosun's line]
+            # self.gpredlayer = nn.Sequential(nn.Linear(self.original_embedding_dim, self.original_embedding_dim), nn.ReLU(), nn.Linear(self.original_embedding_dim, 256)) #[The original line]
+            self.gpredlayer = nn.Sequential(nn.Linear(self.original_embedding_dim, self.original_embedding_dim), nn.Linear(self.original_embedding_dim, self.original_embedding_dim), nn.ReLU(), nn.Linear(self.original_embedding_dim, 256)) #[Hyosun's line]
             # [/Hyosun] Experiment_SSL_part : commented the original line and add the modified line
-            # [/Hyosun] Back to the original code: scrapped out the experiment which commented the original line and add the modified line 2023-10-09
             self.unfold = torch.nn.Unfold(kernel_size=(fshape, tshape), stride=(fstride, tstride))
 
             # we use learnable mask embedding (follow the BEIT paper), but using a fixed mask embedding (e.g., 0) leads to same performance.
@@ -219,9 +222,35 @@ class ASTModel(nn.Module):
             # # [/Hyosun 2024-01-28] added for downstream classification            
             # get the fshape and tshape, input_fdim and input_tdim in the pretraining stage
 
-            #[Hyosun] classification_only=='False': 2024-01-28
-            if classification_only=='False': #[Hyosun] Fine-tuning
-            #/Hyosun] classification_only=='False': 2024-01-28
+
+            #[Hyosun] classification_only=='True': 2024-01-28, or continue_train=="True": 2024-04-30
+            if classification_only=='True' or continue_train=="True":
+                print('now load a pretrained models from ' + load_pretrained_mdl_path)
+                # during pretraining, fstride=fshape and tstride=tshape because no patch overlapping is used
+                # here, input_fdim and input_tdim should be that used in pretraining, not that in the fine-tuning.
+                # we need to know input_fdim and input_tdim to do positional embedding cut/interpolation.
+                # generally it should be better to use same input_fdim during pretraining and finetuning, but input_tdim can be safely different
+                # fstride, tstride, fshape, tshape = 16, 16, 16, 16
+                # input_fdim, input_tdim = 128, 1024
+                print("[Hyosun]ast_models: classification_only or continue_train: fstride:%d, tstride:%d, fshape:%d, tshape:%d"% (fstride, tstride, fshape, tshape))
+                audio_model = ASTModel(
+                                    comp_fusion,               #[Hyosun] comp_fusion added
+                                    comp_fusion_method,        #[Hyosun] comp_fusion_method added
+                                    comp_fusion_multi_layer,   #[Hyosun] comp_fusion_multi_layer added
+                                    pooling_ty,                #[Hyosun] pooling_ty added 
+                                    mlp_layers,                #[Hyosun] mlp_layers added [Hyosun] representation shell만 만들어
+                                    fstride, tstride, fshape, tshape,
+                                    input_fdim, input_tdim, pretrain_stage=True, model_size=model_size,
+                                    classification_only=classification_only, #[Hyosun] added 
+                                    continue_train=continue_train            #[Hyosun] added                      
+                                    )
+                                    #[Hyosun] load_pretrained_mdl_path, load_optimizer_path = None, None as we already assign them into sd.
+                print("[Hyosun:ast_models: pretrain_stage == False: classification_only or continue_train:after ASTModel init] fstride:%d fshape:%d tstride:%d tshape:%d" %(fstride, fshape, tstride,  tshape)) #[Hyosun] added                                           
+            #/Hyosun] classification_only=='True': 2024-01-28, or continue_train=="True": 2024-04-30
+            
+            #[Hyosun] classification_only=='False': 2024-01-28, and continue_train=="False": 2024-04-30
+            else: #classification_only=='False' and continue_train=="False": #[Hyosun] Fine-tuning
+            #/Hyosun] classification_only=='False': 2024-01-28, and continue_train=="False": 2024-04-30
 
                 #[Hyosun] uncommented  2024-01-30
                 #[Hyosun] commented out 2024-01-30
@@ -248,7 +277,8 @@ class ASTModel(nn.Module):
                                     mlp_layers,                #[Hyosun] mlp_layers added [Hyosun] representation shell만 만들어
                                     fstride=p_fshape, tstride=p_tshape, fshape=p_fshape, tshape=p_tshape,
                                     input_fdim=p_input_fdim, input_tdim=p_input_tdim, pretrain_stage=True, model_size=model_size,
-                                    classification_only='False' #[Hyosun] added
+                                    classification_only='False',  #[Hyosun] added
+                                    continue_train='False'        #[Hyosun] added
                                     )
                                     #  comp_fusion,               #[Hyosun] comp_fusion added
                                     #  comp_fusion_method, #[Hyosun] comp_fusion_method added
@@ -258,30 +288,7 @@ class ASTModel(nn.Module):
                                     #  comp_fusion_method=p_comp_fusion_method, #[Hyosun] comp_fusion_method added
                                     #  comp_fusion_multi_layer=p_comp_fusion_multi_layer,  #[Hyosun] comp_fusion_multi_layer added
                                     #  pooling_ty=p_pooling_ty)                 #[Hyosun] pooling_ty added #[Hyosun] representation shell만 만들어
-            
-            #[Hyosun] classification_only=='True': 2024-01-28
-            else: # [Hyosun] args.classification_only=='True':
-                print('now load a SSL pretrained models from ' + load_pretrained_mdl_path)
-                # during pretraining, fstride=fshape and tstride=tshape because no patch overlapping is used
-                # here, input_fdim and input_tdim should be that used in pretraining, not that in the fine-tuning.
-                # we need to know input_fdim and input_tdim to do positional embedding cut/interpolation.
-                # generally it should be better to use same input_fdim during pretraining and finetuning, but input_tdim can be safely different
-                # fstride, tstride, fshape, tshape = 16, 16, 16, 16
-                # input_fdim, input_tdim = 128, 1024
-                print("[Hyosun]ast_models: classification_only: fstride:%d, tstride:%d, fshape:%d, tshape:%d"% (fstride, tstride, fshape, tshape))
-                audio_model = ASTModel(
-                                    comp_fusion,               #[Hyosun] comp_fusion added
-                                    comp_fusion_method,        #[Hyosun] comp_fusion_method added
-                                    comp_fusion_multi_layer,   #[Hyosun] comp_fusion_multi_layer added
-                                    pooling_ty,                #[Hyosun] pooling_ty added 
-                                    mlp_layers,                #[Hyosun] mlp_layers added [Hyosun] representation shell만 만들어
-                                    fstride, tstride, fshape, tshape,
-                                    input_fdim, input_tdim, pretrain_stage=True, model_size=model_size,
-                                    classification_only='True' #[Hyosun] added
-                                    )
-
-                print("[Hyosun:ast_models: pretrain_stage == False: classification_only:after ASTModel init] fstride:%d fshape:%d tstride:%d tshape:%d" %(fstride, fshape, tstride,  tshape)) #[Hyosun] added                                           
-            #/Hyosun] classification_only=='True': 2024-01-28
+                                    #[Hyosun] load_pretrained_mdl_path = None as we already assign them into sd.   
 
             audio_model = torch.nn.DataParallel(audio_model) #[Hyosun] representation shell만 만들어
             #[Hyosun] uncommented  2024-01-30
@@ -295,10 +302,11 @@ class ASTModel(nn.Module):
             #[/Hyosun]commented out 2024-01-30
             #[/Hyosun]uncommented  2024-01-30
 
-            #[Hyosun] classification_only=='True': 2024-01-28
-            if classification_only=='False':
+            #[Hyosun] classification_only=='False': 2024-01-28, and continue_train=="False": 2024-04-30
+            if classification_only=='False' and continue_train=="False": #[Hyosun] normal fine-tuning
+                print('now load a pretrained models from ' + load_pretrained_mdl_path)
                 audio_model.load_state_dict(sd, strict=False)    #[Hyosun] [important]assign pretrained weights contents(를 이제 넣어) into our model shell
-            #/Hyosun] classification_only=='True': 2024-01-28
+            #/Hyosun] classification_only=='False': 2024-01-28
 
             self.v = audio_model.module.v
             self.original_embedding_dim = self.v.pos_embed.shape[2]
@@ -389,16 +397,16 @@ class ASTModel(nn.Module):
             # #[/Hyosun] inserted
             # #[/Hyosun] commented out 2024-01-30
 
-            #[Hyosun] classification_only=='False': 2024-02-01
-            if classification_only=='False':
+            #[Hyosun] classification_only=='False': 2024-02-01, and continue_train=="False":2024-04-30
+            if classification_only=='False' and continue_train=="False":
                 # patch shape should be same for pretraining and fine-tuning
                 if fshape != p_fshape or tshape != p_tshape: #[Hyosun] pretraining's fshape
                     raise ValueError('The patch shape of pretraining and fine-tuning is not consistant, pretraining: f={:d}, t={:d}, finetuning: f={:d}, t={:d}'.format(p_fshape, p_tshape, fshape, tshape))
-            #[/Hyosun] classification_only=='False': 2024-02-01
+            #[/Hyosun] classification_only=='False': 2024-02-01, and continue_train=="False":2024-04-30
 
 
-            #[Hyosun] classification_only=='False': 2024-02-01
-            if classification_only=='False':
+            #[Hyosun] classification_only=='False': 2024-02-01, and continue_train=="False":2024-04-30
+            if classification_only=='False' and continue_train=="False":
                 # patch split stride generally should be different for pretraining and fine-tuning, as patch split overlapping is only used in finetuning
                 # during pretraining, p_fshape = p_fstride and p_tshape = p_tstride
                 if fstride != p_fshape or tstride != p_tshape:
@@ -408,7 +416,7 @@ class ASTModel(nn.Module):
                     new_proj.weight = torch.nn.Parameter(torch.sum(self.v.patch_embed.proj.weight, dim=1).unsqueeze(1))
                     new_proj.bias = self.v.patch_embed.proj.bias
                     self.v.patch_embed.proj = new_proj
-            else: #classification_only=='True':
+            else: #classification_only=='True': or continue_train=="True":2024-04-30
                 # patch split stride generally should be different for pretraining and fine-tuning, as patch split overlapping is only used in finetuning
                 # during pretraining, p_fshape = p_fstride and p_tshape = p_tstride
                 if fstride != fshape or tstride != tshape:
@@ -418,7 +426,7 @@ class ASTModel(nn.Module):
                     new_proj.weight = torch.nn.Parameter(torch.sum(self.v.patch_embed.proj.weight, dim=1).unsqueeze(1))
                     new_proj.bias = self.v.patch_embed.proj.bias
                     self.v.patch_embed.proj = new_proj
-            #[/Hyosun] classification_only=='False': 2024-02-01
+            #[/Hyosun] classification_only=='False': 2024-02-01, and continue_train=="False":2024-04-30
 
 
             new_pos_embed = self.v.pos_embed[:, self.cls_token_num:, :].detach().reshape(1, p_num_patches, self.original_embedding_dim).transpose(1, 2).reshape(1, self.original_embedding_dim, p_f_dim, p_t_dim)
@@ -440,8 +448,9 @@ class ASTModel(nn.Module):
             # [/Hyosun]
 
             # [Hyosun] run here!!! 2024-01-31
-            #[Hyosun] classification_only=='True': 2024-01-28
-            if classification_only=='True':
+            #[Hyosun] classification_only=='True': 2024-01-28, or continue_train=="True": 2024-04-30
+            if classification_only=='True' or continue_train=="True":
+                print('now load a pretrained models from ' + load_pretrained_mdl_path) 
                 audio_model.load_state_dict(sd, strict=False)    #[Hyosun] [important]assign pretrained weights contents(를 이제 넣어) into our model shell
             #/Hyosun] classification_only=='True': 2024-01-28
             # audio_model.load_state_dict(sd, strict=False)    #[Hyosun] [important]assign pretrained weights contents(를 이제 넣어) into our model shell
@@ -755,45 +764,45 @@ class ASTModel(nn.Module):
         #[Hyosun] edited
         #for blk in self.v.blocks:
         #for vbi, blk in self.v.blocks:
-        multi_feat_embeds = [] #[Hyosun] added for comp_fusion
+        #multi_feat_embeds = [] #[Hyosun] added for comp_fusion
         for blk_id, blk in enumerate(self.v.blocks):
             #print("[hyosun:mpc] v.blk_id: ", blk_id)
             #print("[hyosun:mpc] v.blk: \n", blk)
         #[/Hyosun] edited   
             x = blk(x)
-        #[Hyosun] added
-            comp_fusion = True
-            comp_fusion_method_arr = ['use_all_patch', 'cls_token']
-            if comp_fusion == True:
-                print("[Hyosun:mpc] x.shape: ", x.shape)
-                if blk_id in self.composing_multi_layer:
-                    xdash = self.v.norm(x)
-                    print("[Hyosun:mpc before hstack] xdash.shape: ", xdash.shape)
-                    comp_fusion_method = 'use_all_patch'
-                    if comp_fusion_method == 'use_all_patch':
-                        #[Hyosun] idea: apply fusion into each patch instead of cls_token like here                            
-                        #[Hyosun's idea1] In this work, we apply mean pooling over all patch representation {O} as the audio clip level representation.
-                        multi_feat_embeds.append(xdash)                    
-                        #[/Hyosun's idea1]
-                        #[/Hyosun] idea: apply fusion into each patch instead of cls_token like here
-                    elif  comp_fusion_method == 'cls_token':                      
-                        #[Hyosun's idea2] use CLS_TOKEN as AST                    
-                        #xdash = (xdash[:,0] + xdash[:,1]) / 2
-                        # cls_token, dist_token엔 무엇이 들어있지? 어디서 초기 assign하지?
-                        xdash = (xdash[:,0] + xdash[:,1]) / 2 #[Hyosun] xdash[:,0]:cls_token, xdash_token[:,1]:dist_token인거 같음
-                        print("[Hyosun:mpc, after avg] xdash.shape: ", xdash.shape)
-                        multi_feat_embeds.append(xdash)
-                        #[/Hyosun's idea2] use CLS_TOKEN as AST
-        if comp_fusion == True:           
-            #print("[Hyosun:mpc] multi_feat_embeds: \n", multi_feat_embeds)
-            #print("[Hyosun:mpc] torch.hstack(multi_feat): \n", torch.hstack(multi_feat))
-            xdash = torch.hstack(multi_feat_embeds)
-            print("[Hyosun:mpc] torch.hstack(multi_feat_embeds).shape: \n", torch.hstack(multi_feat_embeds).shape)
-            print("[Hyosun:mpc] xdash.shape: \n", xdash.shape)
-            print("[Hyosun:mpc] xdash: \n", xdash)
-        #[/Hyosun] added
+        # #[Hyosun] added
+        #     comp_fusion = True
+        #     comp_fusion_method_arr = ['use_all_patch', 'cls_token']
+        #     if comp_fusion == True:
+        #         print("[Hyosun:mpc] x.shape: ", x.shape)
+        #         if blk_id in self.composing_multi_layer:
+        #             xdash = self.v.norm(x)
+        #             print("[Hyosun:mpc before hstack] xdash.shape: ", xdash.shape)
+        #             comp_fusion_method = 'use_all_patch'
+        #             if comp_fusion_method == 'use_all_patch':
+        #                 #[Hyosun] idea: apply fusion into each patch instead of cls_token like here                            
+        #                 #[Hyosun's idea1] In this work, we apply mean pooling over all patch representation {O} as the audio clip level representation.
+        #                 multi_feat_embeds.append(xdash)                    
+        #                 #[/Hyosun's idea1]
+        #                 #[/Hyosun] idea: apply fusion into each patch instead of cls_token like here
+        #             elif  comp_fusion_method == 'cls_token':                      
+        #                 #[Hyosun's idea2] use CLS_TOKEN as AST                    
+        #                 #xdash = (xdash[:,0] + xdash[:,1]) / 2
+        #                 # cls_token, dist_token엔 무엇이 들어있지? 어디서 초기 assign하지?
+        #                 xdash = (xdash[:,0] + xdash[:,1]) / 2 #[Hyosun] xdash[:,0]:cls_token, xdash_token[:,1]:dist_token인거 같음
+        #                 print("[Hyosun:mpc, after avg] xdash.shape: ", xdash.shape)
+        #                 multi_feat_embeds.append(xdash)
+        #                 #[/Hyosun's idea2] use CLS_TOKEN as AST
+        # if comp_fusion == True:           
+        #     #print("[Hyosun:mpc] multi_feat_embeds: \n", multi_feat_embeds)
+        #     #print("[Hyosun:mpc] torch.hstack(multi_feat): \n", torch.hstack(multi_feat))
+        #     xdash = torch.hstack(multi_feat_embeds)
+        #     print("[Hyosun:mpc] torch.hstack(multi_feat_embeds).shape: \n", torch.hstack(multi_feat_embeds).shape)
+        #     print("[Hyosun:mpc] xdash.shape: \n", xdash.shape)
+        #     print("[Hyosun:mpc] xdash: \n", xdash)
+        # #[/Hyosun] added
         x = self.v.norm(x) #[Hyosun:original code] seems not needed any more..2023-08-08 TUE
-        print("[Hyosun:mpc, before SSL part] x.shape: \n", x.shape)
+        #print("[Hyosun:mpc, before SSL part] x.shape: \n", x.shape)
         # /pass through the Transformer layers [/Hyosun] Transformer 
 
         # prediction of the masked patch
@@ -880,17 +889,17 @@ class ASTModel(nn.Module):
         #[Hyosun] edited
         #for blk in self.v.blocks:  
         #for vbi, blk in self.v.blocks:
-        multi_feat = []
+        #multi_feat = []
         for blk_id, blk in enumerate(self.v.blocks):
             #print("[hyosun:mpg] v.blk_id: ", blk_id)
             #print("[hyosun:mpg] v.blk: \n", blk)
         #[/Hyosun] edited 
             x = blk(x)
-        #[Hyosun] added
-            if blk_id+1 in self.composing_multi_layer:
-              multi_feat.append(x)
-        print("[Hyosun:mpg] multi_feat: \n", multi_feat)
-        #[/Hyosun] added
+        # #[Hyosun] added
+        #     if blk_id+1 in self.composing_multi_layer:
+        #       multi_feat.append(x)
+        # print("[Hyosun:mpg] multi_feat: \n", multi_feat)
+        # #[/Hyosun] added
         x = self.v.norm(x)
         # /go through the Transformer layers [/Hyosun] Transformer 
 

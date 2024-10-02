@@ -96,6 +96,7 @@ class AudioDataset(Dataset):
         print('number of classes is {:d}'.format(self.label_num))
 
     def _wav2fbank(self, filename, filename2=None):
+        print("[Hyosun] filename: ", filename, "filename2: ", filename2)
         # mixup
         if filename2 == None:
             waveform, sr = torchaudio.load(filename)
@@ -104,19 +105,31 @@ class AudioDataset(Dataset):
         else:
             waveform1, sr = torchaudio.load(filename)
             waveform2, _ = torchaudio.load(filename2)
-
+            print("[Hyosun] waveform1.shape: ", waveform1.shape, "waveform2.shape: ", waveform2.shape)
             waveform1 = waveform1 - waveform1.mean()
             waveform2 = waveform2 - waveform2.mean()
 
             if waveform1.shape[1] != waveform2.shape[1]:
+                print("[Hyosun] waveform1.shape: ", waveform1.shape, "waveform2.shape: ", waveform2.shape)
                 if waveform1.shape[1] > waveform2.shape[1]:
                     # padding
-                    temp_wav = torch.zeros(1, waveform1.shape[1])
-                    temp_wav[0, 0:waveform2.shape[1]] = waveform2
+                    # [Hyosun] modified to fix error
+                    # temp_wav = torch.zeros(1, waveform1.shape[1]) #[Hyosun:comment] the original line
+                    temp_wav = torch.zeros(waveform2.shape[0], waveform1.shape[1]) #[Hyosun] modified trial 2024-02-11
+                    # [/Hyosun] modified to fix error
+
+                    print("[Hyosun] temp_wav.shape: ", temp_wav.shape)
+                    print("[Hyosun] waveform2.shape: ", waveform2.shape)
+                    
+                    # [Hyosun] modified to fix error
+                    # temp_wav[0, 0:waveform2.shape[1]] = waveform2 #[Hyosun:comment] the original line
+                    temp_wav[0:waveform2.shape[0], 0:waveform2.shape[1]] = waveform2 #[Hyosun] modified trial 2024-02-11
+                    # [/Hyosun] modified to fix error
                     waveform2 = temp_wav
                 else:
                     # cutting
-                    waveform2 = waveform2[0, 0:waveform1.shape[1]]
+                    # waveform2 = waveform2[0, 0:waveform1.shape[1]] #[Hyosun:comment] the original line
+                    waveform2 = waveform2[0:waveform2.shape[0], 0:waveform1.shape[1]] #[Hyosun] modified trial 2024-02-11
 
             # sample lambda from uniform distribution
             #mix_lambda = random.random()

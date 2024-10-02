@@ -76,6 +76,9 @@ parser.add_argument("--epoch_iter", type=int, default=2000, help="for pretrainin
 
 # fine-tuning arguments
 parser.add_argument("--pretrained_mdl_path", type=str, default=None, help="the ssl pretrained models or [Hyosun]the fine-tuned models path")
+    #[Hyosun:continue_train==True]the best optimizer state path to continue(resume) training as fine-tuning 2024-05-02
+parser.add_argument("--optimizer_path", type=str, default=None, help="[Hyosun:continue_train==True]the best optimizer state path to continue(resume) training as fine-tuning")
+    #[/Hyosun:continue_train==True]the best optimizer state path to continue(resume) training as fine-tuning 2024-05-02
 parser.add_argument("--head_lr", type=int, default=1, help="the factor of mlp-head_lr/lr, used in some fine-tuning experiments only")
 parser.add_argument("--noise", help='if augment noise in finetuning', type=ast.literal_eval)
 parser.add_argument("--metrics", type=str, default="mAP", help="the main evaluation metrics in finetuning", choices=["mAP", "acc"])
@@ -97,6 +100,9 @@ parser.add_argument("--mlp_layers", type=int, default=4, help="how many mlp_head
 parser.add_argument("--classification_only", type=str, default="False", help="whether to apply classification only", choices=["True", "False"])
 parser.add_argument("--best_model_dir", type=str, default="", help="The best model path")
   #[/Hyosun] classification_only added 2024-01-28
+  #[Hyosun] continue_train added 2024-04-30 
+parser.add_argument("--continue_train", type=str, default="False", help="whether to continue training from where you left off", choices=["True", "False"])
+  #[/Hyosun] continue_train added 2024-04-30 
 args = parser.parse_args()
 
 # # dataset spectrogram mean and std, used to normalize the input
@@ -140,10 +146,18 @@ if 'pretrain' in args.task:
     else:
         print('The num_mel_bins {:d} and fshape {:d} are same, masking a typical time frame, not using cluster masking.'.format(args.num_mel_bins, args.fshape))
     # no label dimension needed as it is self-supervised, fshape=fstride and tshape=tstride
-    audio_model = ASTModel(fshape=args.fshape, tshape=args.tshape, fstride=args.fshape, tstride=args.tshape,
-                       input_fdim=args.num_mel_bins, input_tdim=args.target_length, model_size=args.model_size, pretrain_stage=True)
+    audio_model = ASTModel(
+                    #[Hyosun] comp_logic added
+                    comp_fusion=args.comp_fusion,                          #[Hyosun] comp_fusion added
+                    comp_fusion_method=args.comp_fusion_method,            #[Hyosun] comp_fusion_method added
+                    comp_fusion_multi_layer=args.comp_fusion_multi_layer,  #[Hyosun] comp_fusion_multi_layer added
+                    pooling_ty=args.pooling_ty,                            #[Hyosun] pooling_ty added
+                    mlp_layers=args.mlp_layers,                            #[Hyosun] mlp_layers added
+                    #[/Hyosun] comp_logic added        
+                    fshape=args.fshape, tshape=args.tshape, fstride=args.fshape, tstride=args.tshape,
+                    input_fdim=args.num_mel_bins, input_tdim=args.target_length, model_size=args.model_size, pretrain_stage=True)
 # in the fine-tuning stage [Hyosun] focus and use!!!
-else: #[Hyosun] set-up model for fine-tuning
+else: #[Hyosun] set-up model for fine-tuning: 1.normal fine-tuning, 2.classficaiton_only, 3.continue_train
     # if args.classification_only=="False": #[Hyosun]fine-tuning
     print("[Hyosun:run.py] args.comp_fusion: ", args.comp_fusion)
     print("[Hyosun:run.py] args.comp_fusion_method: ", args.comp_fusion_method)
@@ -159,8 +173,12 @@ else: #[Hyosun] set-up model for fine-tuning
                     #[/Hyosun] comp_logic added
                     label_dim=args.n_class, fshape=args.fshape, tshape=args.tshape, fstride=args.fstride, tstride=args.tstride,
                     input_fdim=args.num_mel_bins, input_tdim=args.target_length, model_size=args.model_size, pretrain_stage=False,
-                    load_pretrained_mdl_path=args.pretrained_mdl_path, #[Hyosun] call the model that are already saved, using args.pretrained_mdl_path 
-                    classification_only=args.classification_only           #[Hyosun] classification_only added
+                    #[Hyosun] classification_only(no fine-tuning) or continue_train as fine-tuning
+                    load_pretrained_mdl_path=args.pretrained_mdl_path,     #[Hyosun] call the model that are already saved, using args.pretrained_mdl_path 
+                    load_optimizer_path=args.optimizer_path,               #[Hyosun] optimizer_path added to continue(resume) training as fine-tuning 2024-05-02
+                    classification_only=args.classification_only,          #[Hyosun] classification_only added
+                    continue_train=args.continue_train                     #[Hyosun] continue_train added
+                    #[/Hyosun] classification_only(no fine-tuning) or continue_train as fine-tuning
     )
                     #  #[Hyosun] comp_logic added
                     #  comp_fusion=args.comp_fusion,                      #[Hyosun] comp_fusion added
@@ -179,10 +197,10 @@ if os.path.exists("%s/models" % args.exp_dir) == False:
 with open("%s/args.pkl" % args.exp_dir, "wb") as f:
     pickle.dump(args, f)
 
-#[Hyosun commented] Pretrain, Fine-tuning, or classification_only here
+#[Hyosun commented] Pretrain, Fine-tuning(inc.continue_train), or classification_only here
 if 'pretrain' not in args.task: #[Hyosun] fine-tuning: connects to traintest.py's train(), or classification only[/Hyosun]
     #[Hyosun] fine-tuning: if-structure added 2024-01-28[/Hyosun]
-    if args.classification_only=="False":
+    if args.classification_only=="False": #[Hyosun] continue_train == 'True': is the case here too. 2024-05-05
         print('Now starting fine-tuning for {:d} epochs'.format(args.n_epochs))
         train(audio_model, train_loader, val_loader, args) #[Hyosun] fine-tuning: 여기서 fusion? Yes
     #[Hyosun] classification_only added 2024-01-28
@@ -228,7 +246,8 @@ else: #[Hyosun] pretrain => [Hyosun] connects to traintest_mask.py's trainmask()
 
 # if the dataset has a seperate evaluation set (e.g., speechcommands), then select the model using the validation set and eval on the evaluation set.
 # this is only for fine-tuning
-#[Hyosun:comment] Except for ESC50, TAU: skip this if-statement logic because it doesn't have --data-eval (the same as data_eval)[/Hyosun]
+#[Hyosun:comment] Except for ESC50, TAU and my datasets in my exeriments: --data-eval == None
+                # skip this if-statement logic because it doesn't have --data-eval (the same as data_eval)[/Hyosun]
 if args.data_eval != None: #[Hyosun:comment] For TAU data: --data-train ${tr_data} --data-val ${te_data} but no --data-eval[/Hyosun]
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
     sd = torch.load(args.exp_dir + '/models/best_audio_model.pth', map_location=device)

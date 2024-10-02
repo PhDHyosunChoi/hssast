@@ -72,6 +72,10 @@ def trainmask(audio_model, train_loader, test_loader, args):
             per_sample_data_time.update((time.time() - end_time) / audio_input.shape[0])
             dnn_start_time = time.time()
 
+            
+
+            print("epoch: ", epoch, " i: ", i) #2024-08-09 Hyosun 
+            # Hyosun made it live 2024-08-14 Hyosun comment out 2024-08-08
             # first several steps for warm-up
             if global_step <= 1000 and global_step % 50 == 0:
                 warm_lr = (global_step / 1000) * args.lr

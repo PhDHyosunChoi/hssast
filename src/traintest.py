@@ -54,15 +54,30 @@ def train(audio_model, train_loader, test_loader, args):
 
     # diff lr optimizer #[Hyosun] use here for hyper-parameter optimization!!!
     mlp_list = ['mlp_head.0.weight', 'mlp_head.0.bias', 'mlp_head.1.weight', 'mlp_head.1.bias']
+        #[Hyosun] if-statement added 2024-05-02 
+    if args.mlp_layers==2:
+        mlp_list = ['mlp_head.0.weight', 'mlp_head.0.bias', 'mlp_head.1.weight', 'mlp_head.1.bias']
+    elif args.mlp_layers==4:
+        mlp_list = ['mlp_head.0.weight', 'mlp_head.0.bias', 'mlp_head.1.weight', 'mlp_head.1.bias',
+                    'mlp_head.2.weight', 'mlp_head.2.bias', 'mlp_head.3.weight', 'mlp_head.3.bias'
+                    ]
+    elif args.mlp_layers==6:
+        mlp_list = ['mlp_head.0.weight', 'mlp_head.0.bias', 'mlp_head.1.weight', 'mlp_head.1.bias',
+                    'mlp_head.2.weight', 'mlp_head.2.bias', 'mlp_head.3.weight', 'mlp_head.3.bias',
+                    'mlp_head.4.weight', 'mlp_head.4.bias', 'mlp_head.5.weight', 'mlp_head.5.bias'
+                    ]
+        #[/Hyosun] if-statement added 2024-05-02    
     mlp_params = list(filter(lambda kv: kv[0] in mlp_list, audio_model.module.named_parameters()))
     base_params = list(filter(lambda kv: kv[0] not in mlp_list, audio_model.module.named_parameters()))
     mlp_params = [i[1] for i in mlp_params]
     base_params = [i[1] for i in base_params]
     # only finetuning small/tiny models on balanced audioset uses different learning rate for mlp head
+        #[Hyosun:comment] In case of base model, args.lr, mlp_lr have the same lr. It doesn't matter for my experiments(base models) for fine-tuning.
     print('The mlp header uses {:d} x larger lr'.format(args.head_lr))
     optimizer = torch.optim.Adam([{'params': base_params, 'lr': args.lr}, {'params': mlp_params, 'lr': args.lr * args.head_lr}], weight_decay=5e-7, betas=(0.95, 0.999))
     mlp_lr = optimizer.param_groups[1]['lr']
-    lr_list = [args.lr, mlp_lr]
+    lr_list = [args.lr, mlp_lr] #[Hyosun] In case of base model, args.lr, mlp_lr have the same lr. It doesn't matter for my experiments(base models) for fine-tuning.
+        #[/Hyosun:comment] In case of base model, args.lr, mlp_lr have the same lr. It doesn't matter for my experiments(base models) for fine-tuning.
 
     print('Total mlp parameter number is : {:.3f} million'.format(sum(p.numel() for p in mlp_params) / 1e6))
     print('Total base parameter number is : {:.3f} million'.format(sum(p.numel() for p in base_params) / 1e6))
@@ -99,23 +114,59 @@ def train(audio_model, train_loader, test_loader, args):
     if args.adaptschedule == True: #[Hyosun:comment] controlled by bash files
         scheduler = torch.optim.lr_scheduler.ReduceLROnPlateau(optimizer, mode='max', factor=0.5, patience=args.lr_patience, verbose=True)
         print('now use adaptive learning rate scheduler.')
-    else: #[Hyosun:comment] Data ESC50, TAU <= controlled by bash files
+    else: #[Hyosun:comment] Data ESC50, TAU <= controlled by bash files [Hyosun: my experiments] adaptschedule==False [/Hyosun]
         scheduler = torch.optim.lr_scheduler.MultiStepLR(optimizer, list(range(args.lrscheduler_start, 1000, args.lrscheduler_step)),gamma=args.lrscheduler_decay)
     main_metrics = args.metrics
     if args.loss == 'BCE':  #[Hyosun:comment] seems mostly for speech or audio datasets
         loss_fn = nn.BCEWithLogitsLoss()
-    elif args.loss == 'CE': #[Hyosun:comment] Data ESC50, TAU <= controlled by bash files
+    elif args.loss == 'CE': #[Hyosun:comment] Data ESC50, TAU, and all datasets I train <= controlled by bash files
         loss_fn = nn.CrossEntropyLoss()
     args.loss_fn = loss_fn
 
     print('now training with {:s}, main metrics: {:s}, loss function: {:s}, learning rate scheduler: {:s}'.format(str(args.dataset), str(main_metrics), str(loss_fn), str(scheduler)))
     print('The learning rate scheduler starts at {:d} epoch with decay rate of {:.3f} every {:d} epoches'.format(args.lrscheduler_start, args.lrscheduler_decay, args.lrscheduler_step))
 
+    
+    #[Hyosun] load optimizer from best optimizer path 2024-05-02
+    resume_epoch = 1
+    if args.continue_train=='True':
+        # op = torch.load(args.optimizer_path, map_location=device)
+        # # optimizer.load_state_dict(op, strict=False)
+        # optimizer.load_state_dict(op) #, strict=False)
+        pretrained_mdl_path_rsplit = args.pretrained_mdl_path.rsplit('/', 2)
+        PATH=pretrained_mdl_path_rsplit[0]+'/checkpoint.pt'
+
+        checkpoint = torch.load(PATH)
+        audio_model.load_state_dict(checkpoint['model_state_dict'])
+        optimizer.load_state_dict(checkpoint['optimizer_state_dict'])
+        epoch = checkpoint['epoch']
+        resume_epoch = epoch + 1 #[Hyosun] error fix: cum_predictions logic at validate_ensemble()
+        global_step = checkpoint['global_step']
+        print("[Hyosun: args.continue_train=='True'] epoch: %s , resume_epoch: %s, global_step: %s" %(epoch, resume_epoch, global_step))
+        global_step+=1
+        loss_meter = checkpoint['loss']  #[Hyosun] This will work?? It seems so
+        #loss_meter.update(loss.item(), B)
+
+        #[Hyosun] eval or train mode set up
+        audio_model.eval()
+        # - or -
+        #audio_model.train()
+
+        #[Hyosun] result logic added 2024-05-06
+        #result = np.zeros([args.n_epochs, 10])
+        result = np.zeros([args.n_epochs, 10]) 
+        p_result = np.loadtxt(pretrained_mdl_path_rsplit[0] + '/result.csv', delimiter=',')
+        result[0:epoch, :] = p_result[0:epoch, :]
+        np.savetxt(exp_dir + '/result.csv', result, delimiter=',')
+        #np.savetxt(exp_dir + '/result.csv', result[0:epoch, :], delimiter=',')
+    #[/Hyosun] load optimizer from best optimizer path 2024-05-02
+
     epoch += 1
 
     print("current #steps=%s, #epochs=%s" % (global_step, epoch))
     print("start training...")
-    result = np.zeros([args.n_epochs, 10])
+    if args.continue_train=="False": #[Hyosun] if-statement added         
+        result = np.zeros([args.n_epochs, 10]) 
     audio_model.train()
     while epoch < args.n_epochs + 1: #[Hyosun] fine-tuning: train with epoch
         begin_time = time.time()
@@ -135,17 +186,17 @@ def train(audio_model, train_loader, test_loader, args):
             per_sample_data_time.update((time.time() - end_time) / audio_input.shape[0])
             dnn_start_time = time.time()
 
-            # first several steps for warm-up #[Hyosun] what is warm_lr?? 2023-09-20 #[/Hyosun]
+            # first several steps for warm-up #[Hyosun] we don't use warm-up for my experiments [/Hyosun]
             if global_step <= 1000 and global_step % 50 == 0 and args.warmup == True:
                 for group_id, param_group in enumerate(optimizer.param_groups):
                     warm_lr = (global_step / 1000) * lr_list[group_id]
                     param_group['lr'] = warm_lr
                     print('warm-up learning rate is {:f}'.format(param_group['lr']))
             #[Hyosun] added
-            print("[Hyosun:traintest.py-train()]epoch: ", epoch)
+            print("[Hyosun:fine-tuning traintest.py-train()]epoch: ", epoch)
             #[/Hyosun] added
             audio_output = audio_model(audio_input, args.task) #[Hyosun] call forward(): fusion here? Yes inside forward()
-            if isinstance(loss_fn, torch.nn.CrossEntropyLoss):
+            if isinstance(loss_fn, torch.nn.CrossEntropyLoss): #[Hyosun] we use 'CE' 
                 loss = loss_fn(audio_output, torch.argmax(labels.long(), axis=1))
             else:
                 loss = loss_fn(audio_output, labels)
@@ -191,7 +242,7 @@ def train(audio_model, train_loader, test_loader, args):
         #[Hyosun] acc is saved in stats as stats[0] [/Hyosun]
 
         # ensemble results #[Hyosun:comment] put results together
-        cum_stats = validate_ensemble(args, epoch)
+        cum_stats = validate_ensemble(args, epoch, resume_epoch) #[Hyosun] resume_epoch added
         cum_mAP = np.mean([stat['AP'] for stat in cum_stats])
         cum_mAUC = np.mean([stat['auc'] for stat in cum_stats])
         cum_acc = cum_stats[0]['acc']
@@ -249,7 +300,7 @@ def train(audio_model, train_loader, test_loader, args):
         if isinstance(scheduler, torch.optim.lr_scheduler.ReduceLROnPlateau):
             print('adaptive learning rate scheduler step')
             scheduler.step(mAP)
-        else:
+        else: #[Hyosun] we use torch.optim.lr_scheduler.MultiStepLR [/Hyosun]
             print('normal learning rate scheduler step')
             scheduler.step()
 
@@ -259,6 +310,23 @@ def train(audio_model, train_loader, test_loader, args):
         with open(exp_dir + '/stats_' + str(epoch) +'.pickle', 'wb') as handle:
             pickle.dump(stats, handle, protocol=pickle.HIGHEST_PROTOCOL)
         _save_progress()
+
+        #[Hyosun] save the general checkpoint
+        #train_loss = loss_meter.avg
+        # # Additional information
+        # EPOCH = 5
+        PATH = exp_dir + '/checkpoint.pt'
+        # LOSS = 0.4
+
+        torch.save({
+                    'epoch': epoch, #[Hyosun] The last epoch we train
+                    'global_step': global_step, #[Hyosun] global_step
+                    'model_state_dict': audio_model.state_dict(),
+                    'optimizer_state_dict': optimizer.state_dict(),
+                    'loss': loss_meter, #train_loss,
+                    }, PATH)
+        
+        #[/Hyosun] save the general checkpoint 
 
         finish_time = time.time()
         print('epoch {:d} training time: {:.3f}'.format(epoch, finish_time-begin_time))
@@ -276,7 +344,7 @@ def train(audio_model, train_loader, test_loader, args):
         loss_meter.reset()
         per_sample_dnn_time.reset()
 
-    if args.wa == True:
+    if args.wa == True: #[Hyosun] we skip this logic as : --wa False [/Hyosun] 
         stats = validate_wa(audio_model, test_loader, args, args.wa_start, args.wa_end)
         mAP = np.mean([stat['AP'] for stat in stats])
         mAUC = np.mean([stat['auc'] for stat in stats])
@@ -347,19 +415,41 @@ def validate(audio_model, val_loader, args, epoch):
 
     return stats, loss 
 
-def validate_ensemble(args, epoch):
+def validate_ensemble(args, epoch, resume_epoch=1): #[Hyosun]resume_epoch added
     exp_dir = args.exp_dir
     target = np.loadtxt(exp_dir+'/predictions/target.csv', delimiter=',')
-    if epoch == 1:
-        cum_predictions = np.loadtxt(exp_dir + '/predictions/predictions_1.csv', delimiter=',')
-    else:
-        cum_predictions = np.loadtxt(exp_dir + '/predictions/cum_predictions.csv', delimiter=',') * (epoch - 1)
-        predictions = np.loadtxt(exp_dir+'/predictions/predictions_' + str(epoch) + '.csv', delimiter=',')
-        cum_predictions = cum_predictions + predictions
-        # remove the prediction file to save storage space
-        # [Hyosun 2023-11-02] commented out removing logic: insert the saving logic as prediction.txt files here =======
-        # os.remove(exp_dir+'/predictions/predictions_' + str(epoch-1) + '.csv')
-        # [/Hyosun 2023-11-02] commented out removing logic: insert the saving logic as prediction.txt files here ======
+
+    #[Hyosun] if statement added
+    #[Hyosun] continue_train==True: added
+    pretrained_mdl_path_rsplit = args.pretrained_mdl_path.rsplit('/', 2)
+    
+    if args.continue_train=='True': 
+       print("[Hyosun:traintest.py train()] args.continue_train=='True':resume_epoch: ", resume_epoch)
+       print("[Hyosun:traintest.py train()] args.continue_train=='True':epoch: ", epoch)
+       if epoch == resume_epoch:   #[Hyosun] 아예 요기로 안들어오는게 문제 2024-05-04
+            # cum_predictions = np.loadtxt(exp_dir + '/predictions/predictions_' + str(epoch) + '.csv', delimiter=',')
+            # #[Hyosun] copy and paste the file: exp_dir + '/predictions/cum_predictions.csv' into this directory
+            # cum_predictions = np.loadtxt(exp_dir + '/predictions/cum_predictions.csv', delimiter=',') * (epoch - 1)  
+            cum_predictions = np.loadtxt(pretrained_mdl_path_rsplit[0] + '/predictions/cum_predictions.csv', delimiter=',') * (epoch - 1)
+            predictions = np.loadtxt(exp_dir+'/predictions/predictions_' + str(epoch) + '.csv', delimiter=',')
+            cum_predictions = cum_predictions + predictions     
+       else: 
+            cum_predictions = np.loadtxt(exp_dir + '/predictions/cum_predictions.csv', delimiter=',') * (epoch - 1)
+            predictions = np.loadtxt(exp_dir+'/predictions/predictions_' + str(epoch) + '.csv', delimiter=',')
+            cum_predictions = cum_predictions + predictions    
+    #[/Hyosun] continue_train==True: added
+    else:  #[Hyosun] continue_train==False:
+        if epoch == 1:    
+            cum_predictions = np.loadtxt(exp_dir + '/predictions/predictions_1.csv', delimiter=',')
+        else:
+            cum_predictions = np.loadtxt(exp_dir + '/predictions/cum_predictions.csv', delimiter=',') * (epoch - 1)
+            predictions = np.loadtxt(exp_dir+'/predictions/predictions_' + str(epoch) + '.csv', delimiter=',')
+            cum_predictions = cum_predictions + predictions
+            # remove the prediction file to save storage space
+            # [Hyosun 2023-11-02] commented out removing logic: insert the saving logic as prediction.txt files here =======
+            # os.remove(exp_dir+'/predictions/predictions_' + str(epoch-1) + '.csv')
+            # [/Hyosun 2023-11-02] commented out removing logic: insert the saving logic as prediction.txt files here ======
+    #[/Hyosun] if statement added
 
     cum_predictions = cum_predictions / epoch
     np.savetxt(exp_dir+'/predictions/cum_predictions.csv', cum_predictions, delimiter=',')

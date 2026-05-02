@@ -1,4 +1,7 @@
-# HSSAST Dual representations: A novel variant of Self-Supervised Audio Spectrogram Transformer with multi-layer feature fusion and pooling combinations for sound classification 
+# [HSSAST Dual representations: A novel variant of Self-Supervised Audio Spectrogram Transformer with multi-layer feature fusion and pooling combinations for sound classification](https://www.sciencedirect.com/science/article/pii/S0925231225000876)
+
+### Authors: Hyosun Choi, Li Zhang, Chris Watkins
+
 ## Highlights :
 ### • We propose an SSAST variant with multilayer feature fusion and pooling combination. 
 ### • A variety of all-patch-wise min, max, and mean pooling permutations are applied.
